@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #2F3E51;
+  width: 300px;
+  height: 100vh;
+  border-right: 1px solid white;
+}
+
+.group-list{
+  height: 100px;
+  padding: 0 40px;
+}
+
+.making-group{
+  height: 100px;
+  background-color: #253141;
+  padding: 0 40px;
+}
+
+.groups{
+  height: clac(100vh - 250px);
+  padding: 0 40px;
+}
+
+.tweet {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+}
+
+.main-header{
+  height: 100px;
+  background-color: #2F3E51;
+}
+
+.tweets{
+  background-color: #fAFAFA;
+  height: calc(100vh - 150px);
+  padding: 45px 40px 20px;
+}

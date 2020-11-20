@@ -5,24 +5,50 @@
 .side-bar {
   background-color: #2F3E51;
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 50px);
   border-right: 1px solid white;
 }
 
 .group-list{
   height: 100px;
-  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-list a{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .making-group{
   height: 100px;
   background-color: #253141;
-  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.making-group a{
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .groups{
   height: clac(100vh - 250px);
   padding: 0 40px;
+  overflow: scroll;
+}
+
+.group{
+  padding: 20px 0;
+}
+
+.group-name a{
+  text-decoration: none;
+  color: white;
 }
 
 .tweet {

@@ -13,29 +13,20 @@
     <header>
       <div class="header">
         <div class="header-left">
-          <%#<% if user_signed_in? %>
-            <a href="#" class="user-nickname">Tom</a>
-            <%#<%= link_to 'Tom', "#" class="user-nickname" %>
-          <%#<% else %>
-            <%#<h2>ログインしていません</h2>
-          <%#<% end %>
+          <% if user_signed_in? %>
+            <%= link_to current_user.nickname, root_path, class: "user-nickname" %>
+          <% end %>
         </div>
         <div class="header-main">
-          <a href="#" class="header-title">GroupTalk</a>
-          <%#<%= link_to 'GroupTalk', "#" class="header-title"%>
+          <%= link_to 'GroupTalk', root_path, class: "header-title" %>
         </div>
         <div class="header-right">
-          <%#<% if user_signed_in? %>
-            <%#<a href="#" class="post">投稿</a>
-            <%#<%= link_to '投稿', "#", class="post" %>
-            <%#<a href="#" class="logout">ログアウト</a>
-            <%#<%= link_to 'ログアウト', "#" class="logout" %>
-          <%#<% else %>
-            <a href="#" class="login">ログイン</a>
-            <%#<%= link_to 'ログイン', class="login" %>
-            <a href="#" class="sign-up">新規登録</a>
-            <%#<%= link_to '新規登録', class="sign-up" %>
-          <%#<% end %>
+          <% if user_signed_in? %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+          <% else %>
+            <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+            <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+          <% end %>
         </div>
       </div>
     </header>

@@ -1,6 +1,10 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!, only: :new
 
+  def index
+    @groups = Group.order("name ASC")
+  end
+
   def new
     @group = Group.new
     @group.users << current_user

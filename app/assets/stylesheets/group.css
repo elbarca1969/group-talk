@@ -126,3 +126,39 @@ select {
 .field_with_errors {
   display: contents;
 }
+
+
+.group_list{
+  width: 100%;
+  margin: 0 100px;
+}
+
+.group_index{
+  display: flex;
+  padding: 0 100px;
+  margin: 20px 0; 
+}
+
+.group__name{
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.participation{
+  font-size: 20px;
+  background-color: #2F3E51;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.participation a{
+  text-decoration: none;
+  color: white;
+}
+
+.group_content{
+  display: flex;
+  align-items: center;
+}

@@ -1,23 +1,17 @@
 <div class="group-list">
-  <a href="#">グループ一覧</a>
+  <%= link_to 'グループ一覧', groups_path %>
 </div>
 <div class="making-group">
-  <a href="#">グループ作成</a>
+  <%= link_to 'グループ作成', new_group_path %>
 </div>
 <div class="groups">
-  <div class="group">
-    <div class="group-name">
-      <a href="#">group1</a>
-    </div>
-  </div>
-  <div class="group">
-    <div class="group-name">
-      <a href="#">group2</a>
-    </div>
-  </div>
-  <div class="group">
-    <div class="group-name">
-      <a href="#">group3</a>
-    </div>
-  </div>
+  <% if user_signed_in? %>
+    <% current_user.groups.each do |group| %>
+      <div class="group">
+        <div class="group-name">
+          <%= group.name%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>

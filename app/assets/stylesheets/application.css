@@ -61,3 +61,10 @@ header{
   text-decoration: none;
   font-size: 15px;
 }
+
+.error-message{
+  font-size: 30px;
+  color :red;
+  display: flex;
+  justify-content: center;
+}

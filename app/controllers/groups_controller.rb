@@ -19,6 +19,14 @@ class GroupsController < ApplicationController
     end
   end
 
+  def join
+    @group = Group.find_by(id: params[:id])
+    if !@group.users.include?(current_user)
+      @group.users << current_user
+      redirect_to root_path
+    end
+  end
+
   private
   
   def group_params

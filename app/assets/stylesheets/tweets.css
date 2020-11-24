@@ -37,7 +37,7 @@
 }
 
 .groups{
-  height: clac(100vh - 250px);
+  height: calc(100vh - 250px);
   padding: 0 40px;
   overflow: scroll;
 }

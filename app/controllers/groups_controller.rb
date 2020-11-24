@@ -30,6 +30,12 @@ class GroupsController < ApplicationController
     end
   end
 
+  def quit
+    @group = Group.find(params[:id])
+    @group.users.delete(current_user)
+    redirect_to root_path
+  end
+
   private
   
   def group_params

@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
     @group = Group.find_by(id: params[:id])
     if !@group.users.include?(current_user)
       @group.users << current_user
-      redirect_to root_path
+      redirect_to group_tweets_path(@group)
     end
   end
 

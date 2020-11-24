@@ -12,35 +12,5 @@
   </div>
 </div>
 <div class="tweets">
-  <div class="tweet">
-    <div class="upper-tweet">
-      <div class="tweet-user">
-        Tom
-      </div>
-      <div class="tweet-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="lower-tweet">
-      <div class="tweet-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="tweet">
-    <div class="upper-tweet">
-      <div class="tweet-user">
-        Tom
-      </div>
-      <div class="tweet-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="lower-tweet">
-      <div class="tweet-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'tweet', collection: @tweets %>
 </div>

@@ -48,6 +48,7 @@
 
 .group-name{
   color: white;
+  text-decoration: none;
 }
 
 .chat {
@@ -64,9 +65,8 @@
   padding: 0 20px;
 }
 
-.group-title{
+.left-header{
   color: white;
-  text-decoration: none;
   font-size: 20px;
 }
 
@@ -123,4 +123,24 @@
   color: #434a54;
   font-size: 14px;
   margin-bottom: 40px;
+}
+
+.form-input{
+  display: flex;
+  justify-content: center;
+}
+
+.form-tweet{
+  width: 50vw;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.tweet-form{
+  display: flex;
+  justify-content: space-around;
+}
+
+.tweet-form-right{
+  margin-top: 15px;
 }

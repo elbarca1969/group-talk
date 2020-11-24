@@ -1,5 +1,5 @@
 <div class="group-list">
-  <%= link_to 'グループ一覧', groups_path %>
+  <%= link_to 'グループ一覧', list_groups_path %>
 </div>
 <div class="making-group">
   <%= link_to 'グループ作成', new_group_path %>
@@ -9,7 +9,7 @@
     <% current_user.groups.each do |group| %>
       <div class="group">
         <div class="group-name">
-          <%= group.name%>
+          <%= link_to group.name, group_tweets_path(group), class: 'group-name' %>
         </div>
       </div>
     <% end %>

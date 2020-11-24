@@ -1,0 +1,16 @@
+<div class="tweet">
+  <div class="upper-tweet">
+    <div class="tweet-user">
+      <%= tweet.user.nickname %>
+    </div>
+    <div class="tweet-date">
+      <%= l tweet.created_at %>
+    </div>
+  </div>
+  <div class="lower-tweet">
+    <div class="tweet-content">
+      <%= tweet.content %>
+      <hr>
+    </div>
+  </div>
+</div>

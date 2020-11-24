@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!, only: :new
 
   def index
-    @groups = Group.order("name ASC")
   end
 
   def new
@@ -17,6 +16,10 @@ class GroupsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def list
+    @groups = Group.order("name ASC")
   end
 
   def join

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create] do
     member do
       get :join
+      delete :quit
     end
     collection do
       get :list

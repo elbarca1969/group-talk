@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
     if current_user.save
-      redirect_to root_path
+      redirect_to group_tweets_path(@group)
     else
       render :new
     end
@@ -26,8 +26,14 @@ class GroupsController < ApplicationController
     @group = Group.find_by(id: params[:id])
     if !@group.users.include?(current_user)
       @group.users << current_user
-      redirect_to root_path
+      redirect_to group_tweets_path(@group)
     end
+  end
+
+  def quit
+    @group = Group.find(params[:id])
+    @group.users.delete(current_user)
+    redirect_to root_path
   end
 
   private

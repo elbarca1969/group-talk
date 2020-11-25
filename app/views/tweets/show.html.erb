@@ -10,7 +10,7 @@
   <% if user_signed_in? && @tweet.user_id == current_user.id%>
     <div class="tweet-show-button">
       <%= link_to '編集', edit_group_tweet_path(@group, @tweet.id), class: 'tweet-show-edit'%>
-      <%= link_to '削除', "#", class: 'tweet-show-delete' %>
+      <%= link_to '削除', group_tweet_path(@group, @tweet.id), method: :delete, class: 'tweet-show-delete' %>
     </div>
   <% end %>
   <div class="tweet-show-content">

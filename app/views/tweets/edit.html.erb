@@ -1,0 +1,11 @@
+<%= form_with model: [@group, @tweet], local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_area :content, class:'form-tweet', placeholder:'type a tweet' %>
+  </div>
+  <div class="tweet-form">
+    <div class="tweet-form-left"></div>
+    <div class="tweet-form-right">
+      <%= f.submit '更新する', class:'form-submit' %>
+    </div>
+  </div>
+<% end %>

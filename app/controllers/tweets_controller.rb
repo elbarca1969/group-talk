@@ -45,6 +45,13 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destroy
+    @group = Group.find(params[:group_id])
+    @tweet = @group.tweets.find(params[:id])
+    @tweet.destroy
+    redirect_to group_tweets_path(@group)
+  end
+
   private
 
   def tweet_params

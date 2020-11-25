@@ -31,6 +31,16 @@ class TweetsController < ApplicationController
     @tweet = @group.tweets.find(params[:id])
   end
 
+  def update
+    @group = Group.find(params[:group_id])
+    @tweet = @group.tweets.find(params[:id])
+    if @tweet.update(tweet_params)
+      redirect_to group_tweets_path(@group)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def tweet_params

@@ -7,10 +7,12 @@
       <%= l tweet.created_at %>
     </div>
   </div>
-  <div class="lower-tweet">
-    <div class="tweet-content">
-      <%= tweet.content %>
-      <hr>
+  <%= link_to(group_tweet_path(@group, tweet.id), class:'tweet-show-page') do %>
+    <div class="lower-tweet">
+      <div class="tweet-content">
+        <%= tweet.content %>
+      </div>
     </div>
-  </div>
+  <% end %>
+  <hr>
 </div>

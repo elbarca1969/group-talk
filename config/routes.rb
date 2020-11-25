@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     collection do
       get :list
     end
-    resources :tweets, only: [:index, :new, :create, :show, :edit, :update]
+    resources :tweets
   end
 end

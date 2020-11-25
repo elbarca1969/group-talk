@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:index, :new, :edit]
+
   def index
     @group = Group.find(params[:group_id])
     @tweets = @group.tweets.includes(:user).order("created_at DESC")

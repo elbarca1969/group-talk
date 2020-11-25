@@ -21,6 +21,11 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.find(params[:group_id])
+    @tweet = @group.tweets.find(params[:id])
+  end
+
   private
 
   def tweet_params

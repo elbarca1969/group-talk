@@ -48,8 +48,12 @@ class TweetsController < ApplicationController
   def destroy
     @group = Group.find(params[:group_id])
     @tweet = @group.tweets.find(params[:id])
-    @tweet.destroy
-    redirect_to group_tweets_path(@group)
+    if current_user.id == @tweet.user_id
+      @tweet.destroy
+      redirect_to group_tweets_path(@group)
+    else
+      render :index
+    end
   end
 
   private

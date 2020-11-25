@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :edit]
   before_action :set_group
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   def index
     @tweets = @group.tweets.includes(:user).order("created_at DESC")
@@ -21,18 +22,15 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = @group.tweets.find(params[:id])
   end
 
   def edit
-    @tweet = @group.tweets.find(params[:id])
     unless user_signed_in? && current_user.id == @tweet.user_id
       redirect_to root_path
     end
   end
 
   def update
-    @tweet = @group.tweets.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to group_tweets_path(@group)
     else
@@ -41,7 +39,6 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet = @group.tweets.find(params[:id])
     if current_user.id == @tweet.user_id
       @tweet.destroy
       redirect_to group_tweets_path(@group)
@@ -58,6 +55,10 @@ class TweetsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+  end
+
+  def set_tweet
+    @tweet = @group.tweets.find(params[:id])
   end
 
 end

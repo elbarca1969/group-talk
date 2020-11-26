@@ -5,4 +5,12 @@ class Group < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
+  def self.search(search)
+    if search != ""
+      Group.where('name LIKE(?)', "%#{search}%")
+    else
+      Group.all
+    end
+  end
+
 end

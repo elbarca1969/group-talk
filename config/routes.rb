@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
     collection do
       get :list
+      get :search
     end
     resources :tweets
   end

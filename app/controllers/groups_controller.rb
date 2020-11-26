@@ -36,6 +36,10 @@ class GroupsController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @groups = Group.search(params[:keyword])
+  end
+
   private
   
   def group_params

@@ -128,37 +128,99 @@ select {
 }
 
 
-.group_list{
-  width: 100%;
-  margin: 0 100px;
+.group_lists{
+  margin-top: 15px;
+  width: 100%
 }
 
-.group_index{
-  display: flex;
-  padding: 0 100px;
-  margin: 20px 0; 
+.group-search{
+  text-align: center;
+  margin: 15px 0;
 }
 
-.group__name{
-  font-size: 30px;
-  margin-right: 20px;
+.search-input{
+  width: 500px;
+  height: 40px;
 }
 
-.participation{
-  font-size: 20px;
+.search-btn{
+  width: 100px;
+  height: 40px;
+  color: white;
   background-color: #2F3E51;
-  padding: 0 30px;
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
 }
 
-.participation a{
+.group_list{
+  padding: 0 200px;
+  margin-bottom: 50px;
+}
+
+.group-container{
+  margin: 30px 0;
+}
+
+.upper-group-container{
+  display: flex;
+}
+
+.group-content-left{
+  width: 150px;
+  margin: 0 20px;
+}
+
+.participation, .no_participation{
+  font-size: 20px;
+  padding: 8px 30px;
+  text-align: center;
+}
+
+.participation a, .no_participation a{
   text-decoration: none;
   color: white;
 }
 
-.group_content{
+.participation{
+  background-color: #2F3E51;
+}
+
+.no_participation{
+  background-color: darkred;
+}
+
+.number_of_user{
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.group-content-right{
+  margin-right: 25px;
+  width: calc(100% - 150px);
+}
+
+.group__name{
+  font-size: 30px;
+}
+
+.group__name a{
+  text-decoration: none;
+  color: black;
+}
+
+.lower-group-container{
+  display: flex;
+  margin: 0 25px;
+  background-color: rgb(233, 233, 233);
+  margin-top: 5px;
+}
+
+.user_name{
+  width: 700px;
+  font-size: 17px;
+}
+
+.group_birthday{
+  font-size: 15px;
+  color: gray;
   display: flex;
   align-items: center;
 }

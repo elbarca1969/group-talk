@@ -19,6 +19,9 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def list
     @groups = Group.order("name ASC")
   end

@@ -1,15 +1,17 @@
 <div class='chat-room-form'>
-  <h1>新規グループ作成</h1>
+  <h1>グループ内容編集</h1>
   <%=form_with model: @group, local: true do |f|%>
 
   <%= render 'shared/error_messages', model: f.object %>
 
     <div class='chat-group-form__field'>
       <div class='chat-group-form__field--left'>
-        <%= f.label :グループ名, class: 'chat-group-form__label'%>
+        <div class='chat-group-form__label'>グループ名</div>
       </div>
       <div class='chat-group-form__field--right'>
-        <%= f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'%>
+        <div class='chat__group_name chat-group-form__input'>
+          <%= @group.name %>
+        </div>
       </div>
     </div>
     <div class='chat-group-form__field'>
@@ -23,7 +25,7 @@
     <div class='chat-group-form__field'>
       <div class='chat-group-form__field--left'></div>
       <div class='chat-group-form__field--right'>
-        <%= f.submit 'グループを作成', class: 'chat-group-form__action-btn'%>
+        <%= f.submit '更新する', class: 'chat-group-form__action-btn'%>
       </div>
     </div>
   <% end %>

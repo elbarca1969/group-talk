@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
   end
@@ -22,6 +22,22 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @tweets = @group.tweets.includes(:user).order("created_at DESC")
+  end
+
+  def edit
+    @group = Group.find(params[:id])
+    unless user_signed_in? && current_user.id == @group.user_id
+      redirect_to root_path
+    end
+  end
+
+  def update
+    @group = Group.find(params[:id])
+    if @group.update(group_params)
+      redirect_to group_path(@group.id)
+    else
+      render :edit
+    end
   end
 
   def list

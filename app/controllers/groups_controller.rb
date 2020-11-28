@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
   end
 
   def list
-    @groups = Group.order("name ASC")
+    @groups = Group.joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
   end
 
   def join

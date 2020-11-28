@@ -17,8 +17,8 @@
   </div>
   <% if user_signed_in? && current_user.id == @group.user_id %>
     <div class="group-show-button">
-      <%= link_to '編集', edit_group_path(@group.id), class: 'group-show-edit' %>
-      <%= link_to '削除', root_path, method: :delete, class: 'group-show-delete' %>
+      <%= link_to 'グループ編集', edit_group_path(@group.id), class: 'group-show-edit' %>
+      <%= link_to 'グループ削除', group_path(@group.id), method: :delete, class: 'group-show-delete' %>
     </div>
   <% end %>
   <div class="group-show-container">

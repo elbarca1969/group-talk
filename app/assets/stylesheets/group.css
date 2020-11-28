@@ -179,9 +179,15 @@ select {
   text-align: center;
 }
 
-.participation a, .no_participation a{
+.participation a{
   text-decoration: none;
   color: white;
+}
+
+.no_participation a{
+  text-decoration: none;
+  color: #2F3E51;
+  font-weight: bold;
 }
 
 .participation{
@@ -189,7 +195,8 @@ select {
 }
 
 .no_participation{
-  background-color: darkred;
+  border: 2px solid #2F3E51;
+  background-color: white;
 }
 
 .number_of_user{

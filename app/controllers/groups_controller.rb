@@ -10,7 +10,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = current_user.groups.new(group_params)
+    @group = current_user.owned_groups.new(group_params)
+    @group.users << current_user
     if current_user.save
       redirect_to group_tweets_path(@group)
     else

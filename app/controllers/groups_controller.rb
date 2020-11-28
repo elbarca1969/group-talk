@@ -40,6 +40,12 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    redirect_to list_groups_path
+  end
+
   def list
     @groups = Group.joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
   end

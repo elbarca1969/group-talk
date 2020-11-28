@@ -1,6 +1,6 @@
 <div class="main-header">
   <div class="left-header">
-    現在のグループ：<%= @group.name %>
+    現在のグループ：<%= link_to @group.name, group_path(@group.id) %>
   </div>
   <div class="right-header">
     <div class="header-post">

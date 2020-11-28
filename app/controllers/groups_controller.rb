@@ -20,6 +20,8 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
+    @tweets = @group.tweets.includes(:user).order("created_at DESC")
   end
 
   def list

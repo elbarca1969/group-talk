@@ -43,7 +43,7 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.search(params[:keyword])
+    @groups = Group.search(params[:keyword]).joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
   end
 
   private

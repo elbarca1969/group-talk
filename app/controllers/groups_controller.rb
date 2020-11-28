@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
   end
@@ -19,6 +19,11 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.find(params[:id])
+    @tweets = @group.tweets.includes(:user).order("created_at DESC")
+  end
+
   def edit
     @group = Group.find(params[:id])
     unless user_signed_in? && current_user.id == @group.user_id
@@ -33,11 +38,6 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def show
-    @group = Group.find(params[:id])
-    @tweets = @group.tweets.includes(:user).order("created_at DESC")
   end
 
   def list

@@ -12,24 +12,26 @@
       <div class="group-container">
         <div class="upper-group-container">
           <div class="group-content-left">
-            <% if user_signed_in? %>
-              <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
-                <div class="no_participation">
-                  <%= link_to '参　加', join_group_path(group) %>
-                </div>
-              <% else %>
-                <div class="participation">
-                  <%= link_to '参加中', "#" %>
-                </div>
+            <div class="participation-button">
+              <% if user_signed_in? %>
+                <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
+                  <div class="no_participation">
+                    <%= link_to '参　加', join_group_path(group) %>
+                  </div>
+                <% else %>
+                  <div class="participation">
+                    <%= link_to '参加中', "#" %>
+                  </div>
+                <% end %>
               <% end %>
-            <% end %>
+            </div>
             <div class="number_of_user">
-              参加人数: ○人
+              参加人数: <%= group.users.length %>
             </div>
           </div>
           <div class="group-content-right">
             <div class="group__name" >
-              <%= link_to group.name, '#' %>
+              <%= link_to group.name, group_path(group.id) %>
             </div>
             <div class="group_content">
               <%= group.content %>
@@ -38,10 +40,10 @@
         </div>
         <div class="lower-group-container">
           <div class="user_name">
-            作成者:ユーザー名
+            作成者: <%= group.user.nickname %>
           </div>
           <div class="group_birthday">
-            作成日:<%= l group.created_at %>
+            作成日: <%= l group.created_at %>
           </div>
         </div>
         <hr>

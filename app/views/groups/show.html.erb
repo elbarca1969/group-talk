@@ -1,0 +1,46 @@
+<div clas="group-show">
+  <div class="group-show-name">
+    <%= @group.name %>
+  </div>
+  <div class="participation-button">
+    <% if user_signed_in? %>
+      <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
+        <div class="no_participation">
+          <%= link_to '参　加', join_group_path(@group) %>
+        </div>
+      <% else %>
+        <div class="participation">
+          <%= link_to '参加中', "#" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <% if user_signed_in? && current_user.id == @group.user_id %>
+    <div class="group-show-button">
+      <%= link_to '編集', root_path, class: 'group-show-edit' %>
+      <%= link_to '削除', root_path, method: :delete, class: 'group-show-delete' %>
+    </div>
+  <% end %>
+  <div class="group-show-container">
+    <div class="group-show-content">
+      <%= @group.content %>
+    </div>
+    <div class="group-show-upper">
+      <div class="group-show-user-number">
+        参加人数: <%= @group.users.length %>
+      </div>
+      <div class="group-show-builder">
+        作成者: <%= link_to @group.user.nickname, root_path %>
+      </div>
+      <div class="group-show-birthday">
+        作成日: <%= l @group.created_at %>
+      </div>
+    </div>
+    <hr>
+    <div class="group-show-lower">
+      <% @tweets.each do |tweet| %>
+        <%= render partial: "/tweets/tweet", locals: { tweet: tweet} %>
+      <% end %>
+    </div>
+  </div>
+</div>

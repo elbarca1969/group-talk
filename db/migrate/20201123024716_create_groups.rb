@@ -3,6 +3,7 @@ class CreateGroups < ActiveRecord::Migration[6.0]
     create_table :groups do |t|
       t.string :name, null: false, unique: true
       t.string :content
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

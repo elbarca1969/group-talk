@@ -10,7 +10,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = current_user.groups.new(group_params)
+    @group = current_user.owned_groups.new(group_params)
+    @group.users << current_user
     if current_user.save
       redirect_to group_tweets_path(@group)
     else
@@ -18,8 +19,13 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.find(params[:id])
+    @tweets = @group.tweets.includes(:user).order("created_at DESC")
+  end
+
   def list
-    @groups = Group.order("name ASC")
+    @groups = Group.joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
   end
 
   def join
@@ -37,7 +43,7 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.search(params[:keyword])
+    @groups = Group.search(params[:keyword]).joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
   end
 
   private

@@ -201,3 +201,17 @@
   font-size: 20px;
   color: gray;
 }
+
+.form-image {
+  font-size: 15px;
+  background-color: #2F3E51;
+  color: white;
+  padding: 10px 15px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

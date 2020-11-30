@@ -5,6 +5,15 @@
   <div class="tweet-form">
     <div class="tweet-form-left"></div>
     <div class="tweet-form-right">
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    </div>
+  </div>
+  <div class="tweet-form">
+    <div class="tweet-form-left"></div>
+    <div class="tweet-form-right">
       <%= f.submit '更新する', class:'form-submit' %>
     </div>
   </div>

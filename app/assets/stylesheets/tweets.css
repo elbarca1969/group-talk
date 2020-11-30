@@ -156,6 +156,7 @@
 
 .tweet-show-contents{
   padding: 0 160px;
+  margin-bottom: 50px;
 }
 
 .tweet-show-upper{
@@ -214,4 +215,8 @@
 
 .hidden {
   display: none;
+}
+
+.tweet-image{
+  text-align: center;
 }

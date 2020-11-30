@@ -19,4 +19,7 @@
   <div class="tweet-show-date">
     <%= l @tweet.created_at %>
   </div>
+  <div class="tweet-image">
+    <%= image_tag @tweet.image.variant(resize: '500x500') if @tweet.image.attached? %>
+  </div>
 </div>

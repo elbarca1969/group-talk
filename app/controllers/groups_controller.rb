@@ -44,7 +44,7 @@ class GroupsController < ApplicationController
   end
 
   def list
-    @groups = Group.joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
   end
 
   def join
@@ -60,7 +60,7 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.search(params[:keyword]).joins(:group_users).group(:group_id).order('count(group_id) DESC').order('created_at ASC')
+    @groups = Group.search(params[:keyword]).select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
   end
 
   private

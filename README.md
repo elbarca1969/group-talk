@@ -14,19 +14,22 @@
 - has_many :group_users
 - has_many :groups, through: group_users
 - has_many :tweets
+- has_many :owned_groups
 
 ## groups テーブル
 
-| Column  | Type   | Options                   |
-| ------- | ------ | ------------------------- |
-| name    | string | null: false, unique: true |
-| content | string |                           |
+| Column  | Type       | Options                       |
+| ------- | ---------- | ----------------------------- |
+| name    | string     | null: false, unique: true     |
+| content | string     |                               |
+| user    | references | null:false, foreign_key: true |
 
 ### Association
 
 - has_many :group_users
 - has_many :users, through: group_users
 - has_many :tweets
+- belongs_to :user
 
 ## group_users テーブル
 
@@ -44,7 +47,7 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | string     | null: false                    |
+| content | string     |                                |
 | user    | references | null: false, foreign_key: true |
 | group   | references | null: false, foreign_key: true |
 

@@ -1,7 +1,7 @@
 <div class="tweet">
   <div class="upper-tweet">
     <div class="tweet-user">
-      <%= tweet.user.nickname %>
+      <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
     </div>
     <div class="tweet-date">
       <%= l tweet.created_at %>

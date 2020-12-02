@@ -4,7 +4,7 @@
       投稿者:
     </div>
     <div class="tweet-show-upper-right">
-      <%= @tweet.user.nickname %>
+      <%= link_to @tweet.user.nickname, user_path(@tweet.user_id) %>
     </div>
   </div>
   <% if user_signed_in? && @tweet.user_id == current_user.id%>

@@ -110,8 +110,12 @@
 }
 
 .tweet-user{
-  color: #434a54;
   font-size: 16px;
+}
+
+.tweet-user a{
+  text-decoration: none;
+  color: black;
 }
 
 .tweet-date{
@@ -168,6 +172,11 @@
 
 .tweet-show-upper-left{
   margin-right: 20px;
+}
+
+.tweet-show-upper-right a{
+  text-decoration: none;
+  color: black;
 }
 
 .tweet-show-button{

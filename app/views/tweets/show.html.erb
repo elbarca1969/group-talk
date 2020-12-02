@@ -13,6 +13,9 @@
       <%= link_to 'ツイート削除', group_tweet_path(@group, @tweet.id), method: :delete, class: 'tweet-show-delete' %>
     </div>
   <% end %>
+  <div class="tweet-show-group-name">
+    in: <%= link_to @group.name, group_path(@group) %>
+  </div>
   <div class="tweet-show-content">
     <%= @tweet.content %>
   </div>

@@ -30,7 +30,7 @@
         参加人数: <%= @group.users.length %>
       </div>
       <div class="group-show-builder">
-        作成者: <%= link_to @group.user.nickname, root_path %>
+        作成者: <%= link_to @group.user.nickname, user_path(@group.user_id) %>
       </div>
       <div class="group-show-birthday">
         作成日: <%= l @group.created_at %>

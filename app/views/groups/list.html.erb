@@ -40,7 +40,7 @@
         </div>
         <div class="lower-group-container">
           <div class="user_name">
-            作成者: <%= group.user.nickname %>
+            作成者: <%= link_to group.user.nickname, user_path(group.user_id) %>
           </div>
           <div class="group_birthday">
             作成日: <%= l group.created_at %>

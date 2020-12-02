@@ -1,0 +1,42 @@
+<div class="user-show-page">
+  <div class="user-show-container">
+    <div class="user-show-nickname">
+      <%= @user.nickname %>
+    </div>
+    <div class="user-show-button">
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <%= link_to 'プロフィールを編集する', root_path, class: "user-show-edit" %>
+      <% end %>
+    </div>
+    <div class="user-show-introduction">
+      <%= @user.introduction %>
+    </div>
+    <div class="user-show-tweets">
+      <div class="user-show-tweets-title">
+        ＜<%= @user.nickname %>のツイート＞
+      <hr>
+      </div>
+      <div class="user-show-tweet">
+        <% @tweets.each do |tweet| %>
+          <div class="user-show-tweet-upper">
+            <div class="user-show-group-name">
+              in: <%= link_to tweet.group.name, group_path(tweet.group.id) %>
+            </div>
+          </div>
+          <%= link_to(group_tweet_path(tweet.group.id, tweet.id), class: "user-show-tweet-lower") do %>
+            <div class="user-show-tweet-content">
+              <%= tweet.content %>
+            </div>
+            <div class="user-show-tweet-date">
+              <%= l tweet.created_at %>
+            </div>
+            <div class="user-show-tweet-image">
+              <%= image_tag tweet.image.variant(resize: '300x300') if tweet.image.attached? %>
+            </div>
+          <% end %>
+          <hr>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

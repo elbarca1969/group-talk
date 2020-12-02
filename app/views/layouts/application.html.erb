@@ -13,15 +13,11 @@
     <header>
       <div class="header">
         <div class="header-left">
-          <% if user_signed_in? %>
-            <%= link_to current_user.nickname, root_path, class: "user-nickname" %>
-          <% end %>
-        </div>
-        <div class="header-main">
           <%= link_to 'GroupTalk', root_path, class: "header-title" %>
         </div>
         <div class="header-right">
           <% if user_signed_in? %>
+            <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
           <% else %>
             <%= link_to 'ログイン', new_user_session_path, class: "login" %>

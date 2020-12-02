@@ -5,7 +5,7 @@
     </div>
     <div class="user-show-button">
       <% if user_signed_in? && current_user.id == @user.id %>
-        <%= link_to 'プロフィールを編集する', root_path, class: "user-show-edit" %>
+        <%= link_to 'アカウント編集', edit_user_path(@user.id), class: "user-show-edit" %>
       <% end %>
     </div>
     <div class="user-show-introduction">

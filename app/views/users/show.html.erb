@@ -20,7 +20,7 @@
         <% @tweets.each do |tweet| %>
           <div class="user-show-tweet-upper">
             <div class="user-show-group-name">
-              in: <%= link_to tweet.group.name, root_path %>
+              in: <%= link_to tweet.group.name, group_path(tweet.group.id) %>
             </div>
           </div>
           <%= link_to(root_path, class: "user-show-tweet-lower") do %>

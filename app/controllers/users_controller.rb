@@ -5,4 +5,8 @@ class UsersController < ApplicationController
     @tweets = @user.tweets.order("created_at DESC")
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
 end

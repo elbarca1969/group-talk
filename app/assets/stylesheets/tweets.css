@@ -129,9 +129,9 @@
 }
 
 .tweet-content {
-  color: #434a54;
-  font-size: 14px;
-  padding: 5px 0;
+  color: black;
+  font-size: 15px;
+  padding: 5px 10px;
 }
 
 .form-input{
@@ -168,6 +168,7 @@
   justify-content: center;
   margin: 20px 0;
   font-size: 25px;
+  font-weight: bold;
 }
 
 .tweet-show-upper-left{
@@ -201,9 +202,20 @@
   padding: 10px 20px;
 }
 
+.tweet-show-group-name{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.tweet-show-group-name a{
+  text-decoration: none;
+  color: black;
+}
+
 .tweet-show-content{
   font-size: 30px;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .tweet-show-date{

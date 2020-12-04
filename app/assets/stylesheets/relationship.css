@@ -1,0 +1,22 @@
+.follow-btn{
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.follow-btn:hover{
+  cursor: pointer;
+}
+
+.following-btn{
+  border: none;
+  background-color: #38aef0;
+  color: white;
+}
+
+.unfollow-btn{
+  border: 2px solid #38aef0;
+  background-color: white;
+  color: #38aef0;
+}

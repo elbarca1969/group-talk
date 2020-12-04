@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :tweets
   end
   resources :users, only: [:show, :edit, :update]
+  resources :relationships, only: [:create, :destroy]
 end

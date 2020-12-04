@@ -6,25 +6,7 @@
     </div>
     <div class="follow-list">
       <% @followings.where.not(id: current_user.id).each do |following| %>
-        <%= link_to(user_path(following), class: "follow-content") do %>
-          <div class="follow-content-upper">
-            <div class="follow-nickname">
-              <%= following.nickname %>
-            </div>
-            <div class="follow-introduction">
-              <%= following.introduction %>
-            </div>
-          </div>
-          <div class="follow-content-lower">
-            <div class="follow-following">
-              <%= "#{following.followings.length}フォロー中" %>
-            </div>
-            <div class="follow-follower">
-              <%= "#{following.followers.length}フォロワー" %>
-            </div>
-          </div>
-        <% end %>
-        <hr>
+        <%= render partial: "list", locals: { user: following } %>
       <% end %>
     </div>
   </div>

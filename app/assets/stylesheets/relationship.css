@@ -35,3 +35,35 @@
   text-decoration: none;
   color: black;
 }
+
+.follow-lists{
+  margin: 20px 0;
+}
+
+.follow-container{
+  padding: 0 160px;
+}
+
+.follow-list-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.follow-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.follow-content{
+  display: flex;
+  padding: 10px 20px;
+}
+
+.follow-content-upper{
+  width: 85%;
+}
+
+.follow-nickname{
+  font-size: 20px;
+}

@@ -12,6 +12,7 @@
     <div class="user-show-introduction">
       <%= @user.introduction %>
     </div>
+    <%= render partial: "/relationships/follow_number" %>
     <div class="user-show-tweets">
       <div class="user-show-tweets-title">
         ＜<%= @user.nickname %>のツイート＞

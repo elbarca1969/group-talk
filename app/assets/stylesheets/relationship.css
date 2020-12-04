@@ -20,3 +20,18 @@
   background-color: white;
   color: #38aef0;
 }
+
+.follow-number{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.following{
+  margin-right:20px;
+}
+
+.following a, .follower a{
+  text-decoration: none;
+  color: black;
+}

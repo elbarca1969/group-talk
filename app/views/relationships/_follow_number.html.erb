@@ -1,0 +1,8 @@
+<div class="follow-number">
+  <div class="following">
+    <%= link_to "#{@user.followings.length}フォロー中", root_path %>
+  </div>
+  <div class="follower">
+    <%= link_to "#{@user.followers.length}フォロワー", root_path %>
+  </div>
+</div>

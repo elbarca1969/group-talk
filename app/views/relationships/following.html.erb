@@ -5,7 +5,7 @@
       <hr>
     </div>
     <div class="follow-list">
-      <% @followings.where.not(id: current_user.id).each do |following| %>
+      <% @followings.each do |following| %>
         <%= render partial: "list", locals: { user: following } %>
       <% end %>
     </div>

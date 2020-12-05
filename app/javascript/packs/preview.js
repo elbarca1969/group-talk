@@ -1,4 +1,4 @@
-if (document.URL.match( "tweets/new" ) || document.URL.match( "tweets/edit" )) {
+if (document.URL.match( "tweets/new" ) || document.URL.match(/groups\/\d+\/tweets\/\d+\/edit/)) {
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
 

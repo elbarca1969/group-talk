@@ -2,7 +2,7 @@ class RelationshipsController < ApplicationController
   before_action :set_user, only: [:create, :destroy]
 
   def index
-    @followings = current_user.followings
+    @followings = current_user.try(:followings)
   end
 
   def create

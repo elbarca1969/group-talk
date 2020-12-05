@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "groups#index"
+  root to: "relationships#index"
   resources :groups do
     member do
       get :join

@@ -1,6 +1,10 @@
 class RelationshipsController < ApplicationController
   before_action :set_user, only: [:create, :destroy]
 
+  def index
+    @followings = current_user.followings
+  end
+
   def create
     following = current_user.follow(@user)
     following.save

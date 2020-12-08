@@ -220,13 +220,13 @@ select {
 
 .lower-group-container{
   display: flex;
+  justify-content: space-between;
   margin: 0 25px;
   background-color: rgb(233, 233, 233);
   margin-top: 5px;
 }
 
 .user_name{
-  width: 700px;
   font-size: 17px;
 }
 

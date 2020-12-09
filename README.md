@@ -46,6 +46,60 @@ SNSでの誹謗中傷が現代社会の大きな問題となっております�
 | ツイート投稿機能        | 自分の思いや写真を投稿することで、他のユーザーと価値観を共有するため                 |
 | いいね機能             | ユーザーの自己肯定感が高まるようにするため                                       |
 
+# 実装した機能についてのGIFと説明
+### ユーザー管理機能
+- ユーザーの新規登録
+[![Image from Gyazo](https://i.gyazo.com/7d796c00df600baa30175037c623e24c.gif)](https://gyazo.com/7d796c00df600baa30175037c623e24c)
+・Nickname、email、password、password_confirmationが入力すると新規登録ができます。<br>・introductionは入力していなくても新規登録ができます。
+
+- ログイン・ログアウト
+[![Image from Gyazo](https://i.gyazo.com/7012dc5888fc5b515ad8988556afdf0e.gif)](https://gyazo.com/7012dc5888fc5b515ad8988556afdf0e)
+・emailとパスワードを入力すれば、ログインすることができます。<br>・ログアウトボタンをクリックするとログアウトすることができます。
+
+- ユーザー詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/8d795f1ecd99de5fd1b7bfa96e99422b.gif)](https://gyazo.com/8d795f1ecd99de5fd1b7bfa96e99422b)
+・ユーザー詳細ページでは、本人のみに「アカウント編集」ボタン、本人以外には「フォロー」ボタンが表示されます。<br>・ユーザーのフォロー・フォロワー一覧を見ることができます。<br>・ユーザーが投稿したツイートが見ることができます。
+
+### フォロー・フォロワー機能
+- 他のユーザーをフォローすることができる。フォローを外すことができる
+[![Image from Gyazo](https://i.gyazo.com/ea3cccfd265d969fa3587f6378605ea6.gif)](https://gyazo.com/ea3cccfd265d969fa3587f6378605ea6)
+・「フォロー」ボタンをクリックするとフォローすることができます。<br>・フォローしたユーザーのツイートはトップページに表示されます。<br>・「フォロー中」ボタンをクリックするとフォローを外すことができます。
+
+- フォロー・フォロワーの一覧
+[![Image from Gyazo](https://i.gyazo.com/46eff1a91f1d5291cf4f6aaebacec06b.gif)](https://gyazo.com/46eff1a91f1d5291cf4f6aaebacec06b)
+・ユーザー詳細ページにフォロー・フォロワーの人数が表示されます。<br>・フォロー・フォロワーの一覧を見ることができます。そこから他のユーザーの詳細ページに遷移することができます。
+
+### グループ管理機能
+- グループ作成
+[![Image from Gyazo](https://i.gyazo.com/460995c2e965f7a0a0927ee55bd1f4bd.gif)](https://gyazo.com/460995c2e965f7a0a0927ee55bd1f4bd)
+・「新規グループ作成」ページからグループ名を入力すれば新規グループを作成することができます。<br>・グループを作ったユーザーがグループの管理者になり、グループ内容の変更と削除をすることができます。
+
+- グループ一覧ページ
+[![Image from Gyazo](https://i.gyazo.com/a7c5560eee03d50d3d3b03612d51dad5.gif)](https://gyazo.com/a7c5560eee03d50d3d3b03612d51dad5)
+・参加人数の多いグループから順に上から表示されます。<br>・「参加中」のボタンをクリックするとグループのチャット画面に遷移します。
+
+- グループに参加
+[![Image from Gyazo](https://i.gyazo.com/025a686d35ef6df7d83dd4240db3295a.gif)](https://gyazo.com/025a686d35ef6df7d83dd4240db3295a)
+・「参加」ボタンをクリックするとグループに参加することができ、グループのチャット画面に遷移します。
+
+- グループを退会
+[![Image from Gyazo](https://i.gyazo.com/d4e619f40bf0ddc1a9d4c2815e11b86c.gif)](https://gyazo.com/d4e619f40bf0ddc1a9d4c2815e11b86c)
+・グループのチャット画面にある「グループを退会する」ボタンをクリックするとグループを退会することができます。
+
+- グループ詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/0b13f597df5bf9ffc44b247475c40223.gif)](https://gyazo.com/0b13f597df5bf9ffc44b247475c40223)
+・グループ内で投稿された全てのツイートが表示されます。<br>・グループの作成者には「編集」「削除」ボタンが表示されます。<br>・投稿者をクリックするとユーザー詳細ページに遷移します。
+
+### グループ検索機能
+- グループを検索することができる
+[![Image from Gyazo](https://i.gyazo.com/b0613ed547b272d056b8c21b9f183a11.gif)](https://gyazo.com/b0613ed547b272d056b8c21b9f183a11)
+・グループ一覧ページの上部の検索窓にキーワードを入力したら、該当するグループを探すことができます。
+
+### ツイート投稿機能
+- 所属しているグループで新規投稿ページから写真付きでツイートを投稿することができる
+[![Image from Gyazo](https://i.gyazo.com/953329e971aeacb794ebc46ff1883e24.gif)](https://gyazo.com/953329e971aeacb794ebc46ff1883e24)
+・「投稿する」ボタンをクリックすると、ツイート投稿ページに遷移します。<br>・ツイートを書くか、写真を添付すれば投稿することができます。
+
 # テーブル設計
 
 ## users テーブル

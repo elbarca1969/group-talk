@@ -12,6 +12,7 @@
     </div>
   </div>
   <div id="image-list"></div>
+    <%= image_tag @tweet.image if @tweet.image.attached? %>
   <div class="tweet-form">
     <div class="tweet-form-left"></div>
     <div class="tweet-form-right">

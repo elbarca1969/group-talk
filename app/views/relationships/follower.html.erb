@@ -1,0 +1,13 @@
+<div class="follow-lists">
+  <div class="follow-container">
+    <div class="follow-list-title">
+      <%= "#{@user.nickname}:フォロワー" %>
+      <hr>
+    </div>
+    <div class="follow-list">
+      <% @followers.each do |follower| %>
+        <%= render partial: "list", locals: { user: follower } %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,10 @@
 - has_many :groups, through: group_users
 - has_many :tweets
 - has_many :owned_groups
+- has_many :relationships
+- has_many :followings, through: :relationships
+- has_many :reverse_of_relationships
+- has_many :followers, through: :reverse_of_relationships,
 
 ## groups テーブル
 
@@ -55,3 +59,16 @@
 
 - belongs_to :group
 - belongs_to :user
+- has_one_attached :image
+
+## relationships テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| user     | references | null: false, foreign_key: true |
+| follow   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :follow

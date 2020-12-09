@@ -2,4 +2,18 @@
   <div class="side-bar">
     <%= render "/tweets/side_bar" %>
   </div>
+  <div class="chat">
+    <div class="main-header">
+      <div class="left-header"></div>
+      <div class="center-header">
+        <div class="group-search">
+          <%= form_with(url: search_groups_path, local: true, method: :get, class: "search-form") do |f| %>
+            <%= f.text_field :keyword, placeholder: "グループを検索する", class: "search-input" %>
+            <%= f.submit "検索", class: "search-btn" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="right-header"></div>
+    </div>
+  </div>
 </div>

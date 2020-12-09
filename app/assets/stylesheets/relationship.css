@@ -1,0 +1,105 @@
+.follow-btn{
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.follow-btn:hover{
+  cursor: pointer;
+}
+
+.following-btn{
+  border: none;
+  background-color: #38aef0;
+  color: white;
+}
+
+.unfollow-btn{
+  border: 2px solid #38aef0;
+  background-color: white;
+  color: #38aef0;
+}
+
+.follow-number{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.following{
+  margin-right:20px;
+}
+
+.following a, .follower a{
+  text-decoration: none;
+  color: black;
+}
+
+.follow-lists{
+  margin: 20px 0;
+}
+
+.follow-container{
+  padding: 0 160px;
+}
+
+.follow-list-title{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.follow-list a{
+  text-decoration: none;
+  color: black;
+}
+
+.follow-content{
+  display: flex;
+  padding: 10px 20px;
+}
+
+.follow-content-upper{
+  width: 85%;
+}
+
+.follow-nickname{
+  font-size: 20px;
+}
+
+.logout-tweet{
+  width: 90%;
+  padding: 30px 150px;
+  margin: auto;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-tweet-container{
+  text-align: center;
+}
+
+.logout-tweet h4{
+  font-size: 20px;
+  padding: 10px;
+  background-color: #253141;
+  color: white;
+  font-weight: bold;
+}
+
+.logout-tweet h3{
+  font-size: 25px;
+  width: 80%;
+  margin: 30px auto;
+  border-bottom: 2px solid rgb(224, 102, 102);
+}
+
+.logout-tweet h5{
+  font-size: 50px;
+  color: rgb(224, 102, 102);
+  text-shadow: 0 5px 5px #253141;
+  font-weight: bold;
+}

@@ -3,6 +3,9 @@
     <div class="user-show-nickname">
       <%= @user.nickname %>
     </div>
+    <% if user_signed_in? %>
+      <%= render partial: "/relationships/follow_button", locals: { user: @user} %>
+    <% end %>
     <div class="user-show-button">
       <% if user_signed_in? && current_user.id == @user.id %>
         <%= link_to 'アカウント編集', edit_user_path(@user.id), class: "user-show-edit" %>
@@ -11,6 +14,7 @@
     <div class="user-show-introduction">
       <%= @user.introduction %>
     </div>
+    <%= render partial: "/relationships/follow_number" %>
     <div class="user-show-tweets">
       <div class="user-show-tweets-title">
         ＜<%= @user.nickname %>のツイート＞

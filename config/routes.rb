@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "groups#index"
+  root to: "relationships#index"
   resources :groups do
     member do
       get :join
@@ -13,4 +13,10 @@ Rails.application.routes.draw do
     resources :tweets
   end
   resources :users, only: [:show, :edit, :update]
+  resources :relationships, only: [:index, :create, :destroy] do
+    member do
+      get :following
+      get :follower
+    end
+  end
 end

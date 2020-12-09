@@ -2,7 +2,8 @@ class RelationshipsController < ApplicationController
   before_action :set_user, only: [:create, :destroy]
 
   def index
-    @followings = current_user.try(:followings)
+    followings = current_user.try(:followings)
+    @tweets = Tweet.where(user: followings).order("created_at DESC")
   end
 
   def create

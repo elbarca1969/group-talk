@@ -5,9 +5,9 @@
 
 .left-bar {
   background-color: #2F3E51;
-  width: 300px;
+  width: 350px;
   height: calc(100vh - 50px);
-  border-right: 1px solid white;
+  border-right: 2px solid #DDDDDD;
 }
 
 .group-list{
@@ -54,7 +54,7 @@
 
 .chat {
   background-color: #ffffff;
-  width: calc(100vw - 300px);
+  width: 750px;
 }
 
 .main-header{
@@ -257,4 +257,11 @@ img {
   width: 400px;
   display: block;
   margin: auto;
+}
+
+.right-bar {
+  background-color: #2F3E51;
+  width: calc(100vw - 1100px);
+  height: calc(100vh - 50px);
+  border-left: 2px solid #DDDDDD;
 }

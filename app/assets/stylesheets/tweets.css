@@ -24,7 +24,7 @@
   height: 250px;
 }
 
-.left-bar-upper a{
+.left-bar-upper a, .left-bar-group-title a{
   text-decoration: none;
   color: black;
   font-size: 20px;
@@ -42,19 +42,33 @@
   text-align: center;
 }
 
-.groups{
-  height: calc(100vh - 250px);
-  padding: 0 40px;
+.left-bar-lower {
+  background-color: #EEEEEE;
+  margin: 0 30px;
+  border-radius: 20px;
+}
+
+.left-bar-group-title {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.left-bar-groups {
+  height: calc(100vh - 370px);
+  padding: 0 15px;
   overflow: scroll;
 }
 
-.group{
-  padding: 20px 0;
+.left-bar-group {
+  padding: 10px 0;
 }
 
-.group-name{
-  color: white;
+.left-bar-group-name a {
   text-decoration: none;
+  color: black;
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px;
 }
 
 .chat {

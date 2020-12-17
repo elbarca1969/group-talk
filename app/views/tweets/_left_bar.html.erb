@@ -26,15 +26,22 @@
       <% end %>
     </div>
   </div>
-  <div class="groups">
-    <% if user_signed_in? %>
-      <% current_user.groups.each do |group| %>
-        <div class="group">
-          <div class="group-name">
-            <%= link_to group.name, group_tweets_path(group), class: 'group-name' %>
-          </div>
-        </div>
+  <div class="left-bar-lower">
+    <div class="left-bar-group-title">
+      <%= link_to root_path do %>
+        <i class="fa fa-users"></i>あなたのグループ
       <% end %>
-    <% end %>
+    </div>
+    <div class="left-bar-groups">
+      <% if user_signed_in? %>
+        <% current_user.groups.each do |group| %>
+          <div class="left-bar-group">
+            <div class="left-bar-group-name">
+              <%= link_to group.name, group_tweets_path(group) %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

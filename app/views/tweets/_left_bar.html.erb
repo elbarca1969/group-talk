@@ -15,6 +15,11 @@
         <i class="fa fa-user-friends"></i>フレンド
       <% end %>
     </div>
+    <div class="left-bar-group-list">
+      <%= link_to list_groups_path do %>
+        <i class="fa fa-eye"></i>グループを見る
+      <% end %>
+    </div>
     <div class="groups">
       <% if user_signed_in? %>
         <% current_user.groups.each do |group| %>

@@ -10,6 +10,11 @@
         <i class="fa fa-user"></i>プロフィール
       <% end %>
     </div>
+    <div class="left-bar-friend">
+      <%= link_to following_relationship_path(current_user) do %>
+        <i class="fa fa-user-friends"></i>フレンド
+      <% end %>
+    </div>
     <div class="groups">
       <% if user_signed_in? %>
         <% current_user.groups.each do |group| %>

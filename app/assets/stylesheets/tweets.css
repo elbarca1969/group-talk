@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  margin-top: 50px;
 }
 
 .side-bar {

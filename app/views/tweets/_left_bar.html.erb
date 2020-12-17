@@ -20,6 +20,11 @@
         <i class="fa fa-eye"></i>グループを見る
       <% end %>
     </div>
+    <div class="left-bar-making-group">
+      <%= link_to new_group_path do %>
+        <i class="fa fa-plus-circle"></i>グループを作る
+      <% end %>
+    </div>
     <div class="groups">
       <% if user_signed_in? %>
         <% current_user.groups.each do |group| %>

@@ -5,6 +5,11 @@
         <i class="fa fa-home"></i>ホーム
       <% end %>
     </div>
+    <div class="left-bar-profile">
+      <%= link_to user_path(current_user.id) do %>
+        <i class="fa fa-user"></i>プロフィール
+      <% end %>
+    </div>
     <div class="groups">
       <% if user_signed_in? %>
         <% current_user.groups.each do |group| %>

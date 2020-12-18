@@ -14,7 +14,10 @@
   border-radius: 20px;
 }
 
-.left-bar-container a:hover{
+.left-bar-container a:hover,
+.main-chat-header-lower-left a:hover,
+.right-bar-container a:hover,
+.right-bar-group-search-btn:hover {
   color: white;
   background-color:#253141;
 }
@@ -91,7 +94,9 @@
   height: 50px;
 }
 
-.main-chat-header-upper a:hover {
+.main-chat-header-upper a:hover,
+.tweet-user:hover,
+.tweet-group:hover {
   text-decoration: underline;
 }
 
@@ -104,11 +109,6 @@
 .main-chat-header-lower a {
   border-radius: 20px;
   padding: 5px 10px;
-}
-
-.main-chat-header-lower-left a:hover {
-  color: white;
-  background-color:#253141;
 }
 
 .main-chat-header-lower-right a:hover {
@@ -138,10 +138,6 @@
 
 .tweet-user a {
   font-weight: bold;
-}
-
-.tweet-user:hover, .tweet-group:hover{
-  text-decoration: underline;
 }
 
 .tweet-date {
@@ -177,11 +173,6 @@
   border-left: 2px solid #DDDDDD;
 }
 
-.right-bar-container a:hover{
-  color: white;
-  background-color:#253141;
-}
-
 .right-bar-group-search-form{
   display: flex;
   margin: 30px 20px;
@@ -206,11 +197,6 @@
   border-radius: 100px;
   color: #999;
   border: 1px solid #EEEEEE;
-}
-
-.right-bar-group-search-btn:hover {
-  color: white;
-  background-color:#253141;
 }
 
 .hidden{

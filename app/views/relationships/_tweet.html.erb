@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+  <div class="tweet">
+    <div class="tweet-container">
+      <div class="tweet-upper">
+        <div class="tweet-user">
+          <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
+        </div>
+        <div class="tweet-date">
+          <%= time_ago_in_words(tweet.created_at) %>前
+        </div>
+      </div>
+      <div class="tweet-center">
+        <div class="tweet-group">
+          <%= link_to tweet.group.name, group_path(tweet.group.id) %>
+        </div>
+      </div>
+      <div class="tweet-lower">
+        <%= link_to group_tweet_path(tweet.group, tweet.id) do %> 
+          <div class="tweet-content">
+            <%= tweet.content %>
+            <%= image_tag tweet.image, class: 'tweet-image' if tweet.image.attached? %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="logout-tweet">
+    <div class="logout-tweet-container">
+      <h4>ログイン・新規登録すると・・・</h4>
+      <h3>１.興味のあるグループに参加できる</h3>
+      <h3>２.グループでツイートを投稿できる</h3>
+      <h3>３.好きなユーザーをフォローできる</h3>
+      <h5>Let's Enjoy GroupTalk</h5>
+    </div>
+  </div>
+<% end %>

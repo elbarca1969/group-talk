@@ -10,4 +10,42 @@
       <% end %>
     </div>
   </div>
+  <div class="right-bar-lower">
+    <div class="right-bar-title">
+      グループ Top20
+    </div>
+    <div class="right-bar-groups">
+      <% @groups.each do |group| %>
+        <% if user_signed_in? %>
+          <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
+            <div class="right-bar-group-no-participation">
+              <%= link_to group_path(group.id) do %>
+                <div class="right-bar-group">
+                  <div class="right-bar-group-icon">
+                    <i class="fa fa-users-slash fa-fw"></i>
+                  </div>
+                  <div class="right-bar-group-name">
+                    <%= group.name %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="right-bar-group-participation">
+              <%= link_to group_path(group.id) do %>
+                <div class="right-bar-group">
+                  <div class="right-bar-group-icon">
+                    <i class="fa fa-users fa-fw"></i>
+                  </div>
+                  <div class="right-bar-group-name">
+                    <%= group.name %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

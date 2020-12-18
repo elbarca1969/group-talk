@@ -217,6 +217,43 @@
   display: none;
 }
 
+.right-bar-lower {
+  background-color: #EEEEEE;
+  margin: 10px 30px 0 30px;
+  border-radius: 20px;
+  width: 270px;
+}
+
+.right-bar-title{
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 50px;
+}
+
+.right-bar-groups {
+  height: calc(100vh - 210px);
+  padding: 0 15px;
+  overflow: scroll;
+}
+
+.right-bar-groups a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+
+.right-bar-group {
+  display: flex;
+}
+
+.right-bar-group-icon{
+  margin-right: 10px;
+}
+
 .form-input{
   display: flex;
   justify-content: center;
@@ -314,14 +351,6 @@
   padding: 10px 15px;
   width: 60px;
   margin: 5px 10px;
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.tweet-image{
   text-align: center;
 }
 

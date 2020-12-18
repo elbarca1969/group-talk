@@ -1,0 +1,13 @@
+<div class="right-bar-container">
+  <div class="right-bar-upper">
+    <div class="right-bar-group-search">
+      <%= form_with(url: search_groups_path, local: true, method: :get, class: "right-bar-group-search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: "グループ検索", class: "right-bar-group-search-input" %>
+        <label class="right-bar-group-search-btn">
+          <i class="fa fa-search"></i>
+          <%= f.submit class: "hidden" %>
+        </label>
+      <% end %>
+    </div>
+  </div>
+</div>

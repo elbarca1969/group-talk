@@ -66,46 +66,54 @@
 }
 
 .main-chat {
-  background-color: #ffffff;
+  background-color: white;
   width: 750px;
 }
 
-.main-header{
+.main-chat-header {
   height: 100px;
-  background-color: #2F3E51;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+  padding: 0 15px;
+}
+
+.main-chat-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+}
+
+.main-chat-header-upper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  height: 50px;
 }
 
-.left-header{
-  color: white;
-  font-size: 20px;
+.main-chat-header-upper a:hover {
+  text-decoration: underline;
 }
 
-.left-header a{
-  text-decoration: none;
-  color: white;
-}
-
-.right-header{
+.main-chat-header-lower {
   display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
 }
 
-.header-post a {
-  text-decoration: none;
-  color: #2F3E51;
-  background-color: white;
-  padding: 20px;
-  margin-right: 20px;
+.main-chat-header-lower a {
+  border-radius: 20px;
+  padding: 5px 10px;
 }
 
-.header-button a {
-  text-decoration: none;
-  color: #2F3E51;
-  background-color: white;
-  padding: 20px;
+.main-chat-header-lower-left a:hover {
+  color: white;
+  background-color:#253141;
+}
+
+.main-chat-header-lower-right a:hover {
+  color: white;
+  background-color: darkred;
 }
 
 .tweets{

@@ -29,7 +29,7 @@
   font-size: 20px;
   font-weight: bold;
   display: inline-block;
-  padding: 5px 10px 5px 0;
+  padding: 5px 10px;
 }
 
 .left-bar-element {
@@ -37,7 +37,7 @@
 }
 
 .fa{
-  width: 50px;
+  margin-right: 10px;
   text-align: center;
 }
 

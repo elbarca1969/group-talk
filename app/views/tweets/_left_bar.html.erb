@@ -2,34 +2,34 @@
   <div class="left-bar-upper">
     <div class="left-bar-home left-bar-element">
       <%= link_to root_path do %>
-        <i class="fa fa-home"></i>ホーム
+        <i class="fa fa-home fa-fw"></i>ホーム
       <% end %>
     </div>
     <div class="left-bar-profile left-bar-element">
       <%= link_to user_path(current_user.id) do %>
-        <i class="fa fa-user"></i>プロフィール
+        <i class="fa fa-user fa-fw"></i>プロフィール
       <% end %>
     </div>
     <div class="left-bar-friend left-bar-element">
       <%= link_to following_relationship_path(current_user) do %>
-        <i class="fa fa-user-friends"></i>フレンド
+        <i class="fa fa-user-friends fa-fw"></i>フレンド
       <% end %>
     </div>
     <div class="left-bar-group-list left-bar-element">
       <%= link_to list_groups_path do %>
-        <i class="fa fa-eye"></i>グループを見る
+        <i class="fa fa-eye fa-fw"></i>グループを見る
       <% end %>
     </div>
     <div class="left-bar-making-group left-bar-element">
       <%= link_to new_group_path do %>
-        <i class="fa fa-plus-circle"></i>グループを作る
+        <i class="fa fa-plus-circle fa-fw"></i>グループを作る
       <% end %>
     </div>
   </div>
   <div class="left-bar-lower">
     <div class="left-bar-group-title">
       <%= link_to root_path do %>
-        <i class="fa fa-users"></i>あなたのグループ
+        <i class="fa fa-users fa-fw"></i>あなたのグループ
       <% end %>
     </div>
     <div class="left-bar-groups">

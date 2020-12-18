@@ -1,19 +1,25 @@
 <div class="tweet">
-  <div class="upper-tweet">
-    <div class="tweet-user">
-      <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
+  <div class="tweet-container">
+    <div class="tweet-upper">
+      <div class="tweet-user">
+        <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
+      </div>
+      <div class="tweet-date">
+        <%= l tweet.created_at %>
+      </div>
     </div>
-    <div class="tweet-date">
-      <%= l tweet.created_at %>
+    <div class="tweet-center">
+      <div class="tweet-group">
+        <%= link_to tweet.group.name, group_path(tweet.group.id) %>
+      </div>
+    </div>
+    <div class="tweet-lower">
+      <%= link_to group_tweet_path(@group, tweet.id) do %> 
+        <div class="tweet-content">
+          <%= tweet.content %>
+          <%= image_tag tweet.image, class: 'tweet-image' if tweet.image.attached? %>
+        </div>
+      <% end %>
     </div>
   </div>
-  <%= link_to(group_tweet_path(@group, tweet.id), class:'tweet-show-page') do %>
-    <div class="lower-tweet">
-      <div class="tweet-content">
-        <%= tweet.content %>
-      </div>
-      <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
-    </div>
-  <% end %>
-  <hr>
 </div>

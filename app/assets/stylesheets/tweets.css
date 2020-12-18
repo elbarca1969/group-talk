@@ -116,54 +116,58 @@
   background-color: darkred;
 }
 
-.tweets{
-  background-color: #fAFAFA;
+.tweets {
+  background-color: white;
   height: calc(100vh - 150px);
-  padding: 45px 40px 20px;
   overflow: scroll;
 }
 
-.tweet{
-  margin: 10px 0 0 0;
-}
-
-.upper-tweet{
-  display: flex;
-}
-
-.tweet-user{
-  font-size: 16px;
-}
-
-.tweet-user a{
+.tweet-container a {
   text-decoration: none;
   color: black;
 }
 
-.tweet-date{
-  color: #999;
-  font-size: 12px;
-  padding-left: 10px;
-}
-
-.tweet-group{
-  text-align: right;
-  padding-right: 30px;
-}
-
-.tweet-group a{
-  text-decoration: none;
-  color: black;
-}
-
-.lower-tweet{
+.tweet {
   margin-top: 10px;
 }
 
+.tweet-upper {
+  display: flex;
+  padding: 0 10px;
+}
+
+.tweet-user a {
+  font-weight: bold;
+}
+
+.tweet-user:hover, .tweet-group:hover{
+  text-decoration: underline;
+}
+
+.tweet-date {
+  color: #999;
+  padding-left: 10px;
+}
+
+.tweet-group {
+  padding: 0 10px;
+}
+
+.tweet-group a {
+  color: #999;
+}
+
+.tweet-lower {
+  padding: 0 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
 .tweet-content {
-  color: black;
-  font-size: 15px;
-  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.tweet-image {
+  text-align: center;
 }
 
 .form-input{

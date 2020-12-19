@@ -1,3 +1,13 @@
+.home-main-chat-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 100px;
+}
+
 .follow-btn{
   display: block;
   width: 120px;
@@ -66,40 +76,4 @@
 
 .follow-nickname{
   font-size: 20px;
-}
-
-.logout-tweet{
-  width: 90%;
-  padding: 30px 150px;
-  margin: auto;
-  border: 1px solid gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logout-tweet-container{
-  text-align: center;
-}
-
-.logout-tweet h4{
-  font-size: 20px;
-  padding: 10px;
-  background-color: #253141;
-  color: white;
-  font-weight: bold;
-}
-
-.logout-tweet h3{
-  font-size: 25px;
-  width: 80%;
-  margin: 30px auto;
-  border-bottom: 2px solid rgb(224, 102, 102);
-}
-
-.logout-tweet h5{
-  font-size: 50px;
-  color: rgb(224, 102, 102);
-  text-shadow: 0 5px 5px #253141;
-  font-weight: bold;
 }

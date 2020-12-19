@@ -1,57 +1,11 @@
 <div class="wrapper">
-  <div class="side-bar">
-    <%= render "/tweets/side_bar" %>
+  <div class="left-bar">
+    <%= render "/tweets/left_bar" %>
   </div>
-  <div class="chat">
-    <div class="main-header">
-      <div class="left-header"></div>
-      <div class="center-header">
-        <div class="group-search">
-          <%= form_with(url: search_groups_path, local: true, method: :get, class: "search-form") do |f| %>
-            <%= f.text_field :keyword, placeholder: "グループを検索する", class: "search-input" %>
-            <%= f.submit "検索", class: "search-btn" %>
-          <% end %>
-        </div>
-      </div>
-      <div class="right-header"></div>
-    </div>
-    <div class="tweets">
-      <% if user_signed_in? %>
-        <% @tweets.each do |tweet| %>
-          <div class="tweet">
-            <div class="upper-tweet">
-              <div class="tweet-user">
-                <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
-              </div>
-              <div class="tweet-date">
-                <%= l tweet.created_at %>
-              </div>
-            </div>
-            <div class="tweet-group">
-              in: <%= link_to tweet.group.name, group_path(tweet.group.id) %>
-            </div>
-            <%= link_to(group_tweet_path(tweet.group, tweet.id), class:'tweet-show-page') do %>
-              <div class="lower-tweet">
-                <div class="tweet-content">
-                  <%= tweet.content %>
-                </div>
-                <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
-              </div>
-            <% end %>
-            <hr>
-          </div>
-        <% end %>
-      <% else %>
-        <div class="logout-tweet">
-          <div class="logout-tweet-container">
-            <h4>ログイン・新規登録すると・・・</h4>
-            <h3>１.興味のあるグループに参加できる</h3>
-            <h3>２.グループでツイートを投稿できる</h3>
-            <h3>３.好きなユーザーをフォローできる</h3>
-            <h5>Let's Enjoy GroupTalk</h5>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <div class="main-chat">
+    <%= render "main_chat" %>
+  </div>
+  <div class="right-bar">
+    <%= render "/tweets/right_bar"%>
   </div>
 </div>

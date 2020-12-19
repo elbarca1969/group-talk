@@ -2,6 +2,7 @@ class RelationshipsController < ApplicationController
   before_action :set_user, only: [:create, :destroy]
 
   def index
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     followings = current_user.try(:followings)
     @tweets = Tweet.where(user: followings).order("created_at DESC")
   end

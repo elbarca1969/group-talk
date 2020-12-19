@@ -1,0 +1,60 @@
+<div class="left-bar-container">
+  <div class="left-bar-upper">
+    <div class="left-bar-home left-bar-element">
+      <%= link_to root_path do %>
+        <i class="fa fa-home fa-fw"></i>&nbsp;&nbsp;ホーム
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <div class="left-bar-profile left-bar-element">
+        <%= link_to user_path(current_user.id) do %>
+          <i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;プロフィール
+        <% end %>
+      </div>
+      <div class="left-bar-friend left-bar-element">
+        <%= link_to following_relationship_path(current_user) do %>
+          <i class="fa fa-user-friends fa-fw"></i>&nbsp;&nbsp;フレンド
+        <% end %>
+      </div>
+    <% else %>
+      <div class="left-bar-profile left-bar-element">
+        <%= link_to root_path do %>
+          <i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;プロフィール
+        <% end %>
+      </div>
+      <div class="left-bar-friend left-bar-element">
+        <%= link_to root_path do %>
+          <i class="fa fa-user-friends fa-fw"></i>&nbsp;&nbsp;フレンド
+        <% end %>
+      </div>
+    <% end %>
+    <div class="left-bar-group-list left-bar-element">
+      <%= link_to list_groups_path do %>
+        <i class="fa fa-eye fa-fw"></i>&nbsp;&nbsp;グループを見る
+      <% end %>
+    </div>
+    <div class="left-bar-making-group left-bar-element">
+      <%= link_to new_group_path do %>
+        <i class="fa fa-plus-circle fa-fw"></i>&nbsp;&nbsp;グループを作る
+      <% end %>
+    </div>
+  </div>
+  <% if user_signed_in? %>
+    <div class="left-bar-lower">
+      <div class="left-bar-group-title">
+        <%= link_to root_path do %>
+          <i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;あなたのグループ
+        <% end %>
+      </div>
+      <div class="left-bar-groups">
+          <% current_user.groups.each do |group| %>
+            <div class="left-bar-group">
+              <div class="left-bar-group-name">
+                <%= link_to group.name, group_tweets_path(group) %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

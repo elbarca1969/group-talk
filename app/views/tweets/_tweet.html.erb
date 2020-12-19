@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="tweet-lower">
-      <%= link_to group_tweet_path(@group, tweet.id) do %> 
+      <%= link_to group_tweet_path(tweet.group, tweet.id) do %> 
         <div class="tweet-content">
           <%= tweet.content %>
           <%= image_tag tweet.image, class: 'tweet-image' if tweet.image.attached? %>

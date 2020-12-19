@@ -44,6 +44,19 @@
               <% end %>
             </div>
           <% end %>
+        <% else %>
+          <div class="right-bar-group-no-participation">
+            <%= link_to group_path(group.id) do %>
+              <div class="right-bar-group">
+                <div class="right-bar-group-icon">
+                  <i class="fa fa-users-slash fa-fw"></i>
+                </div>
+                <div class="right-bar-group-name">
+                  <%= group.name %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
     </div>

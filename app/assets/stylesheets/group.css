@@ -127,119 +127,152 @@ select {
   display: contents;
 }
 
-
-.group_lists{
-  margin-top: 15px;
-  width: 100%
+.group-list-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+  padding: 0 20px;
 }
 
-.group-search{
-  text-align: center;
-  margin: 15px 0;
-}
-
-.search-input{
-  width: 500px;
+.group-list-header-upper {
   height: 40px;
-}
-
-.search-btn{
-  width: 100px;
-  height: 40px;
-  color: white;
-  background-color: #2F3E51;
-}
-
-.group_list{
-  padding: 0 200px;
-  margin-bottom: 50px;
-}
-
-.group-container{
-  margin: 30px 0;
-}
-
-.upper-group-container{
-  display: flex;
-}
-
-.group-content-left{
-  width: 150px;
-  margin: 0 20px;
-}
-
-.participation-button{
-  width: 150px;
-  margin: 0 auto;
-}
-
-.participation, .no_participation{
   font-size: 20px;
-  padding: 8px 30px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.group-list-header-lower {
   text-align: center;
 }
 
-.participation a{
-  text-decoration: none;
-  color: white;
+.group-list-header-group-search-input {
+  padding:10px 20px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  border: 1px solid #EEEEEE;
+  margin-right: 5px;
+  width: 400px;
 }
 
-.no_participation a{
+.group-list-header-group-search-input:hover {
+  background-color: white;
+  border: 1px solid #253141;
+}
+
+.group-list-header-group-search-btn {
+  padding: 15px 30px;
+  background-color: #EEEEEE;
+  border-radius: 100px;
+  color: #999;
+  border: 1px solid #EEEEEE;
+}
+
+.group-list-header-group-search-btn:hover {
+  color: white;
+  background-color:#253141;
+}
+
+.group-list-main {
+  background-color: white;
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+.group-list-main-container a {
   text-decoration: none;
-  color: #2F3E51;
+  color: black;
+}
+
+.group-list-main-container {
+  margin-top: 10px;
+}
+
+.group-list-main-upper,
+.group-list-main-center,
+.group-list-main-lower {
+  padding: 0 10px;
+}
+
+.group-list-main-upper,
+.group-list-main-lower,
+.group-list-main-lower-left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-list-main-no-participation a,
+.group-list-main-participation a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid #253141;
+}
+
+.group-list-main-no-participation a {
+  color: #253141;
   font-weight: bold;
 }
 
-.participation{
-  background-color: #2F3E51;
+.group-list-main-participation a {
+  color: white;
+  background-color: #253141;
 }
 
-.no_participation{
-  border: 2px solid #2F3E51;
-  background-color: white;
+.group-list-main-users-member,
+.group-list-main-group-birthday,
+.group-list-main-lower-left {
+  color: #999;
 }
 
-.number_of_user{
-  font-size: 15px;
-  margin-left: 5px;
+.group-list-main-group-name {
+  font-weight: bold;
 }
 
-.group-content-right{
-  margin-right: 25px;
-  width: calc(100% - 150px);
+.group-list-main-group-content {
+  font-size: smaller;
 }
 
-.group__name{
-  font-size: 30px;
+.group-list-main-center:hover {
+  text-decoration: underline;
 }
 
-.group__name a{
-  text-decoration: none;
+.group-list-main-lower {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.group-list-main-lower-left:hover {
   color: black;
 }
 
-.lower-group-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 25px;
-  background-color: rgb(233, 233, 233);
-  margin-top: 5px;
+.group-list-right-bar-container {
+  background-color: #EEEEEE;
+  margin: 30px 30px 0 30px;
+  border-radius: 20px;
+  width: 270px;
 }
 
-.user_name{
-  font-size: 17px;
+.group-list-right-bar-title {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 50px;
 }
 
-.user_name a{
+.group-list-right-bar-groups {
+  height: calc(100vh - 135px);
+  padding: 0 15px;
+  overflow: scroll;
+}
+
+.group-list-right-bar-groups a {
   text-decoration: none;
   color: black;
-}
-
-.group_birthday{
   font-size: 15px;
-  color: gray;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 20px;
 }
 
 .group-show{

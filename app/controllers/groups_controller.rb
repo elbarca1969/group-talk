@@ -62,6 +62,7 @@ class GroupsController < ApplicationController
 
   def search
     @groups = Group.search(params[:keyword]).select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+    @newgroups = Group.order("created_at DESC").limit(20)
   end
 
   private

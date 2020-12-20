@@ -1,53 +1,131 @@
-<div class="group_lists">
-  <h1>グループ一覧</h1>
-  <div class="group-search">
-    <%= form_with(url: search_groups_path, local: true, method: :get, class: "search-form") do |f| %>
-      <%= f.text_field :keyword, placeholder: "グループを検索する", class: "search-input" %>
-      <%= f.submit "検索", class: "search-btn" %>
-    <% end %>
+<div class="wrapper">
+  <div class="left-bar">
+    <%= render "/tweets/left_bar" %>
   </div>
-
-  <div class="group_list">
-    <% @groups.each do |group| %>
-      <div class="group-container">
-        <div class="upper-group-container">
-          <div class="group-content-left">
-            <div class="participation-button">
-              <% if user_signed_in? %>
-                <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
-                  <div class="no_participation">
-                    <%= link_to '参　加', join_group_path(group) %>
-                  </div>
-                <% else %>
-                  <div class="participation">
-                    <%= link_to '参加中', "#" %>
-                  </div>
+  <div class="main">
+    <div class="group-list">
+      <div class="group-list-header">
+        <div class="group-list-header-upper">
+          <i class="fa fa-eye fa-fw"></i>&nbsp;&nbsp;グループを見る
+        </div>
+        <div class="group-list-header-lower">
+          <div class="group-list-header-group-search">
+            <%= form_with(url: search_groups_path, local: true, method: :get, class: "group-list-header-group-search-form") do |f| %>
+              <%= f.text_field :keyword, placeholder: "グループ検索", class: "group-list-header-group-search-input" %>
+              <label class="group-list-header-group-search-btn">
+                <i class="fa fa-search"></i>
+                <%= f.submit class: "hidden" %>
+              </label>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="group-list-main">
+        <% @groups.each do |group| %>
+          <div class="group-list-main-container">
+            <div class="group-list-main-upper">
+              <div class="group-list-main-upper-left">
+                <div class="group-list-main-users-member">
+                  <%= group.users.length %>参加中
+                </div>
+              </div>
+              <div class="group-list-main-upper-right">
+                <% if user_signed_in? %>
+                  <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
+                    <div class="group-list-main-no-participation">
+                      <%= link_to '参　加', join_group_path(group) %>
+                    </div>
+                  <% else %>
+                    <div class="group-list-main-participation">
+                      <%= link_to '参加中', group_tweets_path(group) %>
+                    </div>
+                  <% end %>
                 <% end %>
+              </div>
+            </div>
+            <div class="group-list-main-center">
+              <%= link_to(group_path(group.id)) do %>
+                <div class="group-list-main-group-name">
+                  <%= group.name%>
+                </div>
+                <div class="group-list-main-group-content">
+                  <%= group.content %>
+                </div>
               <% end %>
             </div>
-            <div class="number_of_user">
-              参加人数: <%= group.users.length %>
+            <div class="group-list-main-lower">
+                <%= link_to(user_path(group.user_id)) do %>
+                  <div class="group-list-main-lower-left">
+                      <div class="group-list-main-group-owner-icon">
+                        <i class="fa fa-user-shield fa-fw"></i>
+                      </div>
+                      <div class="group-list-main-group-owner-name">
+                        <%= group.user.nickname %>
+                      </div>
+                  </div>
+                <% end %>
+              <div class="group-list-main-lower-right">
+                <div class="group-list-main-group-birthday">
+                  <i class="fa fa-history fa-fw"></i><%= l group.created_at, format: :short %>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="group-content-right">
-            <div class="group__name" >
-              <%= link_to group.name, group_path(group.id) %>
-            </div>
-            <div class="group_content">
-              <%= group.content %>
-            </div>
-          </div>
-        </div>
-        <div class="lower-group-container">
-          <div class="user_name">
-            作成者: <%= link_to group.user.nickname, user_path(group.user_id) %>
-          </div>
-          <div class="group_birthday">
-            作成日: <%= l group.created_at %>
-          </div>
-        </div>
-        <hr>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+  </div>
+  <div class="right-bar">
+    <div class="group-list-right-bar-container">
+      <div class="group-list-right-bar-title">
+        新着グループ
+      </div>
+      <div class="group-list-right-bar-groups">
+        <% @newgroups.each do |group| %>
+          <% if user_signed_in? %>
+            <% unless GroupUser.exists?(group_id: group.id, user_id: current_user.id) %>
+              <div class="right-bar-group-no-participation">
+                <%= link_to group_path(group.id) do %>
+                  <div class="right-bar-group">
+                    <div class="right-bar-group-icon">
+                      <i class="fa fa-users-slash fa-fw"></i>
+                    </div>
+                    <div class="right-bar-group-name">
+                      <%= group.name %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% else %>
+              <div class="right-bar-group-participation">
+                <%= link_to group_path(group.id) do %>
+                  <div class="right-bar-group">
+                    <div class="right-bar-group-icon">
+                      <i class="fa fa-users fa-fw"></i>
+                    </div>
+                    <div class="right-bar-group-name">
+                      <%= group.name %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          <% else %>
+            <div class="right-bar-group-no-participation">
+              <%= link_to group_path(group.id) do %>
+                <div class="right-bar-group">
+                  <div class="right-bar-group-icon">
+                    <i class="fa fa-users-slash fa-fw"></i>
+                  </div>
+                  <div class="right-bar-group-name">
+                    <%= group.name %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

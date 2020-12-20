@@ -246,6 +246,35 @@ select {
   color: black;
 }
 
+.group-list-right-bar-container {
+  background-color: #EEEEEE;
+  margin: 30px 30px 0 30px;
+  border-radius: 20px;
+  width: 270px;
+}
+
+.group-list-right-bar-title {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 50px;
+}
+
+.group-list-right-bar-groups {
+  height: calc(100vh - 135px);
+  padding: 0 15px;
+  overflow: scroll;
+}
+
+.group-list-right-bar-groups a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 20px;
+}
+
 .group-show{
   width: 100vw;
 }

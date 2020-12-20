@@ -172,96 +172,78 @@ select {
   background-color:#253141;
 }
 
-.group_list{
-  padding: 0 200px;
-  margin-bottom: 50px;
+.group-list-main {
+  background-color: white;
+  height: calc(100vh - 150px);
+  overflow: scroll;
 }
 
-.group-container{
-  margin: 30px 0;
+.group-list-main-container a {
+  text-decoration: none;
+  color: black;
 }
 
-.upper-group-container{
+.group-list-main-container {
+  margin-top: 10px;
+}
+
+.group-list-main-upper,
+.group-list-main-center,
+.group-list-main-lower {
+  padding: 0 10px;
+}
+
+.group-list-main-upper,
+.group-list-main-lower,
+.group-list-main-lower-left {
   display: flex;
+  justify-content: space-between;
 }
 
-.group-content-left{
-  width: 150px;
-  margin: 0 20px;
+.group-list-main-no-participation a,
+.group-list-main-participation a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid #253141;
 }
 
-.participation-button{
-  width: 150px;
-  margin: 0 auto;
-}
-
-.participation, .no_participation{
-  font-size: 20px;
-  padding: 8px 30px;
-  text-align: center;
-}
-
-.participation a{
-  text-decoration: none;
-  color: white;
-}
-
-.no_participation a{
-  text-decoration: none;
-  color: #2F3E51;
+.group-list-main-no-participation a {
+  color: #253141;
   font-weight: bold;
 }
 
-.participation{
-  background-color: #2F3E51;
+.group-list-main-participation a {
+  color: white;
+  background-color: #253141;
 }
 
-.no_participation{
-  border: 2px solid #2F3E51;
-  background-color: white;
+.group-list-main-users-member,
+.group-list-main-group-birthday,
+.group-list-main-lower-left {
+  color: #999;
 }
 
-.number_of_user{
-  font-size: 15px;
-  margin-left: 5px;
+.group-list-main-group-name {
+  font-weight: bold;
 }
 
-.group-content-right{
-  margin-right: 25px;
-  width: calc(100% - 150px);
+.group-list-main-group-content {
+  font-size: smaller;
 }
 
-.group__name{
-  font-size: 30px;
+.group-list-main-center:hover {
+  text-decoration: underline;
 }
 
-.group__name a{
-  text-decoration: none;
+.group-list-main-lower {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.group-list-main-lower-left:hover {
   color: black;
-}
-
-.lower-group-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 25px;
-  background-color: rgb(233, 233, 233);
-  margin-top: 5px;
-}
-
-.user_name{
-  font-size: 17px;
-}
-
-.user_name a{
-  text-decoration: none;
-  color: black;
-}
-
-.group_birthday{
-  font-size: 15px;
-  color: gray;
-  display: flex;
-  align-items: center;
 }
 
 .group-show{

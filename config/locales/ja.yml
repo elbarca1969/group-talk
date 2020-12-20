@@ -1,7 +1,9 @@
 ja:
   time:
     formats:
-      default: "%Y/%m/%d %H:%M:%S"
+      default: "%Y/%m/%d %H:%M"
+      short: "%Y/%m/%d"
+
   datetime:
     distance_in_words:
       half_a_minute: "30秒前後"

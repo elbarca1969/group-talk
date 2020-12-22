@@ -417,3 +417,52 @@ select {
 .group-member-header-right {
   color: #999;
 }
+
+.group-member-main {
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+.group-member-main-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.group-member-main-upper {
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-member-main-upper-right-edit a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkgreen;
+  border: 1px solid darkgreen;
+}
+
+.group-member-main-upper-right-edit a:hover {
+  color: white;
+  background-color: darkgreen;
+  border: 1px solid darkgreen;
+}
+
+.group-member-main-lower {
+  padding: 0 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.group-member-main-lower:hover {
+  text-decoration: underline;
+}
+
+.group-member-user-nickname {
+  font-weight: bold;
+}
+
+.group-member-user-introduction {
+  margin-bottom: 10px;
+}

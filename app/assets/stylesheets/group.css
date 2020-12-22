@@ -365,10 +365,14 @@ select {
   border: 1px solid #526f94;
 }
 
-.group-show-header-users-member,
+.group-show-header-users-member a,
 .group-show-header-group-birthday,
 .group-show-header-lower-left {
   color: #999;
+}
+
+.group-show-header-users-member a:hover{
+  text-decoration: underline;
 }
 
 .group-show-header-group-name {

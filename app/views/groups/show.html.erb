@@ -66,6 +66,9 @@
         </div>
       </div>
     </div>
+    <div class="group-show-main">
+      <%= render partial: '/tweets/tweet', collection: @tweets %>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

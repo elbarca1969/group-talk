@@ -367,11 +367,16 @@ select {
   font-size: larger;
 }
 
-.group-show-header-group-content{
+.group-show-header-group-content {
   height: 50px;
   overflow: scroll;
 }
 
 .group-show-header-lower-left:hover {
   color: black;
+}
+
+.group-show-main {
+  height: calc(100vh - 200px);
+  overflow: scroll;
 }

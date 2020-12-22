@@ -26,7 +26,7 @@
             <div class="group-list-main-upper">
               <div class="group-list-main-upper-left">
                 <div class="group-list-main-users-member">
-                  <%= group.users.length %>参加中
+                  <%= link_to "#{group.users.length}参加中", member_group_path(group) %>
                 </div>
               </div>
               <div class="group-list-main-upper-right">

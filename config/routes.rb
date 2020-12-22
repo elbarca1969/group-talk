@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     member do
       get :join
       delete :quit
+      get :member
     end
     collection do
       get :list

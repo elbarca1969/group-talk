@@ -1,46 +1,76 @@
-<div clas="group-show">
-  <div class="group-show-name">
-    <%= @group.name %>
+<div class="wrapper">
+  <div class="left-bar">
+    <%= render "/tweets/left_bar" %>
   </div>
-  <div class="participation-button">
-    <% if user_signed_in? %>
-      <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
-        <div class="no_participation">
-          <%= link_to '参　加', join_group_path(@group) %>
+  <div class="main">
+    <div class="group-show-header">
+      <div class="group-show-header-container">
+        <div class="group-show-header-upper">
+          <div class="group-show-header-upper-left">
+            <div class="group-show-header-users-member">
+              <%= link_to "#{@group.users.length}参加中", member_group_path(@group) %>
+            </div>
+          </div>
+          <% if user_signed_in? && current_user.id == @group.user_id %>
+            <div class="group-show-header-upper-center">
+              <div class="group-show-header-upper-center-edit">
+                <%= link_to(edit_group_path(@group.id)) do %>
+                  <i class="fa fa-wrench fa-fw"></i>グループを編集
+                <% end %>
+              </div>
+              <div class="group-show-header-upper-center-delete">
+                <%= link_to(group_path(@group.id), method: :delete) do %>
+                  <i class="fa fa-trash-alt fa-fw"></i>グループを削除
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+          <div class="group-show-header-upper-right">
+            <% if user_signed_in? %>
+              <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
+                <div class="group-show-header-no-participation">
+                  <%= link_to '参　加', join_group_path(@group) %>
+                </div>
+              <% else %>
+                <div class="group-show-header-participation">
+                  <%= link_to '参加中', group_tweets_path(@group) %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
         </div>
-      <% else %>
-        <div class="participation">
-          <%= link_to '参加中', group_tweets_path(@group) %>
+        <div class="group-show-header-center">
+          <div class="group-show-header-group-name">
+            <%= @group.name%>
+          </div>
+          <div class="group-show-header-group-content">
+            <%= @group.content %>
+          </div>
         </div>
-      <% end %>
-    <% end %>
+        <div class="group-show-header-lower">
+            <%= link_to(user_path(@group.user_id)) do %>
+              <div class="group-show-header-lower-left">
+                  <div class="group-show-header-group-owner-icon">
+                    <i class="fa fa-user-shield fa-fw"></i>
+                  </div>
+                  <div class="group-show-header-group-owner-name">
+                    <%= @group.user.nickname %>
+                  </div>
+              </div>
+            <% end %>
+          <div class="group-show-header-lower-right">
+            <div class="group-show-header-group-birthday">
+              <i class="fa fa-history fa-fw"></i><%= l @group.created_at, format: :short %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="group-show-main">
+      <%= render partial: '/tweets/tweet', collection: @tweets %>
+    </div>
   </div>
-  <% if user_signed_in? && current_user.id == @group.user_id %>
-    <div class="group-show-button">
-      <%= link_to 'グループ編集', edit_group_path(@group.id), class: 'group-show-edit' %>
-      <%= link_to 'グループ削除', group_path(@group.id), method: :delete, class: 'group-show-delete' %>
-    </div>
-  <% end %>
-  <div class="group-show-container">
-    <div class="group-show-content">
-      <%= @group.content %>
-    </div>
-    <div class="group-show-upper">
-      <div class="group-show-user-number">
-        参加人数: <%= @group.users.length %>
-      </div>
-      <div class="group-show-builder">
-        作成者: <%= link_to @group.user.nickname, user_path(@group.user_id) %>
-      </div>
-      <div class="group-show-birthday">
-        作成日: <%= l @group.created_at %>
-      </div>
-    </div>
-    <hr>
-    <div class="group-show-lower">
-      <% @tweets.each do |tweet| %>
-        <%= render partial: "/tweets/tweet", locals: { tweet: tweet} %>
-      <% end %>
-    </div>
+  <div class="right-bar">
+    <%= render "/tweets/right_bar" %>
   </div>
 </div>

@@ -393,3 +393,27 @@ select {
   height: calc(100vh - 200px);
   overflow: scroll;
 }
+
+.group-member-header {
+  height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.group-member-header-left a {
+  color: black;
+  text-decoration: none;
+}
+
+.group-member-header-left a:hover {
+  text-decoration: underline;
+}
+
+.group-member-header-right {
+  color: #999;
+}

@@ -8,27 +8,36 @@
   line-height: 100px;
 }
 
-.follow-btn{
-  display: block;
-  width: 120px;
-  height: 40px;
-  margin: 0 auto;
+.follow-btn {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  width: 110px;
 }
 
-.follow-btn:hover{
-  cursor: pointer;
-}
-
-.following-btn{
-  border: none;
+.following-btn {
   background-color: #38aef0;
   color: white;
+  border: 1px solid #38aef0;
 }
 
-.unfollow-btn{
-  border: 2px solid #38aef0;
+.following-btn:hover {
+  cursor: pointer;
+  background-color: #6fbeec;
+  border: 1px solid #6fbeec;
+}
+
+.unfollow-btn {
+  border: 1px solid #38aef0;
   background-color: white;
   color: #38aef0;
+  font-weight: bold;
+}
+
+.unfollow-btn:hover {
+  cursor: pointer;
+  background-color:#ddf3ff;
 }
 
 .follow-number{

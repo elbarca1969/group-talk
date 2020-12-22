@@ -214,9 +214,18 @@ select {
   font-weight: bold;
 }
 
+.group-list-main-no-participation a:hover {
+  background-color: #EEEEEE;
+}
+
 .group-list-main-participation a {
   color: white;
   background-color: #253141;
+}
+
+.group-list-main-participation a:hover {
+  background-color: #526f94;
+  border: 1px solid #526f94;
 }
 
 .group-list-main-users-member,

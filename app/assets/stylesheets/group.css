@@ -228,10 +228,14 @@ select {
   border: 1px solid #526f94;
 }
 
-.group-list-main-users-member,
+.group-list-main-users-member a,
 .group-list-main-group-birthday,
 .group-list-main-lower-left {
   color: #999;
+}
+
+.group-list-main-users-member a:hover {
+  text-decoration: underline;
 }
 
 .group-list-main-group-name {

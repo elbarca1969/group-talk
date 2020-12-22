@@ -288,6 +288,11 @@ select {
   border-radius: 20px;
 }
 
+.group-list-right-bar-groups a:hover {
+  color: white;
+  background-color:#253141;
+}
+
 .group-show-header {
   height: 150px;
   background-color: #FAFAFA;

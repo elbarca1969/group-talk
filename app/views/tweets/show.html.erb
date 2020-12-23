@@ -1,28 +1,10 @@
-<div class="tweet-show-contents">
-  <div class="tweet-show-upper">
-    <div class="tweet-show-upper-left">
-      投稿者:
-    </div>
-    <div class="tweet-show-upper-right">
-      <%= link_to @tweet.user.nickname, user_path(@tweet.user_id) %>
-    </div>
+<div class="wrapper">
+  <div class="left-bar">
+    <%= render "left_bar" %>
   </div>
-  <% if user_signed_in? && @tweet.user_id == current_user.id%>
-    <div class="tweet-show-button">
-      <%= link_to 'ツイート編集', edit_group_tweet_path(@group, @tweet.id), class: 'tweet-show-edit'%>
-      <%= link_to 'ツイート削除', group_tweet_path(@group, @tweet.id), method: :delete, class: 'tweet-show-delete' %>
-    </div>
-  <% end %>
-  <div class="tweet-show-group-name">
-    in: <%= link_to @group.name, group_path(@group) %>
+  <div class="main">
   </div>
-  <div class="tweet-show-content">
-    <%= @tweet.content %>
-  </div>
-  <div class="tweet-show-date">
-    <%= l @tweet.created_at %>
-  </div>
-  <div class="tweet-image">
-    <%= image_tag @tweet.image.variant(resize: '500x500') if @tweet.image.attached? %>
+  <div class="right-bar">
+    <%= render "right_bar" %>
   </div>
 </div>

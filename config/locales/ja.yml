@@ -1,8 +1,8 @@
 ja:
   time:
     formats:
-      default: "%Y/%m/%d %H:%M"
-      short: "%Y/%m/%d"
+      default: "%Y/%m/%d"
+      long: "%Y/%m/%d %H:%M"
 
   datetime:
     distance_in_words:

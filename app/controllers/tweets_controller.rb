@@ -23,6 +23,7 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
   end
 
   def edit

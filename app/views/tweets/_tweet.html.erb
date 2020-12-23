@@ -5,7 +5,7 @@
         <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
       </div>
       <div class="tweet-date">
-        <%= time_ago_in_words(tweet.created_at) %>前
+        <%= tweet_time(tweet.created_at) %>
       </div>
     </div>
     <div class="tweet-center">

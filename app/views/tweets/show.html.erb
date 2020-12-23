@@ -3,6 +3,40 @@
     <%= render "left_bar" %>
   </div>
   <div class="main">
+    <div class="tweet-show-container">
+      <div class="tweet-show-upper">
+        <div class="tweet-show-upper-left"></div>
+        <div class="tweet-show-upper-right">
+          <% if user_signed_in? && @tweet.user_id == current_user.id%>
+            <div class="tweet-show-upper-right-edit">
+              <%= link_to(edit_group_tweet_path(@group, @tweet.id)) do %>
+                <i class="fa fa-wrench fa-fw"></i>編集する
+              <% end %>
+            </div>
+            <div class="tweet-show-upper-right-delete">
+              <%= link_to(group_tweet_path(@group, @tweet.id), method: :delete) do %>
+                <i class="fa fa-trash-alt fa-fw"></i>削除する
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="tweet-show-lower">
+        <div class="tweet-show-lower-user">
+          <%= link_to @tweet.user.nickname, user_path(@tweet.user_id) %>
+        </div>
+        <div class="tweet-show-lower-group">
+          <%= link_to @group.name, group_path(@group) %>
+        </div>
+        <div class="tweet-show-lower-content">
+          <%= @tweet.content %>
+          <%= image_tag @tweet.image, class: "tweet-show-lower-image" if @tweet.image.attached? %>
+        </div>
+        <div class="tweet-show-lower-date">
+          <%= l @tweet.created_at, format: :long %>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "right_bar" %>

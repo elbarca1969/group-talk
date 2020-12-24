@@ -13,7 +13,7 @@
   font-size: smaller;
   padding: 5px 20px;
   border-radius: 20px;
-  width: 110px;
+  width: 120px;
 }
 
 .following-btn {
@@ -22,10 +22,20 @@
   border: 1px solid #38aef0;
 }
 
-.following-btn:hover {
+.following-button > .following-btn-hover {
+  display: none;
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.following-button:hover .following-btn {
+  display: none;
+}
+
+.following-button:hover .following-btn-hover {
+  display: inline;
   cursor: pointer;
-  background-color: #6fbeec;
-  border: 1px solid #6fbeec;
 }
 
 .unfollow-btn {

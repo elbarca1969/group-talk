@@ -25,6 +25,19 @@
       <div class="user-show-introduction">
         <%= @user.introduction %>
       </div>
+      <div class="user-show-header-lower">
+        <div class="user-show-header-lower-follow-member">
+          <%= render partial: "/relationships/follow_number" %>
+        </div>
+        <div class="user-show-header-lower-group">
+          <div class="user-show-header-lower-group-participation">
+            <%= link_to "#{@user.groups.length}グループ", root_path %>
+          </div>
+          <div class="user-show-header-lower-group-owner">
+            <%= link_to "#{@user.owned_groups.length}オーナー", root_path %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="right-bar">

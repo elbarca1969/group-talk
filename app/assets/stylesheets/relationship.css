@@ -40,19 +40,13 @@
   background-color:#ddf3ff;
 }
 
-.follow-number{
+.follow-number {
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
 }
 
-.following{
+.following,
+.follower {
   margin-right:20px;
-}
-
-.following a, .follower a{
-  text-decoration: none;
-  color: black;
 }
 
 .follow-lists{

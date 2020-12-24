@@ -1,13 +1,10 @@
-<div class="follow-lists">
-  <div class="follow-container">
-    <div class="follow-list-title">
-      <%= "#{@user.nickname}:フォロー中" %>
-      <hr>
-    </div>
-    <div class="follow-list">
-      <% @followings.each do |following| %>
-        <%= render partial: "list", locals: { user: following } %>
-      <% end %>
-    </div>
+<div class="wrapper">
+  <div class="left-bar">
+    <%= render "/tweets/left_bar" %>
+  </div>
+  <div class="main">
+  </div>
+  <div class="right-bar">
+    <%= render "/tweets/right_bar" %>
   </div>
 </div>

@@ -175,31 +175,7 @@
   margin-right: 20px;
 }
 
-.user-show-tweets-title{
-  text-align: center;
-  font-size: 20px;
-}
-
-.user-show-group-name{
-  font-size: 18px;
-}
-
-.user-show-group-name a{
-  text-decoration: none;
-  color: black;
-}
-
-.user-show-tweet a{
-  text-decoration: none;
-}
-
-.user-show-tweet-content{
-  font-size: 20px;
-  color: black;
-  padding: 0 20px;
-}
-
-.user-show-tweet-date{
-  text-align: right;
-  color: gray;
+.user-show-main {
+  height: calc(100vh - 200px);
+  overflow: scroll;
 }

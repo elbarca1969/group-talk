@@ -18,6 +18,11 @@
         </div>
       </div>
     </div>
+    <div class="follow-list-main">
+      <% @followings.each do |following| %>
+        <%= render partial: "/groups/member_list", locals: { user: following } %>
+      <% end %>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

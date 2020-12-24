@@ -113,40 +113,46 @@
   font-size: 13px;
 }
 
-
-.user-show-container{
-  padding: 0 160px;
-  margin-bottom: 50px;
+.user-show-header {
+  padding: 10px 20px 0 20px;
+  height: 150px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
 }
 
-.user-show-nickname{
-  text-align: center;
-  margin: 20px 0;
-  font-size: 30px;
+.user-show-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-show-header-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-show-header-upper-right-edit a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkgreen;
+  border: 1px solid darkgreen;
+}
+
+.user-show-header-upper-right-edit a:hover {
+  color: white;
+  background-color: darkgreen;
+  border: 1px solid darkgreen;
+}
+
+.user-show-nickname {
+  font-size: larger;
   font-weight: bold;
 }
 
-.user-show-button{
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.user-show-button a{
-  text-decoration: none;
-  color: white;
-}
-
-.user-show-edit{
-  background-color: darkgreen;
-  padding: 10px 20px;
-}
-
-.user-show-introduction{
-  font-size: 25px;
-  margin-bottom: 20px;
-  padding: 0 100px;
+.user-show-introduction {
+  height: 50px;
+  overflow: scroll;
 }
 
 .user-show-tweets-title{

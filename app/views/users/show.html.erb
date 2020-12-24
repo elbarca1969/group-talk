@@ -3,6 +3,29 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
+    <div class="user-show-header">
+      <div class="user-show-header-upper">
+        <div class="user-show-header-upper-left"></div>
+        <div class="user-show-header-upper-right">
+          <% if user_signed_in? %>
+            <%= render partial: "/relationships/follow_button", locals: { user: @user } %>
+          <% end %>
+          <% if user_signed_in? && current_user.id == @user.id %>
+            <div class="user-show-header-upper-right-edit">
+              <%= link_to(edit_user_path(@user.id)) do %>
+                <i class="fa fa-wrench fa-fw"></i>アカウントを編集
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="user-show-nickname">
+        <%= @user.nickname %>
+      </div>
+      <div class="user-show-introduction">
+        <%= @user.introduction %>
+      </div>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

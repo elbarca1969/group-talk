@@ -3,6 +3,21 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
+    <div class="follow-list-header">
+      <div class="follow-list-header-upper">
+        <div class="follow-list-header-upper-user">
+          <%= @user.nickname %>
+        </div>
+      </div>
+      <div class="follow-list-header-lower">
+        <div class="follow-list-header-lower-left">
+          <%= link_to "フォロー中", following_relationship_path(@user) %>
+        </div>
+        <div class="follower-list-header-lower-right">
+          <%= link_to "フォロワー", follower_relationship_path(@user) %>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

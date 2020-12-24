@@ -101,3 +101,22 @@
   height: calc(100vh - 150px);
   overflow: scroll;
 }
+
+.follow-list-header-lower-left a {
+  color: #999;
+}
+
+.follow-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.follower-list-header-lower-right a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
+}
+
+.follower-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
+}

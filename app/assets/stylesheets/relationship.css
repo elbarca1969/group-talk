@@ -49,34 +49,50 @@
   margin-right:20px;
 }
 
-.follow-lists{
-  margin: 20px 0;
+.follow-list-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
 }
 
-.follow-container{
-  padding: 0 160px;
-}
-
-.follow-list-title{
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.follow-list a{
+.follow-list-header a {
   text-decoration: none;
   color: black;
 }
 
-.follow-content{
+.follow-list-header-upper-user {
+  font-size: larger;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+.follow-list-header-lower {
   display: flex;
-  padding: 10px 20px;
+  justify-content: space-around;
 }
 
-.follow-content-upper{
-  width: 85%;
+.follow-list-header-lower a {
+  display: inline-block;
+  padding: 5px 30px;
+  font-weight: bold;
 }
 
-.follow-nickname{
-  font-size: 20px;
+.following-list-header-lower-left a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
+}
+
+.following-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.follow-list-header-lower-right a {
+  color: #999;
+}
+
+.follow-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
 }

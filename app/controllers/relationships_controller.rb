@@ -26,6 +26,7 @@ class RelationshipsController < ApplicationController
   end
 
   def follower
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @user = User.find(params[:id])
     @followers = @user.followers
   end

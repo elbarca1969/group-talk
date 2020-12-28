@@ -232,3 +232,22 @@
   height: calc(100vh - 150px);
   overflow: scroll;
 }
+
+.owner-group-list-header-lower-left a {
+  color: #999;
+}
+
+.owner-group-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.owner-group-list-header-lower-right a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
+}
+
+.owner-group-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
+}

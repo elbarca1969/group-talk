@@ -3,6 +3,21 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
+    <div class="user-group-list">
+      <div class="user-group-list-header">
+        <div class="user-group-list-header-upper">
+          <%= @user.nickname %>のグループ
+        </div>
+        <div class="user-group-list-header-lower">
+          <div class="owner-group-list-header-lower-left">
+            <%= link_to "参加中", list_user_path(@user.id) %>
+          </div>
+          <div class="owner-group-list-header-lower-right">
+            <%= link_to "オーナー", owner_user_path(@user.id) %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

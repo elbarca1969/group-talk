@@ -227,3 +227,8 @@
   color: white;
   background-color: #526f94;
 }
+
+.user-group-list-main {
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}

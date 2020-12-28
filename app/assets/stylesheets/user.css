@@ -179,3 +179,51 @@
   height: calc(100vh - 200px);
   overflow: scroll;
 }
+
+.user-group-list-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+}
+
+.user-group-list-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-group-list-header-upper {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+.user-group-list-header-lower {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-group-list-header-lower a {
+  display: inline-block;
+  padding: 5px 30px;
+  font-weight: bold;
+}
+
+.user-group-list-header-lower-left a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
+}
+
+.user-group-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.user-group-list-header-lower-right a {
+  color: #999;
+}
+
+.user-group-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
+}

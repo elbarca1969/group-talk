@@ -31,7 +31,7 @@
         </div>
         <div class="user-show-header-lower-group">
           <div class="user-show-header-lower-group-participation">
-            <%= link_to "#{@user.groups.length}グループ", root_path %>
+            <%= link_to "#{@user.groups.length}グループ", list_user_path(@user.id) %>
           </div>
           <div class="user-show-header-lower-group-owner">
             <%= link_to "#{@user.owned_groups.length}オーナー", root_path %>

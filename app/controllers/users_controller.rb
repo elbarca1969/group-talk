@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: :edit
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :list, :owner]
 
   def show
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @tweets = @user.tweets.order("created_at DESC")
   end
 
@@ -18,6 +19,16 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def list
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
+    @groupLists = @user.groups.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+  end
+
+  def owner
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
+    @groupOwners = @user.owned_groups.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
   end
 
   private

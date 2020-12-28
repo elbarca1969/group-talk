@@ -1,13 +1,30 @@
-<div class="follow-lists">
-  <div class="follow-container">
-    <div class="follow-list-title">
-      <%= "#{@user.nickname}:フォロー中" %>
-      <hr>
+<div class="wrapper">
+  <div class="left-bar">
+    <%= render "/tweets/left_bar" %>
+  </div>
+  <div class="main">
+    <div class="follow-list-header">
+      <div class="follow-list-header-upper">
+        <div class="follow-list-header-upper-user">
+          <%= @user.nickname %>
+        </div>
+      </div>
+      <div class="follow-list-header-lower">
+        <div class="following-list-header-lower-left">
+          <%= link_to "フォロー中", following_relationship_path(@user) %>
+        </div>
+        <div class="follow-list-header-lower-right">
+          <%= link_to "フォロワー", follower_relationship_path(@user) %>
+        </div>
+      </div>
     </div>
-    <div class="follow-list">
+    <div class="follow-list-main">
       <% @followings.each do |following| %>
-        <%= render partial: "list", locals: { user: following } %>
+        <%= render partial: "/groups/member_list", locals: { user: following } %>
       <% end %>
     </div>
+  </div>
+  <div class="right-bar">
+    <%= render "/tweets/right_bar" %>
   </div>
 </div>

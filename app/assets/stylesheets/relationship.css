@@ -13,7 +13,7 @@
   font-size: smaller;
   padding: 5px 20px;
   border-radius: 20px;
-  width: 110px;
+  width: 120px;
 }
 
 .following-btn {
@@ -22,10 +22,20 @@
   border: 1px solid #38aef0;
 }
 
-.following-btn:hover {
+.following-button > .following-btn-hover {
+  display: none;
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.following-button:hover .following-btn {
+  display: none;
+}
+
+.following-button:hover .following-btn-hover {
+  display: inline;
   cursor: pointer;
-  background-color: #6fbeec;
-  border: 1px solid #6fbeec;
 }
 
 .unfollow-btn {
@@ -40,49 +50,83 @@
   background-color:#ddf3ff;
 }
 
-.follow-number{
+.follow-number {
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
 }
 
-.following{
+.following,
+.follower {
   margin-right:20px;
 }
 
-.following a, .follower a{
+.follow-list-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+}
+
+.follow-list-header a {
   text-decoration: none;
   color: black;
 }
 
-.follow-lists{
-  margin: 20px 0;
-}
-
-.follow-container{
-  padding: 0 160px;
-}
-
-.follow-list-title{
-  text-align: center;
+.follow-list-header-upper-user {
   font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  padding: 0 20px;
+}
+
+.follow-list-header-lower {
+  display: flex;
+  justify-content: space-around;
+}
+
+.follow-list-header-lower a {
+  display: inline-block;
+  padding: 5px 30px;
   font-weight: bold;
 }
 
-.follow-list a{
-  text-decoration: none;
-  color: black;
+.following-list-header-lower-left a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
 }
 
-.follow-content{
-  display: flex;
-  padding: 10px 20px;
+.following-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
 }
 
-.follow-content-upper{
-  width: 85%;
+.follow-list-header-lower-right a {
+  color: #999;
 }
 
-.follow-nickname{
-  font-size: 20px;
+.follow-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.follow-list-main {
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+.follow-list-header-lower-left a {
+  color: #999;
+}
+
+.follow-list-header-lower-left a:hover {
+  color: white;
+  background-color: #526f94;
+}
+
+.follower-list-header-lower-right a {
+  color: #253141;
+  border-bottom: 2px solid #253141;
+}
+
+.follower-list-header-lower-right a:hover {
+  color: white;
+  background-color: #526f94;
 }

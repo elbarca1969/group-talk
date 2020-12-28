@@ -1,0 +1,28 @@
+<div class="group-member-main-container">
+  <div class="group-member-main-upper">
+    <div class="group-member-main-upper-left"></div>
+    <div class="group-member-main-upper-right">
+      <% if user_signed_in? %>
+        <% unless current_user.id == user.id %>
+          <%= render partial: "/relationships/follow_button", locals: { user: user } %>
+        <% else %>
+          <div class="group-member-main-upper-right-edit">
+            <%= link_to(edit_user_path(user.id)) do %>
+              <i class="fa fa-wrench fa-fw"></i>アカウント編集
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="group-member-main-lower">
+    <%= link_to(user_path(user.id)) do %>
+      <div class="group-member-user-nickname">
+        <%= user.nickname %>
+      </div>
+      <div class="group-member-user-introduction">
+        <%= user.introduction %>
+      </div>
+    <% end %>
+  </div>
+</div>

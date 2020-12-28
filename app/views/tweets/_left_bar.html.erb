@@ -42,7 +42,7 @@
   <% if user_signed_in? %>
     <div class="left-bar-lower">
       <div class="left-bar-group-title">
-        <%= link_to root_path do %>
+        <%= link_to list_user_path(current_user.id) do %>
           <i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;あなたのグループ
         <% end %>
       </div>

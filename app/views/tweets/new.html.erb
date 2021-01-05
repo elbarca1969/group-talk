@@ -1,21 +1,25 @@
-<%= form_with model: [@group, @tweet], local: true do |f| %>
-  <div class="form-input">
-    <%= f.text_area :content, class:'form-tweet', placeholder:'type a tweet' %>
-  </div>
-  <div class="tweet-form">
-    <div class="tweet-form-left"></div>
-    <div class="tweet-form-right">
-      <label class="form-image">
-        <span class="image-file">画像</span>
-        <%= f.file_field :image, class: 'hidden' %>
-      </label>
+<div class="tweet-form">
+  <%= form_with model: [@group, @tweet], local: true do |f| %>
+    <div class="tweet-form-container">
+      <div class="tweet-form-wrapper">
+        <div class="tweet-form-upper">
+          <%= f.text_area :content, class: "tweet-form-upper-input", placeholder: '何を伝える？', autofocus: true %>
+        </div>
+        <div id="image-list"></div>
+        <div class="tweet-form-lower">
+          <label class="tweet-form-lower-left">
+            <div class="tweet-form-lower-left-icon">
+              <span class="camera-icon"><i class="fa fa-camera-retro fa-fw"></i></span>
+              <%= f.file_field :image, class: 'hidden' %>
+            </div>
+          </label>
+          <div class="tweet-form-right">
+            <div class="tweet-form-submit">
+              <%= f.submit 'ツイート', class: "tweet-form-submit-btn" %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id="image-list"></div>
-  <div class="tweet-form">
-    <div class="tweet-form-left"></div>
-    <div class="tweet-form-right">
-      <%= f.submit '投稿する', class:'form-submit' %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

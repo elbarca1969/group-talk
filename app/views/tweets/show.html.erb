@@ -29,7 +29,7 @@
           <%= link_to @group.name, group_path(@group) %>
         </div>
         <div class="tweet-show-lower-content">
-          <%= @tweet.content %>
+          <%= safe_join(@tweet.content.split("\n"),tag(:br)) %>
           <%= image_tag @tweet.image, class: "tweet-show-lower-image" if @tweet.image.attached? %>
         </div>
         <div class="tweet-show-lower-date">

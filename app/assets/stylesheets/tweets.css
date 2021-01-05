@@ -240,24 +240,60 @@
   margin-right: 10px;
 }
 
-.form-input{
+.tweet-form {
+  width: 750px;
+  margin: 50px auto 0;
+  height: calc(100vh - 50px);
+  overflow: scroll;
+  background-color: #FAFAFA;
+  padding-bottom: 15px;
+}
+
+.tweet-form-container {
+  padding: 0 100px;
+}
+
+.tweet-form-wrapper {
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #253141;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.tweet-form-upper-input {
+  width: 100%;
+  height: 180px;
+  padding: 5px;
+  border: none;
+}
+
+.tweet-form-lower {
+  padding-top: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.form-tweet{
-  width: 50vw;
-  height: 100px;
-  margin-top: 20px;
+.tweet-form-lower-left-icon,
+.tweet-form-submit-btn {
+  border: 1px solid #253141;
+  background-color: #253141;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: large;
+  color: white;
 }
 
-.tweet-form{
-  display: flex;
-  justify-content: space-around;
+.tweet-form-lower-left-icon:hover,
+.tweet-form-submit-btn:hover {
+  cursor: pointer;
+  background-color: #526f94;
+  border: 1px solid #526f94;
 }
 
-.tweet-form-right{
-  margin-top: 15px;
+.input-text-count {
+  height: 30px;
+  text-align: right;
 }
 
 .tweet-show-container {

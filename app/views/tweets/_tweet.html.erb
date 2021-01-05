@@ -16,7 +16,7 @@
     <div class="tweet-lower">
       <%= link_to group_tweet_path(tweet.group, tweet.id) do %> 
         <div class="tweet-content">
-          <%= tweet.content %>
+          <%= safe_join(tweet.content.split("\n"),tag(:br)) %>
           <%= image_tag tweet.image, class: 'tweet-image' if tweet.image.attached? %>
         </div>
       <% end %>

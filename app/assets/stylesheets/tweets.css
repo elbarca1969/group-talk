@@ -291,6 +291,11 @@
   border: 1px solid #526f94;
 }
 
+.input-text-count {
+  height: 30px;
+  text-align: right;
+}
+
 .tweet-show-container {
   padding-top: 10px;
   height: calc(100vh - 50px);

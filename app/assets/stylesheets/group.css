@@ -27,6 +27,12 @@
   border-bottom: 1px solid #999;
 }
 
+.group-name-input-count,
+.group-content-input-count {
+  height: 30px;
+  text-align: right;
+}
+
 .group-content-form-upper-input {
   width: 100%;
   height: 180px;

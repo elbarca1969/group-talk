@@ -1,29 +1,19 @@
-<div class='chat-room-form'>
-  <h1>新規グループ作成</h1>
+<div class="group-form">
   <%=form_with model: @group, local: true do |f|%>
-
-  <%= render 'shared/error_messages', model: f.object %>
-
-    <div class='chat-group-form__field'>
-      <div class='chat-group-form__field--left'>
-        <%= f.label :グループ名, class: 'chat-group-form__label'%>
-      </div>
-      <div class='chat-group-form__field--right'>
-        <%= f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'%>
-      </div>
-    </div>
-    <div class='chat-group-form__field'>
-      <div class='chat-group-form__field--left'>
-        <%= f.label :グループ内容, class: 'chat-group-form__label'%>
-      </div>
-      <div class='chat-group-form__field--right'>
-        <%= f.text_field :content, class: 'chat__group_name chat-group-form__input', placeholder: 'グループの内容を入力してください'%>
-      </div>
-    </div>
-    <div class='chat-group-form__field'>
-      <div class='chat-group-form__field--left'></div>
-      <div class='chat-group-form__field--right'>
-        <%= f.submit 'グループを作成', class: 'chat-group-form__action-btn'%>
+    <div class="group-form-container">
+      <div class="group-form-wrapper">
+        <div class="group-form-upper">
+          <%= f.text_area :name, class:"group-name-form-upper-input", placeholder:"グループの名前は？", autofocus: true %>
+        </div>
+        <div class="group-form-upper">
+          <%= f.text_area :content, class:"group-content-form-upper-input", placeholder:"どんなグループ？" %>
+        </div>
+        <div class="group-form-lower">
+          <div class="group-form-lower-left"></div>
+          <div class="group-form-lower-right">
+            <%= f.submit 'グループを作る', class: "group-form-submit-btn" %>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>

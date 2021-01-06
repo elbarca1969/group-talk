@@ -3,8 +3,9 @@
     <div class="group-form-container">
       <div class="group-form-wrapper">
         <div class="group-form-upper">
-          <%= f.text_area :name, class:"group-name-form-upper-input", placeholder:"グループの名前は？", autofocus: true %>
+          <%= f.text_area :name, class:"group-name-form-upper-input group-name-input-text", placeholder:"グループの名前は？", autofocus: true %>
         </div>
+        <div class="group-name-input-count"></div>
         <div class="group-form-upper">
           <%= f.text_area :content, class:"group-content-form-upper-input", placeholder:"どんなグループ？" %>
         </div>

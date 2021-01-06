@@ -4,7 +4,8 @@ class Group < ApplicationRecord
   has_many :tweets, dependent: :destroy
   belongs_to :user
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true,
+                  length_with_wide_char: { maximum: 70 }
 
   def self.search(search)
     if search != ""

@@ -1,4 +1,4 @@
-if (document.URL.match( "groups/new" )) {
+if (document.URL.match( "groups/new" ) || document.URL.match(/groups\/\d+\/edit/)) {
   $(function(){
     var MAX = 200
     $('.group-content-input-text').on('keyup', function(){

@@ -60,6 +60,12 @@
   border: 1px solid #526f94;
 }
 
+.group-name-edit {
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
 .group-list-header {
   height: 100px;
   background-color: #FAFAFA;

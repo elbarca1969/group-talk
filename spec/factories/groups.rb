@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :group do
-    name {Faker::Name.name}
+    name {"test"}
     content {"test"}
+    association :user
   end
 end

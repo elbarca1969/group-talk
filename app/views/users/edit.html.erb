@@ -1,39 +1,29 @@
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>Edit Account</h2>
-      <h5>アカウントの編集</h5>
-    </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: @user, url: user_path, local: true do |f|%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :nickname%>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :nickname, autofocus: true%>
-          </div>
+<div class="account-page">
+  <div class="account-page-title">
+    アカウントの編集
+  </div>
+  <%= form_with model: @user, url: user_path, local: true do |f|%>
+    <div class="account-page-container">
+      <div class="account-page-wrapper">
+        <div class="field-input account-page-input-name">
+          <%= f.label :nickname, class: "field-label" %>
+          <%= f.text_field :nickname, placeholder: "ニックネーム", autofocus: true %>
         </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :introduction%>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :introduction%>
-          </div>
+        <div class="field-input account-page-input-introduction">
+          <%= f.label :introduction, class: "field-label" %>
+          <%= f.text_area :introduction, class: "introduction-area", placeholder: "自己紹介" %>
         </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email%>
-          </div>
+        <div class="field-input account-page-input-email">
+          <%= f.label :email, class: "field-label" %>
+          <%= f.email_field :email, placeholder: "メールアドレス" %>
         </div>
-        <div class='actions'>
-          <%= f.submit "アカウントの編集", class: 'btn'%>
+        <div class="account-page-btn">
+          <div class="account-page-btn-right"></div>
+          <div class="account-page-btn-left">
+            <%= f.submit "編集する", class: 'account-page-submit-btn'%>
+          </div>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

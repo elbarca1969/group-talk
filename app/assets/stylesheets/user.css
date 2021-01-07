@@ -102,6 +102,11 @@
   border: 1px solid #526f94;
 }
 
+.field-label {
+  font-weight: bold;
+  color: #999;
+}
+
 .user-show-header {
   padding: 10px 20px 0 20px;
   height: 150px;

@@ -1,0 +1,15 @@
+.likes-icon {
+  color: red;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.unlikes-icon {
+  color: #999;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.unlikes-icon:hover {
+  color: rgba(255, 85, 85, 0.5);
+}

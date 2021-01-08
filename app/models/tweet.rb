@@ -2,6 +2,7 @@ class Tweet < ApplicationRecord
   belongs_to :group
   belongs_to :user
   has_one_attached :image
+  has_many :likes, dependent: :destroy
 
   validates :content, presence: true, unless: :was_attached?,
                       length_with_wide_char: { maximum: 400 }

@@ -35,6 +35,11 @@
         <div class="tweet-show-lower-date">
           <%= l @tweet.created_at, format: :long %>
         </div>
+        <div class="tweet-show-likes">
+          <div id="likes-show-button<%= @tweet.id %>">
+            <%= render partial: "likes/like_show", locals: { tweet: @tweet, like: @like } %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

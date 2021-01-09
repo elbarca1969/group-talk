@@ -28,3 +28,8 @@
 .like-show-list:hover {
   text-decoration: underline;
 }
+
+.likes-list-main {
+  height: calc(100vh - 50px);
+  overflow: scroll;
+}

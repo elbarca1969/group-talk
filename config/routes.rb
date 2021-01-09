@@ -12,7 +12,11 @@ Rails.application.routes.draw do
       get :search
     end
     resources :tweets do
-      resources :likes, only: [:create, :destroy]
+      resources :likes, only: [:create, :destroy] do
+        member do
+          get :list
+        end
+      end
     end
   end
   resources :users, only: [:show, :edit, :update] do

@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+  <% unless tweet.like_user(current_user.id).blank? %>
+    <%= link_to(group_tweet_like_path(tweet.group.id, tweet.id, tweet.likes[0].id), method: :delete, remote: true) do %>
+      <div class="likes-icon">
+        <i class="fa fa-heart fa-fw"></i>
+        <%= tweet.likes.length %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to(group_tweet_likes_path(tweet.group.id, tweet.id), method: :post, remote: true) do %>
+      <div class="unlikes-icon">
+        <i class="fa fa-heart fa-fw"></i>
+        <% if tweet.likes.length > 0 %>
+          <%= tweet.likes.length %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

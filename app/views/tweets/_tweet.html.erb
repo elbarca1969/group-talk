@@ -20,6 +20,9 @@
           <%= image_tag tweet.image, class: 'tweet-image' if tweet.image.attached? %>
         </div>
       <% end %>
+      <div id="likes-button<%= tweet.id %>">
+        <%= render partial: "likes/like", locals: { tweet: tweet, like: @like } %>
+      </div>
     </div>
   </div>
 </div>

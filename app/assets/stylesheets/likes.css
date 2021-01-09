@@ -1,0 +1,35 @@
+.likes-icon {
+  color: red;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.unlikes-icon {
+  color: #999;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.unlikes-icon:hover {
+  color: rgba(255, 85, 85, 0.5);
+}
+
+.like-show-list,
+.like-show-list-none {
+  text-decoration: none;
+  color: black;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  display: block;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.like-show-list:hover {
+  text-decoration: underline;
+}
+
+.likes-list-main {
+  height: calc(100vh - 50px);
+  overflow: scroll;
+}

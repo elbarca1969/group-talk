@@ -4,6 +4,7 @@ class CreateLikes < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :tweet_id
       t.timestamps
+      t.index [:user_id, :tweet_id], unique: true
     end
   end
 end

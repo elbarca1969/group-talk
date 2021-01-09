@@ -1,6 +1,6 @@
 <div class="like-show">
   <% if tweet.likes.length > 0 %>
-    <%= link_to "#{tweet.likes.length}いいね", root_path, class: "like-show-list" %>
+    <%= link_to "#{tweet.likes.length}いいね", list_group_tweet_like_path(tweet.group.id, tweet.id, tweet.likes.ids), class: "like-show-list" %>
   <% else %>
     <div class="like-show-list-none">0いいね</div>
   <% end %>

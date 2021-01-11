@@ -65,6 +65,22 @@
   background-color: white;
 }
 
+#avator-list > div > img,
+.human-dummy {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+#avator-list > div > img {
+  object-fit: cover;
+}
+
+#avator-list > div > img:hover,
+.human-dummy:hover {
+  cursor: pointer;
+}
+
 .field-input {
   margin: 20px 0;
 }

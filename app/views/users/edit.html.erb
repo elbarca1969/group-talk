@@ -5,6 +5,18 @@
   <%= form_with model: @user, url: user_path, local: true do |f|%>
     <div class="account-page-container">
       <div class="account-page-wrapper">
+        <div class="field-input account-page-input-avator">
+          <label class="account-page-input-avator-btn">
+            <div id="avator-list"></div>
+            <% if @user.avator.attached? %>
+              <%= image_tag @user.avator, class: "accont-page-input-avator-edit" %>
+              <%= f.file_field :avator, class: 'hidden' %>
+            <% else %>
+              <%= image_tag "human.dummy.png", class: "human-dummy" %>
+              <%= f.file_field :avator, class: 'hidden' %>
+            <% end %>
+          </label>
+        </div>
         <div class="field-input account-page-input-name">
           <%= f.label :nickname, class: "field-label" %>
           <%= f.text_field :nickname, placeholder: "ニックネーム", autofocus: true %>

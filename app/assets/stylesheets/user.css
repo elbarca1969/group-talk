@@ -66,13 +66,15 @@
 }
 
 #avator-list > div > img,
-.human-dummy {
+.human-dummy,
+.accont-page-input-avator-edit {
   width: 100px;
   height: 100px;
   border-radius: 10px;
 }
 
-#avator-list > div > img {
+#avator-list > div > img,
+.accont-page-input-avator-edit {
   object-fit: cover;
 }
 

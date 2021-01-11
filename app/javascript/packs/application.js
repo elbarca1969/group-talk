@@ -13,6 +13,7 @@ require('./preview')
 require('./tweetCount')
 require('./groupNameCount')
 require('./groupContentCount')
+require('./avatorPreview')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

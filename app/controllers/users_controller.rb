@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: :edit
-  before_action :set_user, only: [:show, :edit, :update, :list, :owner]
+  before_action :set_user, only: [:show, :edit, :update, :list, :owner, :purge]
 
   def show
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
@@ -29,6 +29,11 @@ class UsersController < ApplicationController
   def owner
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @groupOwners = @user.owned_groups.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+  end
+
+  def purge
+    @user.avator.purge
+    redirect_to edit_user_path(current_user.id)
   end
 
   private

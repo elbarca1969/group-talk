@@ -344,15 +344,20 @@
   border: 1px solid darkgreen;
 }
 
-.tweet-show-upper-right-delete a {
+#tweet-delete-open {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
   color: darkred;
   border: 1px solid darkred;
+  position: relative;
 }
 
-.tweet-show-upper-right-delete a:hover {
+#tweet-delete-open:hover {
   color: white;
   background-color: darkred;
   border: 1px solid darkred;
+  cursor: pointer;
 }
 
 .tweet-show-lower {

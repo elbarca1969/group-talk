@@ -290,6 +290,10 @@
   cursor: pointer;
 }
 
+#group-delete-modal {
+  display: none;
+}
+
 .group-show-header-no-participation a,
 .group-show-header-participation a {
   display: inline-block;

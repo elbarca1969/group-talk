@@ -274,15 +274,20 @@
   border: 1px solid darkgreen;
 }
 
-.group-show-header-upper-center-delete a {
+#group-delete-open {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
   color: darkred;
   border: 1px solid darkred;
+  position: relative;
 }
 
-.group-show-header-upper-center-delete a:hover {
+#group-delete-open:hover {
   color: white;
   background-color: darkred;
   border: 1px solid darkred;
+  cursor: pointer;
 }
 
 .group-show-header-no-participation a,

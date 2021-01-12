@@ -18,10 +18,8 @@
                   <i class="fa fa-wrench fa-fw"></i>グループを編集
                 <% end %>
               </div>
-              <div class="group-show-header-upper-center-delete">
-                <%= link_to(group_path(@group.id), method: :delete) do %>
-                  <i class="fa fa-trash-alt fa-fw"></i>グループを削除
-                <% end %>
+              <div id="group-delete-open">
+                <i class="fa fa-trash-alt fa-fw"></i>グループを削除
               </div>
             </div>
           <% end %>

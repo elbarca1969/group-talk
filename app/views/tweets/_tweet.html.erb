@@ -1,16 +1,29 @@
 <div class="tweet">
   <div class="tweet-container">
     <div class="tweet-upper">
-      <div class="tweet-user">
-        <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
+      <div class="tweet-upper-left">
+        <%= link_to(user_path(tweet.user.id)) do %>
+          <div class="tweet-upper-avator">
+            <% if tweet.user.avator.attached? %>
+              <%= image_tag tweet.user.avator %>
+            <% else %>
+              <%= image_tag "human.dummy.png" %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
-      <div class="tweet-date">
-        <%= tweet_time(tweet.created_at) %>
-      </div>
-    </div>
-    <div class="tweet-center">
-      <div class="tweet-group">
-        <%= link_to tweet.group.name, group_path(tweet.group.id) %>
+      <div class="tweet-upper-right">
+        <div class="tweet-upper-right-upper">
+          <div class="tweet-user">
+            <%= link_to tweet.user.nickname, user_path(tweet.user_id) %>
+          </div>
+          <div class="tweet-date">
+            <%= tweet_time(tweet.created_at) %>
+          </div>
+        </div>
+        <div class="tweet-group">
+          <%= link_to tweet.group.name, group_path(tweet.group.id) %>
+        </div>
       </div>
     </div>
     <div class="tweet-lower">

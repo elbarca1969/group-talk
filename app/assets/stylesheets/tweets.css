@@ -136,6 +136,18 @@
   padding: 0 10px;
 }
 
+.tweet-upper-avator > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.tweet-upper-right-upper {
+  display: flex;
+}
+
 .tweet-user a {
   font-weight: bold;
 }
@@ -143,10 +155,6 @@
 .tweet-date {
   color: #999;
   padding-left: 10px;
-}
-
-.tweet-group {
-  padding: 0 10px;
 }
 
 .tweet-group a {

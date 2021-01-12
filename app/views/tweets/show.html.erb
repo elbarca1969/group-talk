@@ -22,11 +22,26 @@
         </div>
       </div>
       <div class="tweet-show-lower">
-        <div class="tweet-show-lower-user">
-          <%= link_to @tweet.user.nickname, user_path(@tweet.user_id) %>
-        </div>
-        <div class="tweet-show-lower-group">
-          <%= link_to @group.name, group_path(@group) %>
+        <div class="tweet-show-lower-upper">
+          <div class="tweet-show-lower-left">
+            <%= link_to(user_path(@tweet.user_id)) do %>
+              <div class="tweet-show-avator">
+                <% if @tweet.user.avator.attached? %>
+                  <%= image_tag @tweet.user.avator %>
+                <% else %>
+                  <%= image_tag "human.dummy.png" %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="tweet-show-lower-right">
+            <div class="tweet-show-lower-user">
+              <%= link_to @tweet.user.nickname, user_path(@tweet.user_id) %>
+            </div>
+            <div class="tweet-show-lower-group">
+              <%= link_to @group.name, group_path(@group) %>
+            </div>
+          </div>
         </div>
         <div class="tweet-show-lower-content">
           <%= safe_join(@tweet.content.split("\n"),tag(:br)) %>

@@ -360,6 +360,10 @@
   cursor: pointer;
 }
 
+#tweet-delete-modal {
+  display: none;
+}
+
 .tweet-show-lower {
   border-bottom: 1px solid #DDDDDD;
   margin-bottom: 50px;

@@ -83,6 +83,19 @@
   cursor: pointer;
 }
 
+.account-page-input-avator-btn a {
+  text-decoration: none;
+  color: #999;
+  font-size: small;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.account-page-input-avator-btn a:hover {
+  color: darkred;
+}
+
 .field-input {
   margin: 20px 0;
 }

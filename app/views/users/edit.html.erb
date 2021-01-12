@@ -11,9 +11,15 @@
             <% if @user.avator.attached? %>
               <%= image_tag @user.avator, class: "accont-page-input-avator-edit" %>
               <%= f.file_field :avator, class: 'hidden' %>
+              <%= link_to(purge_user_path(current_user.id), method: :delete) do %>
+                <i class="fa fa-trash-alt fa-fw"></i>プロフィール画像を削除する
+              <% end %>
             <% else %>
               <%= image_tag "human.dummy.png", class: "human-dummy" %>
               <%= f.file_field :avator, class: 'hidden' %>
+              <%= link_to(purge_user_path(current_user.id), method: :delete) do %>
+                <i class="fa fa-trash-alt fa-fw"></i>プロフィール画像を削除する
+              <% end %>
             <% end %>
           </label>
         </div>

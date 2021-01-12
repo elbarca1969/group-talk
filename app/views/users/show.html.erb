@@ -19,11 +19,24 @@
           <% end %>
         </div>
       </div>
-      <div class="user-show-nickname">
-        <%= @user.nickname %>
-      </div>
-      <div class="user-show-introduction">
-        <%= @user.introduction %>
+      <div class="user-show-header-center">
+        <div class="user-show-header-center-left">
+          <div class="user-show-avator">
+            <% if @user.avator.attached? %>
+              <%= image_tag @user.avator %>
+            <% else %>
+              <%= image_tag "human.dummy.png" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="user-show-header-center-left">
+          <div class="user-show-nickname">
+            <%= @user.nickname %>
+          </div>
+          <div class="user-show-introduction">
+            <%= @user.introduction %>
+          </div>
+        </div>
       </div>
       <div class="user-show-header-lower">
         <div class="user-show-header-lower-follow-member">

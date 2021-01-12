@@ -65,6 +65,37 @@
   background-color: white;
 }
 
+#avator-list > div > img,
+.human-dummy,
+.accont-page-input-avator-edit {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+#avator-list > div > img,
+.accont-page-input-avator-edit {
+  object-fit: cover;
+}
+
+#avator-list > div > img:hover,
+.human-dummy:hover {
+  cursor: pointer;
+}
+
+.account-page-input-avator-btn a {
+  text-decoration: none;
+  color: #999;
+  font-size: small;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.account-page-input-avator-btn a:hover {
+  color: darkred;
+}
+
 .field-input {
   margin: 20px 0;
 }
@@ -137,6 +168,19 @@
   color: white;
   background-color: darkgreen;
   border: 1px solid darkgreen;
+}
+
+.user-show-header-center {
+  display: flex;
+}
+
+.user-show-avator > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .user-show-nickname {

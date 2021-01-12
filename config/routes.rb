@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     member do
       get :list
       get :owner
+      delete :purge
     end
   end
   resources :relationships, only: [:index, :create, :destroy] do

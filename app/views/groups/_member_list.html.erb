@@ -15,14 +15,25 @@
       <% end %>
     </div>
   </div>
-  <div class="group-member-main-lower">
-    <%= link_to(user_path(user.id)) do %>
-      <div class="group-member-user-nickname">
-        <%= user.nickname %>
+  <%= link_to(user_path(user.id)) do %>
+    <div class="group-member-main-lower">
+      <div class="group-member-main-lower-left">
+        <div class="group-member-avator">
+          <% if user.avator.attached? %>
+            <%= image_tag user.avator %>
+          <% else %>
+            <%= image_tag "human.dummy.png" %>
+          <% end %>
+        </div>
       </div>
-      <div class="group-member-user-introduction">
-        <%= user.introduction %>
+      <div class="group-member-main-lower-right">
+        <div class="group-member-user-nickname">
+          <%= user.nickname %>
+        </div>
+        <div class="group-member-user-introduction">
+          <%= user.introduction %>
+        </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

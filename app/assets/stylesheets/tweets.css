@@ -136,6 +136,10 @@
   cursor: pointer;
 }
 
+#group-quit-modal {
+  display: none;
+}
+
 .tweets {
   background-color: white;
   height: calc(100vh - 150px);

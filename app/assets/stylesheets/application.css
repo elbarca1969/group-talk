@@ -76,6 +76,10 @@ header{
   cursor: pointer;
 }
 
+#logout-modal {
+  display: none;
+}
+
 .error-message{
   font-size: 30px;
   color :red;

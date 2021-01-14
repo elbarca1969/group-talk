@@ -70,6 +70,7 @@ header{
 #logout-open {
   color: white;
   font-size: 15px;
+  position: relative;
 }
 
 #logout-open:hover {
@@ -78,6 +79,69 @@ header{
 
 #logout-modal {
   display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(128, 128, 128, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logout-confirmation {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.logout-sentence {
+  padding: 50px 0;
+  font-weight: bold;
+}
+
+.logout-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+#logout-btn-cancel {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color:#253141;
+  border: 1px solid #253141;
+}
+
+#logout-btn-cancel:hover {
+  color: white;
+  background-color: #253141;
+  border: 1px solid #253141;
+  cursor: pointer;
+}
+
+.logout-btn-action a {
+  display: block;
+  text-decoration: none;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkred;
+  border: 1px solid darkred;
+}
+
+.logout-btn-action a:hover {
+  color: white;
+  background-color: darkred;
+  border: 1px solid darkred;
 }
 
 .error-message{

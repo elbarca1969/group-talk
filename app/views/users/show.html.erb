@@ -3,57 +3,59 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
-    <div class="user-show-header">
-      <div class="user-show-header-upper">
-        <div class="user-show-header-upper-left"></div>
-        <div class="user-show-header-upper-right">
-          <% if user_signed_in? %>
-            <%= render partial: "/relationships/follow_button", locals: { user: @user } %>
-          <% end %>
-          <% if user_signed_in? && current_user.id == @user.id %>
-            <div class="user-show-header-upper-right-edit">
-              <%= link_to(edit_user_path(@user.id)) do %>
-                <i class="fa fa-wrench fa-fw"></i>アカウントを編集
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="user-show-header-center">
-        <div class="user-show-header-center-left">
-          <div class="user-show-avator">
-            <% if @user.avator.attached? %>
-              <%= image_tag @user.avator %>
-            <% else %>
-              <%= image_tag "human.dummy.png" %>
+    <div class="user-show-main">
+      <div class="user-show-header">
+        <div class="user-show-header-upper">
+          <div class="user-show-header-upper-left"></div>
+          <div class="user-show-header-upper-right">
+            <% if user_signed_in? %>
+              <%= render partial: "/relationships/follow_button", locals: { user: @user } %>
+            <% end %>
+            <% if user_signed_in? && current_user.id == @user.id %>
+              <div class="user-show-header-upper-right-edit">
+                <%= link_to(edit_user_path(@user.id)) do %>
+                  <i class="fa fa-wrench fa-fw"></i>アカウントを編集
+                <% end %>
+              </div>
             <% end %>
           </div>
         </div>
-        <div class="user-show-header-center-left">
-          <div class="user-show-nickname">
-            <%= @user.nickname %>
+        <div class="user-show-header-center">
+          <div class="user-show-header-center-left">
+            <div class="user-show-avator">
+              <% if @user.avator.attached? %>
+                <%= image_tag @user.avator %>
+              <% else %>
+                <%= image_tag "human.dummy.png" %>
+              <% end %>
+            </div>
           </div>
-          <div class="user-show-introduction">
-            <%= @user.introduction %>
+          <div class="user-show-header-center-left">
+            <div class="user-show-nickname">
+              <%= @user.nickname %>
+            </div>
+            <div class="user-show-introduction">
+              <%= @user.introduction %>
+            </div>
+          </div>
+        </div>
+        <div class="user-show-header-lower">
+          <div class="user-show-header-lower-follow-member">
+            <%= render partial: "/relationships/follow_number" %>
+          </div>
+          <div class="user-show-header-lower-group">
+            <div class="user-show-header-lower-group-participation">
+              <%= link_to "#{@user.groups.length}グループ", list_user_path(@user.id) %>
+            </div>
+            <div class="user-show-header-lower-group-owner">
+              <%= link_to "#{@user.owned_groups.length}オーナー", owner_user_path(@user.id) %>
+            </div>
           </div>
         </div>
       </div>
-      <div class="user-show-header-lower">
-        <div class="user-show-header-lower-follow-member">
-          <%= render partial: "/relationships/follow_number" %>
-        </div>
-        <div class="user-show-header-lower-group">
-          <div class="user-show-header-lower-group-participation">
-            <%= link_to "#{@user.groups.length}グループ", list_user_path(@user.id) %>
-          </div>
-          <div class="user-show-header-lower-group-owner">
-            <%= link_to "#{@user.owned_groups.length}オーナー", owner_user_path(@user.id) %>
-          </div>
-        </div>
+      <div class="user-show-main-tweets">
+        <%= render partial: '/tweets/tweet', collection: @tweets %>
       </div>
-    </div>
-    <div class="user-show-main">
-      <%= render partial: '/tweets/tweet', collection: @tweets %>
     </div>
   </div>
   <div class="right-bar">

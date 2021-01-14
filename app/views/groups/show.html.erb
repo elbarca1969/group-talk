@@ -3,86 +3,88 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
-    <div class="group-show-header">
-      <div class="group-show-header-container">
-        <div class="group-show-header-upper">
-          <div class="group-show-header-upper-left">
-            <div class="group-show-header-users-member">
-              <%= link_to "#{@group.users.length}参加中", member_group_path(@group) %>
+    <div class="group-show-main">
+      <div class="group-show-header">
+        <div class="group-show-header-container">
+          <div class="group-show-header-upper">
+            <div class="group-show-header-upper-left">
+              <div class="group-show-header-users-member">
+                <%= link_to "#{@group.users.length}参加中", member_group_path(@group) %>
+              </div>
+            </div>
+            <% if user_signed_in? && current_user.id == @group.user_id %>
+              <div class="group-show-header-upper-center">
+                <div class="group-show-header-upper-center-edit">
+                  <%= link_to(edit_group_path(@group.id)) do %>
+                    <i class="fa fa-wrench fa-fw"></i>グループを編集
+                  <% end %>
+                </div>
+                <div id="group-delete-open">
+                  <i class="fa fa-trash-alt fa-fw"></i>グループを削除
+                </div>
+                <div id="group-delete-modal">
+                  <div class="group-delete-confirmation">
+                    <div class="group-delete-sentence">
+                      本当にこのグループを削除しますか？
+                    </div>
+                    <div class="group-delete-btn">
+                      <div id="group-delete-btn-cancel">
+                        キャンセル
+                      </div>
+                      <div class="group-delete-btn-action">
+                        <%= link_to(group_path(@group.id), method: :delete) do %>
+                          <i class="fa fa-trash-alt fa-fw"></i>グループを削除
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+            <div class="group-show-header-upper-right">
+              <% if user_signed_in? %>
+                <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
+                  <div class="group-show-header-no-participation">
+                    <%= link_to '参　加', join_group_path(@group) %>
+                  </div>
+                <% else %>
+                  <div class="group-show-header-participation">
+                    <%= link_to '参加中', group_tweets_path(@group) %>
+                  </div>
+                <% end %>
+              <% end %>
             </div>
           </div>
-          <% if user_signed_in? && current_user.id == @group.user_id %>
-            <div class="group-show-header-upper-center">
-              <div class="group-show-header-upper-center-edit">
-                <%= link_to(edit_group_path(@group.id)) do %>
-                  <i class="fa fa-wrench fa-fw"></i>グループを編集
-                <% end %>
-              </div>
-              <div id="group-delete-open">
-                <i class="fa fa-trash-alt fa-fw"></i>グループを削除
-              </div>
-              <div id="group-delete-modal">
-                <div class="group-delete-confirmation">
-                  <div class="group-delete-sentence">
-                    本当にこのグループを削除しますか？
-                  </div>
-                  <div class="group-delete-btn">
-                    <div id="group-delete-btn-cancel">
-                      キャンセル
-                    </div>
-                    <div class="group-delete-btn-action">
-                      <%= link_to(group_path(@group.id), method: :delete) do %>
-                        <i class="fa fa-trash-alt fa-fw"></i>グループを削除
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="group-show-header-center">
+            <div class="group-show-header-group-name">
+              <%= @group.name%>
             </div>
-          <% end %>
-          <div class="group-show-header-upper-right">
-            <% if user_signed_in? %>
-              <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
-                <div class="group-show-header-no-participation">
-                  <%= link_to '参　加', join_group_path(@group) %>
-                </div>
-              <% else %>
-                <div class="group-show-header-participation">
-                  <%= link_to '参加中', group_tweets_path(@group) %>
+            <div class="group-show-header-group-content">
+              <%= @group.content %>
+            </div>
+          </div>
+          <div class="group-show-header-lower">
+              <%= link_to(user_path(@group.user_id)) do %>
+                <div class="group-show-header-lower-left">
+                    <div class="group-show-header-group-owner-icon">
+                      <i class="fa fa-user-shield fa-fw"></i>
+                    </div>
+                    <div class="group-show-header-group-owner-name">
+                      <%= @group.user.nickname %>
+                    </div>
                 </div>
               <% end %>
-            <% end %>
-          </div>
-        </div>
-        <div class="group-show-header-center">
-          <div class="group-show-header-group-name">
-            <%= @group.name%>
-          </div>
-          <div class="group-show-header-group-content">
-            <%= @group.content %>
-          </div>
-        </div>
-        <div class="group-show-header-lower">
-            <%= link_to(user_path(@group.user_id)) do %>
-              <div class="group-show-header-lower-left">
-                  <div class="group-show-header-group-owner-icon">
-                    <i class="fa fa-user-shield fa-fw"></i>
-                  </div>
-                  <div class="group-show-header-group-owner-name">
-                    <%= @group.user.nickname %>
-                  </div>
+            <div class="group-show-header-lower-right">
+              <div class="group-show-header-group-birthday">
+                <i class="fa fa-history fa-fw"></i><%= l @group.created_at %>
               </div>
-            <% end %>
-          <div class="group-show-header-lower-right">
-            <div class="group-show-header-group-birthday">
-              <i class="fa fa-history fa-fw"></i><%= l @group.created_at %>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="group-show-main">
-      <%= render partial: '/tweets/tweet', collection: @tweets %>
+      <div class="group-show-main-tweets">
+        <%= render partial: '/tweets/tweet', collection: @tweets %>
+      </div>
     </div>
   </div>
   <div class="right-bar">

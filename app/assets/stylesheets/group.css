@@ -232,8 +232,12 @@
   background-color:#253141;
 }
 
+.group-show-main {
+  height: calc(100vh - 50px);
+  overflow: scroll;
+}
+
 .group-show-header {
-  height: 150px;
   background-color: #FAFAFA;
   border-bottom: 5px solid #DDDDDD;
   padding: 10px 20px;
@@ -400,18 +404,8 @@
   font-size: larger;
 }
 
-.group-show-header-group-content {
-  height: 50px;
-  overflow: scroll;
-}
-
 .group-show-header-lower-left:hover {
   color: black;
-}
-
-.group-show-main {
-  height: calc(100vh - 200px);
-  overflow: scroll;
 }
 
 .group-member-header {

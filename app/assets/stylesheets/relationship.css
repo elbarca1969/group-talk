@@ -1,11 +1,15 @@
 .home-main-chat-header {
-  height: 100px;
   background-color: #FAFAFA;
   border-bottom: 5px solid #DDDDDD;
-  padding: 0 20px;
+  padding: 20px;
   font-size: 20px;
   font-weight: bold;
-  line-height: 100px;
+}
+
+.home-main-chat-container > .tweets {
+  background-color: white;
+  height: calc(100vh - 125px);
+  overflow: scroll;
 }
 
 .follow-btn {

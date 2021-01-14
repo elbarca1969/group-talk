@@ -15,7 +15,6 @@
 }
 
 .left-bar-container a:hover,
-.main-chat-header-lower-left a:hover,
 .right-bar-container a:hover,
 .right-bar-group-search-btn:hover {
   color: white;
@@ -106,14 +105,103 @@
   margin-top: 5px;
 }
 
-.main-chat-header-lower a {
+.main-chat-header-lower-left a {
+  display: inline-block;
+  font-size: smaller;
+  padding: 5px 20px;
   border-radius: 20px;
-  padding: 5px 10px;
+  color: #253141;
+  border: 1px solid #253141;
 }
 
-.main-chat-header-lower-right a:hover {
+.main-chat-header-lower-left a:hover {
+  color: white;
+  background-color: #253141;
+  border: 1px solid #253141;
+}
+
+#group-quit-open {
+  font-size: smaller;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkred;
+  border: 1px solid darkred;
+  position: relative;
+}
+
+#group-quit-open:hover {
   color: white;
   background-color: darkred;
+  border: 1px solid darkred;
+  cursor: pointer;
+}
+
+#group-quit-modal {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(128, 128, 128, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.group-quit-confirmation {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.group-quit-sentence {
+  padding: 50px 0;
+  font-weight: bold;
+}
+
+.group-quit-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+#group-quit-btn-cancel {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color:#253141;
+  border: 1px solid #253141;
+}
+
+#group-quit-btn-cancel:hover {
+  color: white;
+  background-color: #253141;
+  border: 1px solid #253141;
+  cursor: pointer;
+}
+
+.group-quit-btn-action a {
+  text-decoration: none;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkred;
+  border: 1px solid darkred;
+}
+
+.group-quit-btn-action a:hover {
+  color: white;
+  background-color: darkred;
+  border: 1px solid darkred;
 }
 
 .tweets {
@@ -344,12 +432,84 @@
   border: 1px solid darkgreen;
 }
 
-.tweet-show-upper-right-delete a {
+#tweet-delete-open {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: darkred;
+  border: 1px solid darkred;
+  position: relative;
+}
+
+#tweet-delete-open:hover {
+  color: white;
+  background-color: darkred;
+  border: 1px solid darkred;
+  cursor: pointer;
+}
+
+#tweet-delete-modal {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(128, 128, 128, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.tweet-delete-confirmation {
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.tweet-delete-sentence {
+  padding: 50px 0;
+  font-weight: bold;
+}
+
+.tweet-delete-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+#tweet-delete-btn-cancel {
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
+  color:#253141;
+  border: 1px solid #253141;
+}
+
+#tweet-delete-btn-cancel:hover {
+  color: white;
+  background-color: #253141;
+  border: 1px solid #253141;
+  cursor: pointer;
+}
+
+.tweet-delete-btn-action a {
+  text-decoration: none;
+  font-size: smaller;
+  padding: 5px 20px;
+  border-radius: 20px;
   color: darkred;
   border: 1px solid darkred;
 }
 
-.tweet-show-upper-right-delete a:hover {
+.tweet-delete-btn-action a:hover {
   color: white;
   background-color: darkred;
   border: 1px solid darkred;

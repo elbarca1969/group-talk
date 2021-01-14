@@ -12,10 +12,25 @@
           <i class="fa fa-pen-alt fa-fw"></i>&nbsp;&nbsp;ツイート
         <% end %>
       </div>
-      <div class="main-chat-header-lower-right">
-        <%= link_to quit_group_path(@group), method: :delete do %>
-          <i class="fa fa-user-slash fa-fw"></i>&nbsp;&nbsp;退会する
-        <% end %>
+      <div id="group-quit-open">
+        <i class="fa fa-user-slash fa-fw"></i>&nbsp;&nbsp;退会する
+      </div>
+      <div id="group-quit-modal">
+        <div class="group-quit-confirmation">
+          <div class="group-quit-sentence">
+            本当にこのグループを退会しますか？
+          </div>
+          <div class="group-quit-btn">
+            <div id="group-quit-btn-cancel">
+              キャンセル
+            </div>
+            <div class="group-quit-btn-action">
+              <%= link_to(quit_group_path(@group), method: :delete) do %>
+                <i class="fa fa-user-slash fa-fw"></i>&nbsp;&nbsp;退会する
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

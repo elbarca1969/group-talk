@@ -17,8 +17,27 @@
         </div>
         <div class="header-right">
           <% if user_signed_in? %>
-            <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+            <div class="user-nickname">
+              <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>
+            </div>
+            <div id="logout-open">
+              ログアウト
+            </div>
+            <div id="logout-modal">
+              <div class="logout-confirmation">
+                <div class="logout-sentence">
+                  本当にログアウトしますか？
+                </div>
+                <div class="logout-btn">
+                  <div id="logout-btn-cancel">
+                    キャンセル
+                  </div>
+                  <div class="logout-btn-action">
+                    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+                  </div>
+                </div>
+              </div>
+            </div>
           <% else %>
             <%= link_to 'ログイン', new_user_session_path, class: "login" %>
             <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>

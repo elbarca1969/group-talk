@@ -595,4 +595,11 @@ img {
     display: block;
   }
 
+  .left-bar {
+    width: 10%;
+  }
+
+  .main {
+    width: 90%;
+  }
 }

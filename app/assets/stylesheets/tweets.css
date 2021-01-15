@@ -576,3 +576,10 @@ img {
   display: block;
   margin: auto;
 }
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .right-bar {
+    display: none;
+  }
+}

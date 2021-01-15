@@ -602,4 +602,18 @@ img {
   .main {
     width: 90%;
   }
+
+  .left-bar-container-responsive a{
+    border-radius: 20px;
+  }
+  
+  .left-bar-container-responsive a:hover {
+    color: white;
+    background-color:#253141;
+  }
+
+  .left-bar-container-responsive > .left-bar-upper {
+    padding: 0;
+    text-align: center;
+  }
 }

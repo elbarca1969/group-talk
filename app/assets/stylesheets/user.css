@@ -293,4 +293,13 @@
   .user-group-list-main {
     padding-bottom: 50px;
   }
+
+  .user-show-header-lower {
+    display: block;
+  }
+
+  .user-show-header-lower-follow-member {
+    display: flex;
+    justify-content: center;
+  }
 }

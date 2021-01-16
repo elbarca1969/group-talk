@@ -302,4 +302,12 @@
     display: flex;
     justify-content: center;
   }
+
+  .account-page {
+    width: 100vw;
+  }
+
+  .account-page-container {
+    padding: 0 20px 70px;
+  }
 }

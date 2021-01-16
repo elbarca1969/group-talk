@@ -503,4 +503,12 @@
   .group-list-header-group-search-input {
     width: 250px;
   }
+
+  .group-form {
+    width: 100vw;
+  }
+
+  .group-form-container {
+    padding: 0 20px;
+  }
 }

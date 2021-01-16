@@ -631,4 +631,13 @@ img {
   .tweets {
     padding-bottom: 50px;
   }
+
+  .tweet-form {
+    width: 100vw;
+    padding-bottom: 70px;
+  }
+
+  .tweet-form-container {
+    padding: 0 20px;
+  }
 }

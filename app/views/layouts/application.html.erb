@@ -47,5 +47,44 @@
       </div>
     </header>
     <%= yield %>
+    <footer>
+      <div class="footer-elements">
+        <div class="footer-home">
+          <%= link_to root_path do %>
+            <i class="fa fa-home fa-fw"></i>
+          <% end %>
+        </div>
+        <% if user_signed_in? %>
+          <div class="footer-profile">
+            <%= link_to user_path(current_user.id) do %>
+              <i class="fa fa-user fa-fw"></i>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="footer-profile">
+            <%= link_to root_path do %>
+              <i class="fa fa-user fa-fw"></i>
+            <% end %>
+          </div>
+        <% end %>
+        <div class="footer-group-list">
+          <%= link_to list_groups_path do %>
+            <i class="fa fa-eye fa-fw"></i>
+          <% end %>
+        </div>
+        <div class="footer-making-group">
+          <%= link_to new_group_path do %>
+            <i class="fa fa-plus-circle fa-fw"></i>
+          <% end %>
+        </div>
+        <% if user_signed_in? %>
+          <div class="footer-group-title">
+            <%= link_to list_user_path(current_user.id) do %>
+              <i class="fa fa-users fa-fw"></i>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </footer>
   </body>
 </html>

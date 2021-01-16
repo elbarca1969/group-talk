@@ -150,3 +150,24 @@ header{
   display: flex;
   justify-content: center;
 }
+
+footer {
+  background-color: #253141;
+  height: 50px;
+  border-top: 2px solid #DDDDDD;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+.footer-elements {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-elements a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+}

@@ -511,4 +511,8 @@
   .group-form-container {
     padding: 0 20px;
   }
+
+  .group-member-main {
+    padding-bottom: 50px;
+  }
 }

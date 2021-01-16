@@ -140,4 +140,8 @@
   .home-main-chat-container > .tweets {
     padding-bottom: 50px;
   }
+
+  .follow-list-main {
+    padding-bottom: 50px;
+  }
 }

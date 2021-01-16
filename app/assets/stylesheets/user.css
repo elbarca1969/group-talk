@@ -283,3 +283,10 @@
   color: white;
   background-color: #526f94;
 }
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .user-show-main {
+    padding-bottom: 50px;
+  }
+}

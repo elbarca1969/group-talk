@@ -152,6 +152,7 @@ header{
 }
 
 footer {
+  display: none;
   background-color: #253141;
   height: 50px;
   border-top: 2px solid #DDDDDD;
@@ -170,4 +171,11 @@ footer {
   text-decoration: none;
   color: white;
   line-height: 50px;
+}
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  footer {
+    display: block;
+  }
 }

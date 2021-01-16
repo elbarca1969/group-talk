@@ -489,3 +489,10 @@
 .group-member-user-introduction {
   margin-bottom: 10px;
 }
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .group-show-main {
+    padding-bottom: 50px;
+  }
+}

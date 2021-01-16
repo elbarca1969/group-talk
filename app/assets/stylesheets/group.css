@@ -499,4 +499,8 @@
   .group-list-main {
     padding-bottom: 50px;
   }
+
+  .group-list-header-group-search-input {
+    width: 250px;
+  }
 }

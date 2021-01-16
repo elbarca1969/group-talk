@@ -617,3 +617,14 @@ img {
     text-align: center;
   }
 }
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .left-bar {
+    display: none;
+  }
+  
+  .main {
+    width: 100vw;
+  }
+}

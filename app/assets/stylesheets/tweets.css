@@ -627,4 +627,8 @@ img {
   .main {
     width: 100vw;
   }
+
+  .tweets {
+    padding-bottom: 50px;
+  }
 }

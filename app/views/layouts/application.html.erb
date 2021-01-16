@@ -47,6 +47,16 @@
         <div id="header-right-responsive">
           <i class="fa fa-bars fa-fw"></i>
         </div>
+        <nav class="header-nav">
+          <ul class="header-nav-menu-ul">
+            <li class="header-nav-menu-li">
+              <%= link_to 'プロフィール', user_path(current_user.id) %>
+            </li>
+            <li class="header-nav-menu-li" id="responsive-logout-open">
+              ログアウト
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <%= yield %>

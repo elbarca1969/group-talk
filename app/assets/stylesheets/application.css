@@ -178,6 +178,39 @@ footer {
   font-size: larger;
 }
 
+.header-nav {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.header-nav-menu-ul {
+  border: 1px solid #DDDDDD;
+}
+
+.header-nav-menu-li {
+  background-color: white;
+}
+
+.header-nav-menu-li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 30px;
+  font-size: small;
+  font-weight: bold;
+}
+
+.header-nav-menu-li:nth-child(1) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#responsive-logout-open {
+  padding: 10px 30px;
+  font-size: small;
+  font-weight: bold;
+}
+
 /* スマホ表示時 */
 @media (max-width: 480px) {
   footer {

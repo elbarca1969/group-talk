@@ -179,9 +179,14 @@ footer {
 }
 
 .header-nav {
+  display: none;
   position: absolute;
   top: 50px;
   right: 0;
+}
+
+.header-nav.open {
+  display: block;
 }
 
 .header-nav-menu-ul {

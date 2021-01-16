@@ -134,3 +134,10 @@
   color: white;
   background-color: #526f94;
 }
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .home-main-chat-container > .tweets {
+    padding-bottom: 50px;
+  }
+}

@@ -173,6 +173,11 @@ footer {
   line-height: 50px;
 }
 
+#header-right-responsive {
+  color: white;
+  font-size: larger;
+}
+
 /* スマホ表示時 */
 @media (max-width: 480px) {
   footer {

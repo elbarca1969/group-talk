@@ -16,24 +16,24 @@
             <div id="tweet-delete-open">
               <i class="fa fa-trash-alt fa-fw"></i>削除する
             </div>
-            <div id="tweet-delete-modal">
-              <div class="tweet-delete-confirmation">
-                <div class="tweet-delete-sentence">
-                  本当にこのツイートを削除しますか？
-                </div>
-                <div class="tweet-delete-btn">
-                  <div id="tweet-delete-btn-cancel">
-                    キャンセル
-                  </div>
-                  <div class="tweet-delete-btn-action">
-                    <%= link_to(group_tweet_path(@group, @tweet.id), method: :delete) do %>
-                      <i class="fa fa-trash-alt fa-fw"></i>削除する
-                    <% end %>
-                  </div>
-                </div>
+          <% end %>
+        </div>
+        <div id="tweet-delete-modal">
+          <div class="tweet-delete-confirmation">
+            <div class="tweet-delete-sentence">
+              本当にこのツイートを削除しますか？
+            </div>
+            <div class="tweet-delete-btn">
+              <div id="tweet-delete-btn-cancel">
+                キャンセル
+              </div>
+              <div class="tweet-delete-btn-action">
+                <%= link_to(group_tweet_path(@group, @tweet.id), method: :delete) do %>
+                  <i class="fa fa-trash-alt fa-fw"></i>削除する
+                <% end %>
               </div>
             </div>
-          <% end %>
+          </div>
         </div>
         <% if user_signed_in? && @tweet.user_id == current_user.id%>
           <div id="tweet-show-upper-right-responsive">

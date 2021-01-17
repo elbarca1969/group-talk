@@ -519,6 +519,12 @@
   border: 1px solid darkred;
 }
 
+#tweet-show-upper-right-responsive {
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
 .tweet-show-lower {
   border-bottom: 1px solid #DDDDDD;
   margin-bottom: 50px;

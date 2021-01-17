@@ -38,6 +38,18 @@
         <div id="tweet-show-upper-right-responsive">
           <i class="fa fa-ellipsis-h fa-fw"></i>
         </div>
+        <nav class="tweet-show-nav">
+          <ul class="tweet-show-nav-menu-ul">
+            <li class="tweet-show-nav-menu-li">
+              <%= link_to(edit_group_tweet_path(@group, @tweet.id)) do %>
+                <i class="fa fa-wrench fa-fw"></i>編集する
+              <% end %>
+            </li>
+            <li class="tweet-show-nav-menu-li" id="responsive-tweet-delete">
+              <i class="fa fa-trash-alt fa-fw"></i>削除する
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="tweet-show-lower">
         <div class="tweet-show-lower-upper">

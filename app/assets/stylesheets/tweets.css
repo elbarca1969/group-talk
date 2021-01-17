@@ -526,9 +526,14 @@
 }
 
 .tweet-show-nav {
+  display: none;
   position: absolute;
   top: 100px;
   right: 0;
+}
+
+.tweet-show-nav.open {
+  display: block;
 }
 
 .tweet-show-nav-menu-ul {

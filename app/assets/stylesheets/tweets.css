@@ -520,6 +520,7 @@
 }
 
 #tweet-show-upper-right-responsive {
+  display: none;
   font-size: larger;
   font-weight: bold;
   padding: 0 10px;
@@ -683,5 +684,13 @@ img {
 
   .tweet-form-container {
     padding: 0 20px;
+  }
+
+  .tweet-show-upper-right {
+    display: none;
+  }
+
+  #tweet-show-upper-right-responsive {
+    display: block;
   }
 }

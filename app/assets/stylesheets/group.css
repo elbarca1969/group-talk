@@ -362,6 +362,7 @@
 }
 
 #group-show-header-upper-responsive {
+  display: none;
   font-size: larger;
   font-weight: bold;
   padding: 0 20px;
@@ -558,5 +559,17 @@
 
   .group-member-main {
     padding-bottom: 50px;
+  }
+
+  .group-show-header-upper-center {
+    display: none;
+  }
+
+  .group-show-header-upper-right {
+    display: flex;
+  }
+
+  #group-show-header-upper-responsive {
+    display: block;
   }
 }

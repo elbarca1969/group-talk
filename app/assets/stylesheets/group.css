@@ -367,6 +367,39 @@
   padding: 0 20px;
 }
 
+.group-show-nav {
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+.group-show-nav-menu-ul {
+  border: 1px solid #DDDDDD;
+}
+
+.group-show-nav-menu-li {
+  background-color: white;
+}
+
+.group-show-nav-menu-li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 30px;
+  font-size: small;
+  color: darkgreen;
+}
+
+.group-show-nav-menu-li:nth-child(1) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#responsive-group-delete {
+  padding: 10px 30px;
+  font-size: small;
+  color: darkred;
+}
+
 .group-show-header-no-participation a,
 .group-show-header-participation a {
   display: inline-block;

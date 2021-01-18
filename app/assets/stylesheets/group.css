@@ -348,6 +348,7 @@
 
 .group-delete-btn-action a {
   text-decoration: none;
+  display: block;
   font-size: smaller;
   padding: 5px 20px;
   border-radius: 20px;

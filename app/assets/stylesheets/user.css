@@ -138,9 +138,13 @@
   color: #999;
 }
 
+.user-show-main {
+  height: calc(100vh - 50px);
+  overflow: scroll;
+}
+
 .user-show-header {
   padding: 10px 20px 0 20px;
-  height: 150px;
   background-color: #FAFAFA;
   border-bottom: 5px solid #DDDDDD;
 }
@@ -188,11 +192,6 @@
   font-weight: bold;
 }
 
-.user-show-introduction {
-  height: 50px;
-  overflow: scroll;
-}
-
 .user-show-header-lower,
 .user-show-header-lower-group {
   display: flex;
@@ -211,11 +210,6 @@
 
 .user-show-header-lower-group-participation {
   margin-right: 20px;
-}
-
-.user-show-main {
-  height: calc(100vh - 200px);
-  overflow: scroll;
 }
 
 .user-group-list-header {
@@ -288,4 +282,32 @@
 .owner-group-list-header-lower-right a:hover {
   color: white;
   background-color: #526f94;
+}
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .user-show-main {
+    padding-bottom: 50px;
+  }
+
+  .user-group-list-main {
+    padding-bottom: 50px;
+  }
+
+  .user-show-header-lower {
+    display: block;
+  }
+
+  .user-show-header-lower-follow-member {
+    display: flex;
+    justify-content: center;
+  }
+
+  .account-page {
+    width: 100vw;
+  }
+
+  .account-page-container {
+    padding: 0 20px 70px;
+  }
 }

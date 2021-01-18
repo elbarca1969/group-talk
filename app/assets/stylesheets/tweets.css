@@ -67,6 +67,10 @@
   padding: 5px;
 }
 
+.left-bar-container-responsive {
+  display: none;
+}
+
 .main {
   background-color: white;
   width: 750px;
@@ -502,6 +506,7 @@
 
 .tweet-delete-btn-action a {
   text-decoration: none;
+  display: block;
   font-size: smaller;
   padding: 5px 20px;
   border-radius: 20px;
@@ -513,6 +518,51 @@
   color: white;
   background-color: darkred;
   border: 1px solid darkred;
+}
+
+#tweet-show-upper-right-responsive {
+  display: none;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.tweet-show-nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+.tweet-show-nav.open {
+  display: block;
+}
+
+.tweet-show-nav-menu-ul {
+  border: 1px solid #DDDDDD;
+}
+
+.tweet-show-nav-menu-li {
+  background-color: white;
+}
+
+.tweet-show-nav-menu-li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 30px;
+  font-size: small;
+  color: darkgreen;
+}
+
+.tweet-show-nav-menu-li:nth-child(1) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#responsive-tweet-delete {
+  padding: 10px 30px;
+  font-size: small;
+  color: darkred;
 }
 
 .tweet-show-lower {
@@ -575,4 +625,73 @@ img {
   width: 400px;
   display: block;
   margin: auto;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px) {
+  .right-bar {
+    display: none;
+  }
+
+  .left-bar-container {
+    display: none;
+  }
+
+  .left-bar-container-responsive {
+    display: block;
+  }
+
+  .left-bar {
+    width: 10%;
+  }
+
+  .main {
+    width: 90%;
+  }
+
+  .left-bar-container-responsive a{
+    border-radius: 20px;
+  }
+  
+  .left-bar-container-responsive a:hover {
+    color: white;
+    background-color:#253141;
+  }
+
+  .left-bar-container-responsive > .left-bar-upper {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .left-bar {
+    display: none;
+  }
+  
+  .main {
+    width: 100vw;
+  }
+
+  .tweets {
+    padding-bottom: 50px;
+  }
+
+  .tweet-form {
+    width: 100vw;
+    padding-bottom: 70px;
+  }
+
+  .tweet-form-container {
+    padding: 0 20px;
+  }
+
+  .tweet-show-upper-right {
+    display: none;
+  }
+
+  #tweet-show-upper-right-responsive {
+    display: block;
+  }
 }

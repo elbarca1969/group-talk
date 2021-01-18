@@ -18,6 +18,9 @@ require('./tweetDelete')
 require('./groupDelete')
 require('./groupQuit')
 require('./logout')
+require('./headerMenu')
+require('./tweetMenu')
+require('./groupMenu')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

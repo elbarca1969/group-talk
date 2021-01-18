@@ -232,8 +232,12 @@
   background-color:#253141;
 }
 
+.group-show-main {
+  height: calc(100vh - 50px);
+  overflow: scroll;
+}
+
 .group-show-header {
-  height: 150px;
   background-color: #FAFAFA;
   border-bottom: 5px solid #DDDDDD;
   padding: 10px 20px;
@@ -344,6 +348,7 @@
 
 .group-delete-btn-action a {
   text-decoration: none;
+  display: block;
   font-size: smaller;
   padding: 5px 20px;
   border-radius: 20px;
@@ -355,6 +360,51 @@
   color: white;
   background-color: darkred;
   border: 1px solid darkred;
+}
+
+#group-show-header-upper-responsive {
+  display: none;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.group-show-nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+.group-show-nav.open {
+  display: block;
+}
+
+.group-show-nav-menu-ul {
+  border: 1px solid #DDDDDD;
+}
+
+.group-show-nav-menu-li {
+  background-color: white;
+}
+
+.group-show-nav-menu-li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px 30px;
+  font-size: small;
+  color: darkgreen;
+}
+
+.group-show-nav-menu-li:nth-child(1) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+#responsive-group-delete {
+  padding: 10px 30px;
+  font-size: small;
+  color: darkred;
 }
 
 .group-show-header-no-participation a,
@@ -400,18 +450,8 @@
   font-size: larger;
 }
 
-.group-show-header-group-content {
-  height: 50px;
-  overflow: scroll;
-}
-
 .group-show-header-lower-left:hover {
   color: black;
-}
-
-.group-show-main {
-  height: calc(100vh - 200px);
-  overflow: scroll;
 }
 
 .group-member-header {
@@ -494,4 +534,43 @@
 
 .group-member-user-introduction {
   margin-bottom: 10px;
+}
+
+/* スマホ表示時 */
+@media (max-width: 480px) {
+  .group-show-main {
+    padding-bottom: 50px;
+  }
+
+  .group-list-main {
+    padding-bottom: 50px;
+  }
+
+  .group-list-header-group-search-input {
+    width: 250px;
+  }
+
+  .group-form {
+    width: 100vw;
+  }
+
+  .group-form-container {
+    padding: 0 20px;
+  }
+
+  .group-member-main {
+    padding-bottom: 50px;
+  }
+
+  .group-show-header-upper-center {
+    display: none;
+  }
+
+  .group-show-header-upper-right {
+    display: flex;
+  }
+
+  #group-show-header-upper-responsive {
+    display: block;
+  }
 }

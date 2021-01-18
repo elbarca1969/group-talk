@@ -2,6 +2,9 @@ $(function(){
   $(document).on('click', '#tweet-delete-open', function(){
     $('#tweet-delete-modal').show();
   });
+  $(document).on('click', '#responsive-tweet-delete', function(){
+    $('#tweet-delete-modal').show();
+  });
   $(document).on('click', '#tweet-delete-btn-cancel', function(){
     $('#tweet-delete-modal').hide();
   });

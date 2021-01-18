@@ -2,6 +2,9 @@ $(function(){
   $(document).on('click', '#logout-open', function(){
     $('#logout-modal').show();
   });
+  $(document).on('click', '#responsive-logout-open', function(){
+    $('#logout-modal').show();
+  });
   $(document).on('click', '#logout-btn-cancel', function(){
     $('#logout-modal').hide();
   });

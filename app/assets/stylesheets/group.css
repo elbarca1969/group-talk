@@ -361,6 +361,12 @@
   border: 1px solid darkred;
 }
 
+#group-show-header-upper-responsive {
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
 .group-show-header-no-participation a,
 .group-show-header-participation a {
   display: inline-block;

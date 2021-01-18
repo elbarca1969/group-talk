@@ -42,6 +42,9 @@
               </div>
             <% end %>
             <div class="group-show-header-upper-right">
+              <div id="group-show-header-upper-responsive">
+                <i class="fa fa-ellipsis-h fa-fw"></i>
+              </div>
               <% if user_signed_in? %>
                 <% unless GroupUser.exists?(group_id: @group.id, user_id: current_user.id) %>
                   <div class="group-show-header-no-participation">

@@ -368,9 +368,14 @@
 }
 
 .group-show-nav {
+  display: none;
   position: absolute;
   top: 100px;
   right: 0;
+}
+
+.group-show-nav.open {
+  display: block;
 }
 
 .group-show-nav-menu-ul {

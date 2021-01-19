@@ -63,6 +63,9 @@
           <nav class="header-nav">
             <ul class="header-nav-menu-ul">
               <li class="header-nav-menu-li">
+                <%= link_to 'ゲストログイン(閲覧用)', relationships_guest_sign_in_path, method: :post %>
+              </li>
+              <li class="header-nav-menu-li responsive-login">
                 <%= link_to 'ログイン', new_user_session_path %>
               </li>
               <li class="header-nav-menu-li">

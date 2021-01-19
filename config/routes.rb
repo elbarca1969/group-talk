@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "relationships#index"
+  post '/relationships/guest_sign_in', to: 'relationships#new_guest'
   resources :groups do
     member do
       get :join

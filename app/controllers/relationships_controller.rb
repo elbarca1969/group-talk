@@ -31,6 +31,15 @@ class RelationshipsController < ApplicationController
     @followers = @user.followers
   end
 
+  def new_guest
+    user = User.find_or_create_by!(email: 'guest@example.com') do |user|
+      user.nickname = "ゲスト"
+      user.password = SecureRandom.urlsafe_base64
+    end
+    sign_in user
+    redirect_to root_path
+  end
+
   private
 
   def set_user

@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 header{
   background-color: #253141;
   height: 50px;
@@ -54,6 +58,7 @@ header{
   margin-right: 15px;
 }
 
+.guest-login, 
 .login{
   color: white;
   text-decoration: none;
@@ -207,7 +212,8 @@ footer {
   font-weight: bold;
 }
 
-.header-nav-menu-li:nth-child(1) {
+.header-nav-menu-li:nth-child(1),
+.responsive-login {
   border-bottom: 1px solid #DDDDDD;
 }
 

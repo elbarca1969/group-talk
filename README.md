@@ -123,7 +123,9 @@ SNSでの誹謗中傷が現代社会の大きな問題となっております�
 - has_many :relationships
 - has_many :followings, through: :relationships
 - has_many :reverse_of_relationships
-- has_many :followers, through: :reverse_of_relationships,
+- has_many :followers, through: :reverse_of_relationships
+- has_many :likes
+- has_one_attached :avator
 
 ## groups テーブル
 
@@ -165,6 +167,7 @@ SNSでの誹謗中傷が現代社会の大きな問題となっております�
 - belongs_to :group
 - belongs_to :user
 - has_one_attached :image
+- has_many :likes
 
 ## relationships テーブル
 
@@ -177,3 +180,15 @@ SNSでの誹謗中傷が現代社会の大きな問題となっております�
 
 - belongs_to :user
 - belongs_to :follow
+
+## likes テーブル
+
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| user_id  | integer | null: false |
+| tweet_id | integer | null: false |
+
+### Association
+
+- belongs_to :user
+- belongs_to :tweet

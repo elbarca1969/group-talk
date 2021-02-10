@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def list
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @groupLists = @user.groups.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+    @groupLists = @user.groups.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").includes(:group_users, :users, :user)
   end
 
   def owner

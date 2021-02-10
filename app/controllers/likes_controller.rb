@@ -13,7 +13,7 @@ class LikesController < ApplicationController
   def list
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @likes = @tweet.likes
-    @users = User.where(likes: @likes).includes(:avator_attachment)
+    @users = User.where(likes: @likes).with_attached_avator
   end
 
   private

@@ -64,7 +64,7 @@ class GroupsController < ApplicationController
   end
 
   def member
-    @users = @group.users.includes(:avator_attachment)
+    @users = @group.users.with_attached_avator
   end
 
   private

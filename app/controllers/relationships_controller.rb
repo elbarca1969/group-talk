@@ -21,12 +21,12 @@ class RelationshipsController < ApplicationController
 
   def following
     @user = User.find(params[:id])
-    @followings = @user.followings.includes(:avator_attachment)
+    @followings = @user.followings.with_attached_avator
   end
 
   def follower
     @user = User.find(params[:id])
-    @followers = @user.followers.includes(:avator_attachment)
+    @followers = @user.followers.with_attached_avator
   end
 
   def new_guest

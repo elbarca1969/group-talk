@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
 
   def index
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @tweets = @group.tweets.includes(:user).order("created_at DESC")
+    @tweets = @group.tweets.with_attached_image.order("created_at DESC").includes(:user, :likes, :image_attachment, user: { avator_attachment: :blob })
   end
 
   def new

@@ -22,13 +22,13 @@ class RelationshipsController < ApplicationController
   def following
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @user = User.find(params[:id])
-    @followings = @user.followings 
+    @followings = @user.followings.includes(:avator_attachment)
   end
 
   def follower
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @user = User.find(params[:id])
-    @followers = @user.followers
+    @followers = @user.followers.includes(:avator_attachment)
   end
 
   def new_guest

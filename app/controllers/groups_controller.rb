@@ -45,7 +45,7 @@ class GroupsController < ApplicationController
   end
 
   def list
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").includes(:group_users, :user, :users)
     @newgroups = Group.order("created_at DESC").limit(20)
   end
 

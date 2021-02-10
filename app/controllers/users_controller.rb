@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @tweets = @user.tweets.order("created_at DESC")
+    @tweets = @user.tweets.with_attached_image.order("created_at DESC").includes(:group, :likes, :image_attachment)
   end
 
   def edit

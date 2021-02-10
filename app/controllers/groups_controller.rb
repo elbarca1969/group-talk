@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_group, only: [:show, :edit, :update, :destroy, :join, :quit, :member]
+  before_action :right_bar, only: [:show, :member]
 
   def index
   end
@@ -21,7 +22,6 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @tweets = @group.tweets.with_attached_image.order("created_at DESC").includes(:user, :likes, :image_attachment, user: { avator_attachment: :blob })
   end
 
@@ -67,7 +67,6 @@ class GroupsController < ApplicationController
   end
 
   def member
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     @users = @group.users.includes(:avator_attachment)
   end
 
@@ -79,6 +78,10 @@ class GroupsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:id])
+  end
+
+  def right_bar
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
   end
 
 end

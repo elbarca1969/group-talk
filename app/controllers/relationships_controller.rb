@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
   def index
     @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
     followings = current_user.try(:followings)
-    @tweets = Tweet.where(user: followings).order("created_at DESC")
+    @tweets = Tweet.where(user: followings).order("created_at DESC").includes(:user, :group, :likes, :image_attachment, user: { avator_attachment: :blob })
   end
 
   def create

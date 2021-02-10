@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "relationships#index"
   post '/relationships/guest_sign_in', to: 'relationships#new_guest'
-  resources :groups do
+  resources :groups, only: [:new, :create, :show, :edit, :update, :destroy] do
     member do
       get :join
       delete :quit

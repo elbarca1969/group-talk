@@ -3,9 +3,6 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy, :join, :quit, :member]
   before_action :right_bar, only: [:show, :member]
 
-  def index
-  end
-
   def new
     @group = Group.new
     @group.users << current_user

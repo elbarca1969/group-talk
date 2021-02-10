@@ -2,15 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "relationships#index"
   post '/relationships/guest_sign_in', to: 'relationships#new_guest'
-  resources :groups do
+  resources :groups, only: [:new, :create, :show, :edit, :update, :destroy] do
     member do
-      get :join
+      get :join, :member
       delete :quit
-      get :member
     end
     collection do
-      get :list
-      get :search
+      get :list, :search
     end
     resources :tweets do
       resources :likes, only: [:create, :destroy] do
@@ -22,15 +20,13 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update] do
     member do
-      get :list
-      get :owner
+      get :list, :owner
       delete :purge
     end
   end
   resources :relationships, only: [:index, :create, :destroy] do
     member do
-      get :following
-      get :follower
+      get :following, :follower
     end
   end
 end

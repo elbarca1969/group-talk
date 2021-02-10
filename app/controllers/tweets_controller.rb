@@ -2,10 +2,10 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :edit]
   before_action :set_group
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :right_bar, only: [:index, :show]
 
   def index
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @tweets = @group.tweets.includes(:user).order("created_at DESC")
+    @tweets = @group.tweets.with_attached_image.order("created_at DESC").includes(:user, :likes, :image_attachment, user: { avator_attachment: :blob })
   end
 
   def new
@@ -23,7 +23,6 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
   end
 
   def edit
@@ -61,6 +60,10 @@ class TweetsController < ApplicationController
 
   def set_tweet
     @tweet = @group.tweets.find(params[:id])
+  end
+
+  def right_bar
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
   end
 
 end

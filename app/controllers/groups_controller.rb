@@ -1,9 +1,7 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_group, only: [:show, :edit, :update, :destroy, :join, :quit, :member]
-
-  def index
-  end
+  before_action :right_bar, only: [:show, :member]
 
   def new
     @group = Group.new
@@ -21,8 +19,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @tweets = @group.tweets.includes(:user).order("created_at DESC")
+    @tweets = @group.tweets.with_attached_image.order("created_at DESC").includes(:user, :likes, :image_attachment, user: { avator_attachment: :blob })
   end
 
   def edit
@@ -45,7 +42,7 @@ class GroupsController < ApplicationController
   end
 
   def list
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").includes(:group_users, :user, :users)
     @newgroups = Group.order("created_at DESC").limit(20)
   end
 
@@ -62,13 +59,12 @@ class GroupsController < ApplicationController
   end
 
   def search
-    @groups = Group.search(params[:keyword]).select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc")
+    @groups = Group.search(params[:keyword]).select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").includes(:group_users, :user, :users)
     @newgroups = Group.order("created_at DESC").limit(20)
   end
 
   def member
-    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
-    @users = @group.users
+    @users = @group.users.with_attached_avator
   end
 
   private
@@ -79,6 +75,10 @@ class GroupsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:id])
+  end
+
+  def right_bar
+    @groups = Group.select("groups.*, COUNT(group_users.id) users_count").left_joins(:group_users).group("groups.id").order("users_count desc").limit(20)
   end
 
 end

@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: group_talk_production
-  username: group_talk
-  password: <%= ENV['GROUP_TALK_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

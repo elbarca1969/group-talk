@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   def search
     @q = User.ransack(params[:q])
-    @users = @q.result
+    @users = @q.result.with_attached_avator
   end
 
   private

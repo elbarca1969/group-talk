@@ -381,4 +381,12 @@
   .account-page-container {
     padding: 0 20px 70px;
   }
+
+  .user-search-main {
+    padding-bottom: 50px;
+  }
+
+  .users-search-textarea {
+    width: 250px;
+  }
 }

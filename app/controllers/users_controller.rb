@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: :edit
   before_action :set_user, only: [:show, :edit, :update, :list, :owner, :purge]
-  before_action :right_bar, only: [:show, :list, :owner]
+  before_action :right_bar, only: [:show, :list, :owner,:search]
 
   def show
     @tweets = @user.tweets.with_attached_image.order("created_at DESC").includes(:group, :likes, :image_attachment)
@@ -32,6 +32,11 @@ class UsersController < ApplicationController
   def purge
     @user.avator.purge
     redirect_to edit_user_path(current_user.id)
+  end
+
+  def search
+    @q = User.ransack(params[:q])
+    @users = @q.result
   end
 
   private

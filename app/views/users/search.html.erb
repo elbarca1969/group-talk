@@ -3,7 +3,29 @@
     <%= render "/tweets/left_bar" %>
   </div>
   <div class="main">
-    ユーザー検索ページ
+    <div class="user-search">
+      <%= search_form_for @q, url: search_users_path do |f| %>
+        <div class="user-search-header">
+          <div class="user-search-header-upper">
+            <div class="user-search-header-upper-left">
+              <%= link_to "グループ", list_groups_path %>
+            </div>
+            <div class="user-search-header-upper-right">
+              <%= link_to "ユーザー", search_users_path %>
+            </div>
+          </div>
+          <div class="user-search-header-lower">
+            <div class="user-search-header-search">
+              <%= f.search_field :nickname_or_introduction_cont, placeholder: "ユーザーを検索", class: "users-search-textarea" %>
+              <label class="user-search-header-search-btn">
+                <i class="fa fa-search"></i>
+                <%= f.submit class: "hidden" %>
+              </label>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div class="right-bar">
     <%= render "/tweets/right_bar" %>

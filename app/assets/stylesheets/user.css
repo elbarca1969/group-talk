@@ -284,6 +284,66 @@
   background-color: #526f94;
 }
 
+.user-search-header {
+  height: 100px;
+  background-color: #FAFAFA;
+  border-bottom: 5px solid #DDDDDD;
+  padding: 0 20px;
+}
+
+.user-search-header-upper {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.user-search-header-upper a {
+  text-decoration: none;
+  color: black;
+}
+
+.user-search-header-upper a:hover {
+  text-decoration: underline;
+}
+
+.user-search-header-upper-right a {
+  text-decoration: underline;
+}
+
+.user-search-header-lower {
+  text-align: center;
+}
+
+.users-search-textarea {
+  padding:10px 20px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  border: 1px solid #EEEEEE;
+  margin-right: 5px;
+  width: 400px;
+}
+
+.users-search-textarea:hover {
+  background-color: white;
+  border: 1px solid #253141;
+}
+
+.user-search-header-search-btn {
+  padding: 15px 30px;
+  background-color: #EEEEEE;
+  border-radius: 100px;
+  color: #999;
+  border: 1px solid #EEEEEE;
+}
+
+.user-search-header-search-btn:hover {
+  color: white;
+  background-color:#253141;
+}
+
 /* スマホ表示時 */
 @media (max-width: 480px) {
   .user-show-main {

@@ -74,10 +74,25 @@
 }
 
 .group-list-header-upper {
+  display: flex;
+  justify-content: space-around;
   height: 40px;
   font-size: 20px;
   font-weight: bold;
   line-height: 40px;
+}
+
+.group-list-header-upper a {
+  text-decoration: none;
+  color: black;
+}
+
+.group-list-header-upper a:hover {
+  text-decoration: underline;
+}
+
+.group-list-header-upper-left a {
+  text-decoration: underline;
 }
 
 .group-list-header-lower {

@@ -6,7 +6,12 @@
     <div class="group-list">
       <div class="group-list-header">
         <div class="group-list-header-upper">
-          <i class="fa fa-eye fa-fw"></i>&nbsp;&nbsp;グループを見る
+          <div class="group-list-header-upper-left">
+            <i class="fa fa-eye fa-fw"></i>&nbsp;&nbsp;グループを見る
+          </div>
+          <div class="group-list-header-upper-right">
+            <%= link_to "ユーザー", search_users_path %>
+          </div>
         </div>
         <div class="group-list-header-lower">
           <div class="group-list-header-group-search">

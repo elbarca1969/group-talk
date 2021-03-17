@@ -164,24 +164,24 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 
 ### ツイート投稿機能
 - ツイート投稿
-[![Image from Gyazo](https://i.gyazo.com/f2fbcf9b7ae043504704d4c46c8135db.gif)](https://gyazo.com/f2fbcf9b7ae043504704d4c46c8135db)
+[![Image from Gyazo](https://i.gyazo.com/4c19a3e72538a872555638d85059ed2e.gif)](https://gyazo.com/4c19a3e72538a872555638d85059ed2e)
 ・グループのチャットページ上部の「ツイート」をクリックすると、ツイート投稿ページに遷移します。<br>
 ・400字以内で入力すると投稿することができます。(日本語もしくはアルファベットどちらを用いても同じぐらいの文量になるように、大文字は2文字、半角英数字・記号・改行は1文字カウントに設定)<br>
 ・写真を1枚付けて投稿することができます。<br>
 ・テキストか写真どちらかがないと投稿することができません。<br>
 
 - ツイート詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/a26710c78f7a34f96a8c74f306832375.gif)](https://gyazo.com/a26710c78f7a34f96a8c74f306832375)
+[![Image from Gyazo](https://i.gyazo.com/1a8c1e2df4f0828a268df1a69d069bd7.gif)](https://gyazo.com/1a8c1e2df4f0828a268df1a69d069bd7)
 ・チャットページで投稿したツイートの投稿内容をクリックするとツイート詳細ページに遷移します。<br>
 ・投稿者本人には「編集する」と「削除する」が表示されます。<br>
 
 - ツイート編集
-[![Image from Gyazo](https://i.gyazo.com/aab0a0eb9539bd1fb51b5b3d9b5bdece.gif)](https://gyazo.com/aab0a0eb9539bd1fb51b5b3d9b5bdece)
+[![Image from Gyazo](https://i.gyazo.com/80ae38ad19d2e68f83ecb28e8318e911.gif)](https://gyazo.com/80ae38ad19d2e68f83ecb28e8318e911)
 ・投稿者本人のみ編集することができます。<br>
 ・ツイート詳細ページの「編集する」をクリックすると編集ページに遷移します。テキストと写真の両方を編集することができます。<br>
 
 - ツイート削除
-[![Image from Gyazo](https://i.gyazo.com/d24d464b5c2255971f89281a0141502e.gif)](https://gyazo.com/d24d464b5c2255971f89281a0141502e)
+[![Image from Gyazo](https://i.gyazo.com/a9d079e2d74a0c88ee24f64a48908acc.gif)](https://gyazo.com/a9d079e2d74a0c88ee24f64a48908acc)
 ・投稿者本人のみ削除することができます。<br>
 ・ツイート詳細ページの「削除する」をクリックするとモーダルが出現します。モーダル内の「削除する」をクリックするとツイートを削除することができます。<br>
 

@@ -96,23 +96,23 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 ・プロフィール画像と自己紹介は任意設定項目です。プロフィール画像が設定されていない場合は、ダミーのアイコンが表示されます。<br>
 
 - ログイン
-[![Image from Gyazo](https://i.gyazo.com/548db8595bdc6b991492680cc94ec7ce.gif)](https://gyazo.com/548db8595bdc6b991492680cc94ec7ce)
+[![Image from Gyazo](https://i.gyazo.com/119771191b3ac024bf217b9467b9f980.gif)](https://gyazo.com/119771191b3ac024bf217b9467b9f980)
 ・ログアウト状態でヘッダー右の「ログイン」をクリックし、メールアドレスとパスワードを入力すればログインすることができます。<br>
-[![Image from Gyazo](https://i.gyazo.com/3093998796d74e3e5296c774d5100763.gif)](https://gyazo.com/3093998796d74e3e5296c774d5100763)
+[![Image from Gyazo](https://i.gyazo.com/3d04173ed88d8d3f35fd4952ef4b6540.gif)](https://gyazo.com/3d04173ed88d8d3f35fd4952ef4b6540)
 ・ログアウト状態でヘッダー右の「ゲストログイン(閲覧用)」をクリックすると、ゲストユーザーとしてログインすることができます。<br>
 
 - ログアウト
-[![Image from Gyazo](https://i.gyazo.com/4560e678cd7ba190959868bf0c1ca888.gif)](https://gyazo.com/4560e678cd7ba190959868bf0c1ca888)
+[![Image from Gyazo](https://i.gyazo.com/1834a26448ab1c4c8e08aac02566b788.gif)](https://gyazo.com/1834a26448ab1c4c8e08aac02566b788)
 ・ログイン状態でヘッダー右の「ログアウト」をクリックするとモーダルが出現します。モーダル内の「ログアウト」をクリックするとログアウトすることができます。<br>
 
 - ユーザー詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/13037c2e9db87d2e1f4488c84f4c340e.gif)](https://gyazo.com/13037c2e9db87d2e1f4488c84f4c340e)
+[![Image from Gyazo](https://i.gyazo.com/9da7cb0776dcfcaa5e5cd5292cfeeb6f.gif)](https://gyazo.com/9da7cb0776dcfcaa5e5cd5292cfeeb6f)
 ・ヘッダーの「ユーザー名」もしくは左メニューの「プロフィール」をクリックすれば、自身のユーザー詳細ページに遷移することができます。<br>
 ・上部には、本人のみ「アカウント編集」、本人以外に「フォロー」もしくは「フォロー中」が表示されます。<br>
 ・各ユーザーの投稿が時系列順に表示されます。<br>
 
 - アカウント編集
-[![Image from Gyazo](https://i.gyazo.com/c915dc70710af6cafff2011d51391abf.gif)](https://gyazo.com/c915dc70710af6cafff2011d51391abf)
+[![Image from Gyazo](https://i.gyazo.com/754c515092732f75ff2cc79d1ab3501c.gif)](https://gyazo.com/754c515092732f75ff2cc79d1ab3501c)
 ・自身のユーザー詳細ページの上部にある「アカウント編集」をクリックすれば、アカウント編集ページに遷移します。<br>
 ・プロフィール画像、ニックネーム、自己紹介、メールアドレスの変更をすることができます。<br>
 

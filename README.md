@@ -118,38 +118,38 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 
 ### グループ管理機能
 - グループ作成
-[![Image from Gyazo](https://i.gyazo.com/0f9d7303d6ec265d16bab752c3231c51.gif)](https://gyazo.com/0f9d7303d6ec265d16bab752c3231c51)
+[![Image from Gyazo](https://i.gyazo.com/f06820d2183047b56ae14e1c98ad95df.gif)](https://gyazo.com/f06820d2183047b56ae14e1c98ad95df)
 ・左メニューの「グループを作る」をクリックするとグループ作成ページに遷移します。<br>
 ・グループ名は70文字以内、グループの紹介文は200文字以内で入力し、「グループを作る」をクリックすればグループが作成できます。(日本語もしくはアルファベットどちらを用いても同じぐらいの文量になるように、大文字は2文字、半角英数字・記号・改行は1文字カウントに設定)<br>
 ・グループの紹介文は任意設定項目です。<br>
 
 - グループ一覧ページ
-[![Image from Gyazo](https://i.gyazo.com/c0b803dd636605fddbd0bfe403182321.gif)](https://gyazo.com/c0b803dd636605fddbd0bfe403182321)
+[![Image from Gyazo](https://i.gyazo.com/7a4c3c516cbb460900399dbf0dfce5a1.gif)](https://gyazo.com/7a4c3c516cbb460900399dbf0dfce5a1)
 ・左側の「探す」をクリックするとグループ一覧ページに遷移します。<br>
 ・参加人数の多いグループから順に上から表示されます。<br>
 ・右側には最新の20個のグループが表示されます。<br>
 
 - グループ参加
-[![Image from Gyazo](https://i.gyazo.com/df819bd2c3bc46e8955c0b6d5811a27c.gif)](https://gyazo.com/df819bd2c3bc46e8955c0b6d5811a27c)
+[![Image from Gyazo](https://i.gyazo.com/13ea612eaf4286367e80de9196c7735f.gif)](https://gyazo.com/13ea612eaf4286367e80de9196c7735f)
 ・「参加」をクリックするとグループに参加することができ、グループのチャットページに遷移します。<br>
 
 - グループ退会
-[![Image from Gyazo](https://i.gyazo.com/9f70b24b05ba4c79c8099d82f3af7888.gif)](https://gyazo.com/9f70b24b05ba4c79c8099d82f3af7888)
+[![Image from Gyazo](https://i.gyazo.com/667a9e3482309a5e174d396a7fbf03b5.gif)](https://gyazo.com/667a9e3482309a5e174d396a7fbf03b5)
 ・グループのチャットページにある「退会する」をクリックするとモーダルが出現します。モーダル内の「退会する」をクリックするとグループを退会することができます。<br>
 
 - グループ詳細ページ
-[![Image from Gyazo](https://i.gyazo.com/5bac885ed7ba2b29363c7341ba4b9a98.gif)](https://gyazo.com/5bac885ed7ba2b29363c7341ba4b9a98)
+[![Image from Gyazo](https://i.gyazo.com/9fa003953ac1aeb1dbf561fc978f545b.gif)](https://gyazo.com/9fa003953ac1aeb1dbf561fc978f545b)
 ・グループの作成者には「グループを編集」と「グループを削除」が表示されます。<br>
 ・「◯参加中」をクリックすれば、そのグループに参加しているユーザーの一覧ページに遷移します。<br>
 ・グループでの投稿が時系列で表示されます。<br>
 
 - グループ編集
-[![Image from Gyazo](https://i.gyazo.com/cdccd79c507662545631c3a4beccaeda.gif)](https://gyazo.com/cdccd79c507662545631c3a4beccaeda)
+[![Image from Gyazo](https://i.gyazo.com/25e81e73dba992c58345ee8e9a9621a2.gif)](https://gyazo.com/25e81e73dba992c58345ee8e9a9621a2)
 ・グループの作成者のみ編集することができます。<br>
 ・グループ詳細ページの「グループを編集」をクリックすると編集ページに遷移します。グループの紹介文のみ編集することができます。<br>
 
 - グループ削除
-[![Image from Gyazo](https://i.gyazo.com/e43161fbfa7b67c7083c54c6ed6dcdf1.gif)](https://gyazo.com/e43161fbfa7b67c7083c54c6ed6dcdf1)
+[![Image from Gyazo](https://i.gyazo.com/0998af6e4d04527cb6d0ea3cae725302.gif)](https://gyazo.com/0998af6e4d04527cb6d0ea3cae725302)
 ・グループの作成者のみ削除することができます。<br>
 ・グループ詳細ページの「グループを削除」をクリックするとモーダルが出現します。モーダル内の「グループを削除」をクリックするとグループを削除することができます。<br>
 

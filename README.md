@@ -155,11 +155,11 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 
 ### 検索機能
 - グループ検索
-[![Image from Gyazo](https://i.gyazo.com/32aca28632b0f1abf5198faac8bf1668.gif)](https://gyazo.com/32aca28632b0f1abf5198faac8bf1668)
+[![Image from Gyazo](https://i.gyazo.com/ff252c627fd2aee323b624f10cea3f9b.gif)](https://gyazo.com/ff252c627fd2aee323b624f10cea3f9b)
 ・トップページの右側もしくはグループ一覧ページの上部の検索窓にキーワードを入力したら、該当するグループを見つけることができます。<br>
 
 - ユーザー検索
-[![Image from Gyazo](https://i.gyazo.com/64ffbc48339622956e8e51b4d14355aa.gif)](https://gyazo.com/64ffbc48339622956e8e51b4d14355aa)
+[![Image from Gyazo](https://i.gyazo.com/700c134fa858e573eecd14dc55aa0be4.gif)](https://gyazo.com/700c134fa858e573eecd14dc55aa0be4)
 ・グループ一覧ページの「ユーザー」をクリックするとユーザー検索ページに遷移します。<br>
 
 ### ツイート投稿機能

@@ -69,23 +69,23 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 # 実装した機能についてのGIFと説明
 ### トップページ
 - ホーム
-[![Image from Gyazo](https://i.gyazo.com/b02a4b52f8b68b88ca9b71ef294014f4.png)](https://gyazo.com/b02a4b52f8b68b88ca9b71ef294014f4)
+[![Image from Gyazo](https://i.gyazo.com/3bd5538a58de70f678879ab1ec044996.png)](https://gyazo.com/3bd5538a58de70f678879ab1ec044996)
 ・左側下部には、参加中のグループが表示されています。<br>
 ・メイン部分には、フォローしたユーザーの投稿が時系列順で表示されます。<br>
 ・右側には、参加人数が多いTOP20のグループが上から表示されています。<br>
 
 - チャットページ
-[![Image from Gyazo](https://i.gyazo.com/4076a66dfd677a3ce02f11300bda2571.gif)](https://gyazo.com/4076a66dfd677a3ce02f11300bda2571)
+[![Image from Gyazo](https://i.gyazo.com/15ed22816faf5ac1814001c277a4bc1e.gif)](https://gyazo.com/15ed22816faf5ac1814001c277a4bc1e)
 ・左側下部の参加グループリストのグループ名をクリックするとそのグループのチャットページに遷移します。<br>
 ・メイン部分には、そのグループ内で投稿されたツイートが時系列順に表示されます。<br>
 
 - レスポンシブ(タブレット用)
-[![Image from Gyazo](https://i.gyazo.com/db7ece14dcf963de4e6c4d3e02e55769.png)](https://gyazo.com/db7ece14dcf963de4e6c4d3e02e55769)
+[![Image from Gyazo](https://i.gyazo.com/767de13dad845d47ef1e668e0bce3b3a.png)](https://gyazo.com/767de13dad845d47ef1e668e0bce3b3a)
 ・左側はアイコンのみ表示されます。<br>
 ・右側は非表示になります。<br>
 
 - レスポンシブ(スマホ用)
-[![Image from Gyazo](https://i.gyazo.com/8ce012ae46a4563c872eafbab2721452.png)](https://gyazo.com/8ce012ae46a4563c872eafbab2721452)
+[![Image from Gyazo](https://i.gyazo.com/ab6812171a3e29bd66d1fe6ac4cc0b70.png)](https://gyazo.com/ab6812171a3e29bd66d1fe6ac4cc0b70)
 ・左側は非表示になり、フッターにアイコンが表示されます。<br>
 ・ヘッダーの右側がハンバーガーメニューに変わります。<br>
 

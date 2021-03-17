@@ -187,12 +187,12 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 
 ### いいね機能
 - いいねを押す
-[![Image from Gyazo](https://i.gyazo.com/eaa5f923cc12be5281f323c81588714d.gif)](https://gyazo.com/eaa5f923cc12be5281f323c81588714d)
+[![Image from Gyazo](https://i.gyazo.com/e50ebbaa7204350ecbbe0bf907f0af73.gif)](https://gyazo.com/e50ebbaa7204350ecbbe0bf907f0af73)
 ・ツイートの下部のハートをクリックするとツイートに対していいねを押すことができます。<br>
 ・いいねを押したツイートに対して、もう一度ハートをクリックするといいねを解除することができます。<br>
 
 - いいねを押したユーザー一覧
-[![Image from Gyazo](https://i.gyazo.com/7a7e3a1a77ace380a97a8c021ac35311.gif)](https://gyazo.com/7a7e3a1a77ace380a97a8c021ac35311)
+[![Image from Gyazo](https://i.gyazo.com/43a9e92284bcfe32842ff8e1700395b0.gif)](https://gyazo.com/43a9e92284bcfe32842ff8e1700395b0)
 ・ツイート詳細ページの「◯いいね」をクリックすると、そのツイートにいいねを押したユーザー一覧ページに遷移します。<br>
 
 ### フォロー・フォロワー機能

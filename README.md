@@ -218,6 +218,36 @@ Webサービス(主にSNS)での誹謗中傷が現代社会の大きな課題で
 
 <br>
 
+# 使用技術(開発環境)
+## バックエンド
+Ruby, Ruby on Rails
+
+## フロントエンド
+HTML, CSS, JavaScript, jQuery
+
+## データベース
+MySQL, SequelPro, MariaDB
+
+## インフラ
+AWS(EC2), Capistrano
+
+## Webサーバ(本番環境)
+Nginx
+
+## アプリケーションサーバ(本番環境)
+Unicorn
+
+## テスト
+RSpec
+
+## ソース管理
+GitHub, GitHubDesktop
+
+## エディタ
+VSCode
+
+<br>
+
 # テーブル設計
 
 ## users テーブル

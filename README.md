@@ -248,6 +248,11 @@ VSCode
 
 <br>
 
+# ER図
+[![Image from Gyazo](https://i.gyazo.com/6a999400bfc94e392ea7a4c583eacad9.png)](https://gyazo.com/6a999400bfc94e392ea7a4c583eacad9)
+
+<br>
+
 # テーブル設計
 
 ## users テーブル
